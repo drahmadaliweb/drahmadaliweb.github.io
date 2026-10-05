@@ -94,16 +94,73 @@
     return wrap;
   }
 
+  function sourceHost(url){
+    try { return new URL(url, location.href).hostname.replace(/^www\./i,'').toLowerCase(); }
+    catch { return ''; }
+  }
+
+  function isFacebookSource(src){
+    const host=sourceHost(src?.url || '');
+    return src?.type==='facebook' || host==='facebook.com' || host.endsWith('.facebook.com') || host==='fb.com' || host.endsWith('.fb.com');
+  }
+
+  function sourceName(src){
+    if(src?.label) return src.label;
+    const host=sourceHost(src?.url || '');
+    if(isFacebookSource(src)) return 'Facebook';
+    return host || copy.source;
+  }
+
+  function sourceIcon(src){
+    if(isFacebookSource(src)) return facebookIcon();
+    if(!src?.url) return genericSourceIcon();
+
+    const host=sourceHost(src.url);
+    if(!host) return genericSourceIcon();
+
+    const wrap=document.createElement('span');
+    wrap.className='source-icon favicon-logo';
+    wrap.setAttribute('aria-hidden','true');
+    const img=document.createElement('img');
+    img.alt='';
+    img.loading='lazy';
+    // Pull the publication/site favicon automatically from the source URL.
+    img.src=`https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64`;
+    img.addEventListener('error',()=>wrap.replaceChildren(genericSourceIcon()));
+    wrap.appendChild(img);
+    return wrap;
+  }
+
   function sourceLink(post,compact=false){
     const src=post.source || {};
     if(!src.url && !src.label) return null;
     const a=document.createElement(src.url ? 'a' : 'span');
     a.className=compact?'post-source-chip':'post-source-link';
     if(src.url){ a.href=src.url; a.target='_blank'; a.rel='noopener noreferrer'; }
-    a.appendChild(src.type==='facebook'?facebookIcon():genericSourceIcon());
-    const text=document.createElement('span');
-    text.textContent=src.label || copy.source;
-    a.appendChild(text);
+    a.appendChild(sourceIcon(src));
+    const label=document.createElement('span');
+    label.textContent=sourceName(src);
+    a.appendChild(label);
+    return a;
+  }
+
+  function originalLogoLink(post){
+    const src=post.source || {};
+    if(!src.url) return null;
+    const a=document.createElement('a');
+    a.className='original-source-logo';
+    a.href=src.url;
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    const name=sourceName(src);
+    a.setAttribute('aria-label',`${copy.original}: ${name}`);
+    a.title=`${copy.original}: ${name}`;
+    a.appendChild(sourceIcon(src));
+    const arrow=document.createElement('span');
+    arrow.className='external-mark';
+    arrow.textContent='↗';
+    arrow.setAttribute('aria-hidden','true');
+    a.appendChild(arrow);
     return a;
   }
 
@@ -147,7 +204,8 @@
       const actions=document.createElement('div'); actions.className='writing-actions';
       const read=document.createElement('a'); read.className='read-full-link'; read.href=detailHref(post,index); read.textContent=`${copy.read} →`; actions.appendChild(read);
       if(post.source?.url){
-        const original=document.createElement('a'); original.className='original-mini-link'; original.href=post.source.url; original.target='_blank'; original.rel='noopener noreferrer'; original.textContent=`${copy.original} ↗`; actions.appendChild(original);
+        const original=originalLogoLink(post);
+        if(original) actions.appendChild(original);
       }
       card.append(meta,title,ex,actions); archive.appendChild(card);
     });
