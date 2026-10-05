@@ -1,5 +1,6 @@
 /* Rendering for Through the Window of Time.
-   Post content itself lives only in posts-data.js. */
+   Post content is authored as one file per writing in /posts.
+   posts-manifest.js is generated automatically for the browser. */
 (() => {
   const posts = Array.isArray(window.windowOfTimePosts) ? window.windowOfTimePosts.slice() : [];
   const lang = document.documentElement.lang === 'bn' ? 'bn' : 'en';
