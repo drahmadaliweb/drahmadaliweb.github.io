@@ -8,7 +8,7 @@
   const copy = lang === 'bn' ? {
     latest: 'সর্বশেষ',
     read: 'পুরোটি পড়ুন',
-    original: 'মূল লেখাটি দেখুন',
+    original: 'মূল লেখাটি পড়ুন',
     back: 'সব লেখা দেখুন',
     empty: 'এখনও কোনো লেখা যোগ করা হয়নি।',
     missing: 'লেখাটি পাওয়া যায়নি।',
@@ -156,6 +156,10 @@
     a.setAttribute('aria-label',`${copy.original}: ${name}`);
     a.title=`${copy.original}: ${name}`;
     a.appendChild(sourceIcon(src));
+    const label=document.createElement('span');
+    label.className='original-source-text';
+    label.textContent=copy.original;
+    a.appendChild(label);
     const arrow=document.createElement('span');
     arrow.className='external-mark';
     arrow.textContent='↗';
