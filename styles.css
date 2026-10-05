@@ -35,3 +35,63 @@
 html[lang="bn"] body{font-family:var(--bangla);line-height:1.8}html[lang="bn"] h1,html[lang="bn"] h2,html[lang="bn"] h3,html[lang="bn"] .hero-role,html[lang="bn"] .brand-mark,html[lang="bn"] .hero-meta strong,html[lang="bn"] .research-index,html[lang="bn"] .award-list>div>span,html[lang="bn"] .big-stat strong,html[lang="bn"] .bio-facts dd,html[lang="bn"] .contact-block a{font-family:var(--bangla)}html[lang="bn"] h1,html[lang="bn"] h2{letter-spacing:-.02em}html[lang="bn"] .eyebrow,html[lang="bn"] .quote-strip p,html[lang="bn"] .credential-card span,html[lang="bn"] .service-card span,html[lang="bn"] .book-series,html[lang="bn"] .book-search span{letter-spacing:.02em;text-transform:none}html[lang="bn"] .nav-links a,html[lang="bn"] .btn,html[lang="bn"] .filter-btn{font-family:var(--bangla)}html[lang="bn"] .page-lead,html[lang="bn"] .section-intro{line-height:1.8}html[lang="bn"] .biography-prose p:not(.eyebrow){font-family:var(--bangla);line-height:1.9}
 @media(max-width:980px){.brand-text small{display:none}.menu-toggle{display:block;color:var(--forest);cursor:pointer}.nav-actions{gap:8px}.nav-links{position:absolute;left:14px;right:14px;top:74px;display:none;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{padding:11px 13px}.nav-links a.active:after{display:none}}
 @media(max-width:420px){.brand-text strong{font-size:.9rem}.brand-mark{width:38px;height:38px}.language-switch{gap:3px;padding:3px}.language-switch a{min-width:26px;padding:5px}.nav-actions{gap:5px}}
+
+/* Refined language toggle: compact utility control above the main navigation */
+.site-header{padding-top:34px}
+.nav-wrap{position:relative}
+.language-switch{
+  position:absolute;
+  top:-27px;
+  right:0;
+  z-index:3;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:0;
+  width:118px;
+  height:27px;
+  padding:2px;
+  border:1px solid rgba(23,63,54,.16);
+  border-radius:999px;
+  background:#eee9df;
+  box-shadow:none;
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  overflow:hidden;
+}
+.language-switch span{display:none}
+.language-switch a{
+  min-width:0;
+  height:21px;
+  padding:0 8px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#69726e;
+  text-decoration:none;
+  line-height:1;
+  transition:background .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.language-switch a.active{
+  background:var(--forest);
+  color:#fff;
+  box-shadow:0 2px 7px rgba(23,63,54,.16);
+}
+.language-switch a:hover:not(.active){
+  color:var(--forest);
+  background:rgba(255,255,255,.6);
+}
+html[lang="bn"] .language-switch{font-family:var(--sans)}
+html[lang="bn"] .language-switch a:last-child{font-family:var(--bangla);font-size:.72rem}
+
+@media(max-width:980px){
+  .site-header{padding-top:32px}
+  .language-switch{top:-26px;right:0;width:112px}
+}
+@media(max-width:420px){
+  .site-header{padding-top:30px}
+  .language-switch{top:-24px;right:0;width:108px;height:25px;padding:2px}
+  .language-switch a{height:19px;padding:0 6px}
+}
