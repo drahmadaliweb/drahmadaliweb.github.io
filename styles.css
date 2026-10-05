@@ -33,7 +33,7 @@
 /* Language switch + Bengali locale */
 .nav-actions{display:flex;align-items:center;gap:14px}.nav-wrap{position:relative}.language-switch{display:flex;align-items:center;gap:6px;flex:0 0 auto;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72);font-size:.68rem;font-weight:700;letter-spacing:.04em}.language-switch a{min-width:29px;padding:5px 7px;border-radius:999px;text-align:center;text-decoration:none;color:var(--muted);line-height:1.1}.language-switch span{color:#aaa49a}.language-switch a.active{background:var(--forest);color:#fff}.language-switch a:hover:not(.active){color:var(--forest);background:var(--ivory)}
 html[lang="bn"] body{font-family:var(--bangla);line-height:1.8}html[lang="bn"] h1,html[lang="bn"] h2,html[lang="bn"] h3,html[lang="bn"] .hero-role,html[lang="bn"] .brand-mark,html[lang="bn"] .hero-meta strong,html[lang="bn"] .research-index,html[lang="bn"] .award-list>div>span,html[lang="bn"] .big-stat strong,html[lang="bn"] .bio-facts dd,html[lang="bn"] .contact-block a{font-family:var(--bangla)}html[lang="bn"] h1,html[lang="bn"] h2{letter-spacing:-.02em}html[lang="bn"] .eyebrow,html[lang="bn"] .quote-strip p,html[lang="bn"] .credential-card span,html[lang="bn"] .service-card span,html[lang="bn"] .book-series,html[lang="bn"] .book-search span{letter-spacing:.02em;text-transform:none}html[lang="bn"] .nav-links a,html[lang="bn"] .btn,html[lang="bn"] .filter-btn{font-family:var(--bangla)}html[lang="bn"] .page-lead,html[lang="bn"] .section-intro{line-height:1.8}html[lang="bn"] .biography-prose p:not(.eyebrow){font-family:var(--bangla);line-height:1.9}
-@media(max-width:980px){.brand-text small{display:none}.menu-toggle{display:block;color:var(--forest);cursor:pointer}.nav-actions{gap:8px}.nav-links{position:absolute;left:14px;right:14px;top:74px;display:none;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{padding:11px 13px}.nav-links a.active:after{display:none}}
+@media(max-width:1120px){.brand-text small{display:none}.menu-toggle{display:block;color:var(--forest);cursor:pointer}.nav-actions{gap:8px}.nav-links{position:absolute;left:14px;right:14px;top:74px;display:none;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{padding:11px 13px}.nav-links a.active:after{display:none}}
 @media(max-width:420px){.brand-text strong{font-size:.9rem}.brand-mark{width:38px;height:38px}.language-switch{gap:3px;padding:3px}.language-switch a{min-width:26px;padding:5px}.nav-actions{gap:5px}}
 
 /* Refined language toggle: compact utility control above the main navigation */
@@ -128,3 +128,27 @@ html[lang="bn"] .updates-ticker,html[lang="bn"] .update-link{font-family:var(--b
 }
 @media(max-width:390px){.update-label{display:none}}
 @media(prefers-reduced-motion:reduce){.update-track{animation-duration:calc(var(--marquee-duration,30s) * 1.35)}}
+
+/* Through the Window of Time / latest Facebook post */
+.window-hero{padding-bottom:72px}
+.post-shell{max-width:900px}
+.facebook-post{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(30px,5vw,64px);box-shadow:0 18px 55px rgba(35,47,42,.07)}
+.post-kicker{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;background:var(--ivory);color:var(--forest);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.facebook-post>h2{font-size:clamp(2rem,4vw,3.4rem);margin:18px 0 20px;line-height:1.16}
+.facebook-source-link{display:inline-flex;align-items:center;gap:10px;margin:0 0 42px;color:#1877f2;text-decoration:none;font-weight:800;font-size:.86rem}
+.facebook-source-link:hover{text-decoration:underline;text-underline-offset:4px}
+.facebook-logo{width:25px;height:25px;display:inline-flex;flex:0 0 auto}
+.facebook-logo svg{width:100%;height:100%;display:block}
+.facebook-logo circle{fill:#1877f2}.facebook-logo path{fill:#fff}
+.post-content{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:#26312d}
+.post-content p{margin:0 0 1.45em}
+.post-content h3{font-size:1.42rem;line-height:1.38;color:var(--forest);margin:2.15em 0 .65em}
+.post-divider{width:72px;height:1px;background:var(--gold);margin:42px 0}
+.post-question{position:relative;padding:14px 18px 14px 42px!important;margin:0 0 10px!important;border-radius:12px;background:var(--ivory);font-family:var(--sans);font-size:.98rem;line-height:1.65}
+.post-question:before{content:'◆';position:absolute;left:17px;top:14px;color:var(--gold);font-size:.7rem}
+html[lang="bn"] .post-content,html[lang="bn"] .facebook-post>h2{font-family:var(--bangla)}
+html[lang="bn"] .post-content{font-size:1.04rem;line-height:2}
+html[lang="bn"] .post-content h3{font-family:var(--bangla);line-height:1.55}
+html[lang="bn"] .post-kicker{font-family:var(--bangla);letter-spacing:0;text-transform:none}
+html[lang="bn"] .facebook-source-link,html[lang="bn"] .post-question{font-family:var(--bangla)}
+@media(max-width:680px){.facebook-post{padding:26px 20px;border-radius:18px}.facebook-post>h2{font-size:1.8rem}.post-content{font-size:1rem}.post-content h3{font-size:1.2rem}.facebook-source-link{margin-bottom:30px}.post-question{padding-left:36px!important}}
