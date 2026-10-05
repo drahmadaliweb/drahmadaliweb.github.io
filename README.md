@@ -14,3 +14,7 @@ A multi-page static academic website for Dr. Ahmad Ali, Professor of Islamic Stu
 - `contact.html` — Contact information
 
 The biography incorporates family-verified biographical details and the supplied academic CV. Rokomari links on the Books page are treated as a partial retail catalog rather than a complete bibliography.
+
+
+## Bilingual English / Bengali
+The website now includes a full Bengali version under `bn/`. Every main page has an EN / বাংলা switch in the top-right navigation. The language switch keeps the visitor on the corresponding page in the selected language.
