@@ -95,3 +95,36 @@ html[lang="bn"] .language-switch a:last-child{font-family:var(--bangla);font-siz
   .language-switch{top:-24px;right:0;width:108px;height:25px;padding:2px}
   .language-switch a{height:19px;padding:0 6px}
 }
+
+/* Top utility row: rotating latest updates + language toggle */
+.site-header{padding-top:0}
+.header-utility{border-bottom:1px solid rgba(221,215,203,.58);background:rgba(245,240,230,.7)}
+.utility-wrap{min-height:36px;display:flex;align-items:center;gap:18px}
+.updates-ticker{display:flex;align-items:center;gap:10px;min-width:0;flex:1;color:#4b5652;font-size:.73rem;font-weight:600}
+.update-label{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;padding:3px 8px;border-radius:999px;background:rgba(176,138,79,.13);color:#85652f;font-size:.63rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.update-viewport{min-width:0;flex:1;overflow:hidden;white-space:nowrap;line-height:1.2}
+.update-link{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;color:#44514d;transition:color .18s ease}
+.update-link:hover{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+.update-link.is-changing{animation:updateSlide .42s ease both}
+@keyframes updateSlide{0%{opacity:0;transform:translateX(18px)}100%{opacity:1;transform:translateX(0)}}
+.header-utility .language-switch{position:static;top:auto;right:auto;z-index:auto;flex:0 0 auto;width:112px;height:27px;margin-left:auto}
+.nav-wrap{min-height:76px}
+html[lang="bn"] .update-label{font-family:var(--bangla);letter-spacing:0;text-transform:none;font-size:.72rem}
+html[lang="bn"] .updates-ticker,html[lang="bn"] .update-link{font-family:var(--bangla);font-size:.78rem}
+@media(max-width:980px){
+  .site-header{padding-top:0}
+  .utility-wrap{min-height:35px;gap:10px}
+  .header-utility .language-switch{position:static;top:auto;right:auto;width:108px}
+  .nav-wrap{min-height:68px}
+}
+@media(max-width:560px){
+  .utility-wrap{width:min(100% - 20px,1160px);gap:8px}
+  .updates-ticker{gap:7px;font-size:.68rem}
+  .update-label{padding:3px 6px;font-size:.56rem}
+  .header-utility .language-switch{width:102px;height:25px}
+  .header-utility .language-switch a{height:19px;padding:0 5px}
+}
+@media(max-width:390px){
+  .update-label{display:none}
+}
+@media(prefers-reduced-motion:reduce){.update-link.is-changing{animation:none}}
