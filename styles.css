@@ -129,26 +129,31 @@ html[lang="bn"] .updates-ticker,html[lang="bn"] .update-link{font-family:var(--b
 @media(max-width:390px){.update-label{display:none}}
 @media(prefers-reduced-motion:reduce){.update-track{animation-duration:calc(var(--marquee-duration,30s) * 1.35)}}
 
-/* Through the Window of Time / latest Facebook post */
+
+/* Through the Window of Time — writing archive and long-form reader */
 .window-hero{padding-bottom:72px}
-.post-shell{max-width:900px}
-.facebook-post{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(30px,5vw,64px);box-shadow:0 18px 55px rgba(35,47,42,.07)}
-.post-kicker{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;background:var(--ivory);color:var(--forest);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.facebook-post>h2{font-size:clamp(2rem,4vw,3.4rem);margin:18px 0 20px;line-height:1.16}
-.facebook-source-link{display:inline-flex;align-items:center;gap:10px;margin:0 0 42px;color:#1877f2;text-decoration:none;font-weight:800;font-size:.86rem}
-.facebook-source-link:hover{text-decoration:underline;text-underline-offset:4px}
-.facebook-logo{width:25px;height:25px;display:inline-flex;flex:0 0 auto}
-.facebook-logo svg{width:100%;height:100%;display:block}
-.facebook-logo circle{fill:#1877f2}.facebook-logo path{fill:#fff}
-.post-content{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:#26312d}
-.post-content p{margin:0 0 1.45em}
-.post-content h3{font-size:1.42rem;line-height:1.38;color:var(--forest);margin:2.15em 0 .65em}
-.post-divider{width:72px;height:1px;background:var(--gold);margin:42px 0}
-.post-question{position:relative;padding:14px 18px 14px 42px!important;margin:0 0 10px!important;border-radius:12px;background:var(--ivory);font-family:var(--sans);font-size:.98rem;line-height:1.65}
-.post-question:before{content:'◆';position:absolute;left:17px;top:14px;color:var(--gold);font-size:.7rem}
-html[lang="bn"] .post-content,html[lang="bn"] .facebook-post>h2{font-family:var(--bangla)}
-html[lang="bn"] .post-content{font-size:1.04rem;line-height:2}
-html[lang="bn"] .post-content h3{font-family:var(--bangla);line-height:1.55}
-html[lang="bn"] .post-kicker{font-family:var(--bangla);letter-spacing:0;text-transform:none}
-html[lang="bn"] .facebook-source-link,html[lang="bn"] .post-question{font-family:var(--bangla)}
-@media(max-width:680px){.facebook-post{padding:26px 20px;border-radius:18px}.facebook-post>h2{font-size:1.8rem}.post-content{font-size:1rem}.post-content h3{font-size:1.2rem}.facebook-source-link{margin-bottom:30px}.post-question{padding-left:36px!important}}
+.writings-shell{max-width:980px}
+.writings-list{display:grid;gap:22px}
+.writing-card{padding:30px 32px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 10px 34px rgba(35,47,42,.045)}
+.writing-card.featured{padding:38px 40px;border-color:rgba(23,63,54,.22);box-shadow:0 18px 48px rgba(35,47,42,.075)}
+.writing-meta{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;color:var(--muted);font-size:.76rem;font-weight:700}
+.latest-chip{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;background:var(--forest);color:#fff;font-size:.64rem;letter-spacing:.07em;text-transform:uppercase}
+.post-source-chip,.post-source-link{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:800}
+.post-source-chip{color:var(--forest2)}
+.post-source-link{color:var(--forest);font-size:.88rem}
+.post-source-chip:hover,.post-source-link:hover{text-decoration:underline;text-underline-offset:4px}
+.source-icon{width:18px;height:18px;display:inline-flex;flex:0 0 auto}.source-icon svg{width:100%;height:100%;display:block}
+.facebook-logo circle{fill:#1877f2}.facebook-logo path{fill:#fff}.generic-source-icon{color:var(--gold)}.generic-source-icon svg{fill:currentColor}
+.writing-card h2{font-size:clamp(1.75rem,3.6vw,2.65rem);line-height:1.22;margin:18px 0 14px;letter-spacing:-.02em}
+.writing-card h2 a{text-decoration:none}.writing-card h2 a:hover{color:var(--forest2)}
+.writing-excerpt{max-width:850px;margin:0;color:#53605b;font-family:var(--serif);font-size:1.03rem;line-height:1.8}
+.writing-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
+.read-full-link,.original-mini-link{font-weight:800;font-size:.84rem;text-underline-offset:4px}.read-full-link{color:var(--forest)}.original-mini-link{color:var(--muted)}
+.post-shell{max-width:900px}.post-back{display:inline-block;margin-bottom:28px;color:var(--forest);font-weight:800;text-underline-offset:5px}
+.longform-post{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(30px,5vw,64px);box-shadow:0 18px 55px rgba(35,47,42,.07)}
+.longform-post h1{font-size:clamp(2.4rem,5vw,4.25rem);line-height:1.13;margin:18px 0 34px;letter-spacing:-.035em}
+.detail-meta{display:flex;align-items:center;flex-wrap:wrap;gap:14px 18px;color:var(--muted);font-size:.82rem;font-weight:700}
+.post-content{font-family:var(--serif);font-size:1.08rem;line-height:1.9;color:#26312d}.post-content p{margin:0 0 1.45em}.post-content h3{font-size:1.42rem;line-height:1.38;color:var(--forest);margin:2.15em 0 .65em}.post-divider{width:72px;height:1px;background:var(--gold);margin:42px 0}.post-question{position:relative;padding:14px 18px 14px 42px!important;margin:0 0 10px!important;border-radius:12px;background:var(--ivory);font-family:var(--sans);font-size:.98rem;line-height:1.65}.post-question:before{content:'◆';position:absolute;left:17px;top:14px;color:var(--gold);font-size:.7rem}
+html[lang="bn"] .writing-card h2,html[lang="bn"] .writing-excerpt,html[lang="bn"] .longform-post h1,html[lang="bn"] .post-content{font-family:var(--bangla)}
+html[lang="bn"] .writing-excerpt{line-height:1.95}html[lang="bn"] .post-content{font-size:1.04rem;line-height:2}html[lang="bn"] .post-content h3{font-family:var(--bangla);line-height:1.55}html[lang="bn"] .post-question{font-family:var(--bangla)}html[lang="bn"] .latest-chip{font-family:var(--bangla);letter-spacing:0;text-transform:none}
+@media(max-width:680px){.writing-card,.writing-card.featured{padding:24px 20px;border-radius:18px}.writing-card h2{font-size:1.65rem}.longform-post{padding:26px 20px;border-radius:18px}.longform-post h1{font-size:2rem}.post-content{font-size:1rem}.post-content h3{font-size:1.2rem}.post-question{padding-left:36px!important}}

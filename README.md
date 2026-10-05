@@ -1,49 +1,64 @@
 # Dr. Ahmad Ali — Academic Website
 
-A multi-page static academic website for Dr. Ahmad Ali, Professor of Islamic Studies at the University of Chittagong.
+A bilingual multi-page static academic website for Dr. Ahmad Ali, Professor of Islamic Studies at the University of Chittagong.
 
-## Pages
+## Main pages
 - `index.html` — Home
-- `about.html` — Concise academic profile and education
-- `biography.html` — Full chronological biography
-- `research.html` — Compatibility redirect to the research section within Profile
-- `books.html` — Books and bibliographic archive
+- `about.html` — Profile + research
+- `biography.html` — Biography
+- `books.html` — Books
 - `publications.html` — Research publications
-- `career.html` — Compatibility redirect to the academic-career section within Biography
-- `service.html` — Editorial and institutional service
-- `contact.html` — Contact information
+- `window-of-time.html` — **Through the Window of Time** writing archive
+- `post.html` — Reusable English full-writing reader
+- `service.html` — Service and affiliations
+- `contact.html` — Contact
+- `bn/` — Bengali versions
 
-The biography incorporates family-verified biographical details and the supplied academic CV. Rokomari links on the Books page are treated as a partial retail catalog rather than a complete bibliography.
+`research.html` and `career.html` remain only as compatibility redirects.
 
-
-## Bilingual English / Bengali
-The website now includes a full Bengali version under `bn/`. Every main page has an EN / বাংলা switch in the top-right navigation. The language switch keeps the visitor on the corresponding page in the selected language.
-
-## Latest updates bar
-The slim top bar beside the EN/বাংলা toggle rotates through recent updates every ~5.5 seconds and pauses on hover/focus. To change the announcements, edit the `siteUpdates` object near the bottom of `script.js`. Each item has `text` and `href`; `href` can point to an internal page or any full external URL.
+## Updating the top announcement ticker
+Edit the `siteUpdates` object in `script.js`. After the current site is deployed, announcement-only changes require uploading only `script.js`.
 
 ## Updating “Through the Window of Time” / “সময়ের সঙ্গে বাতায়ন”
 
-The latest Facebook post is controlled by **one file only**:
+All writing entries are controlled by **one file only**:
 
-`latest-facebook-post.js`
+`posts-data.js`
 
-You do not need to edit the English or Bengali HTML pages when changing the post.
+This archive is designed for Facebook posts, original blog-style writings, magazine articles, newspaper columns, and other published pieces.
 
-For each new post:
+### To add a new writing
+1. Open `posts-data.js`.
+2. Copy the template object at the top of the file.
+3. Set `date` in `YYYY-MM-DD` format, e.g. `2026-10-05`.
+4. Set the source:
+   - `facebook`
+   - `newspaper`
+   - `magazine`
+   - `blog`
+   - `website`
+   - `other`
+5. Put the publication/source name in `label` and its original link in `url`. For an original website-only essay, `url` can be empty.
+6. Paste the Bengali title and full Bengali body.
+7. Paste the English title and English translation.
+8. Commit/upload **only `posts-data.js`** to GitHub.
 
-1. Open `latest-facebook-post.js`.
-2. Replace `facebookUrl` with the new Facebook post URL.
-3. Replace `bn.title` and `bn.body` with the Bengali original.
-4. Replace `en.title` and `en.body` with the English translation.
-5. Commit/upload only `latest-facebook-post.js` to GitHub.
+You do **not** have to keep the objects in chronological order. The website automatically sorts them by date, newest first.
 
-The English page (`window-of-time.html`) and Bengali page (`bn/window-of-time.html`) will update automatically from that file.
+The archive automatically creates:
+- publication date
+- source badge/icon (including the Facebook logo for Facebook posts)
+- a short preview from the beginning of the article
+- **View Full / পুরোটি পড়ুন**
+- an original-source link when supplied
+- an individual full-reading page in both English and Bengali
 
-### Plain-text formatting
-
-You can paste ordinary text into each `body` field. The page formats it automatically:
-- `1.`, `2.`, etc. (and Bengali digits such as `১.`, `২.`) become section headings.
-- A line beginning with `#` becomes a highlighted question/item.
+### Formatting inside `body`
+Paste normal text. The reader formats it automatically:
+- `1.`, `2.`, etc. and Bengali `১.`, `২.` become section headings.
+- Lines beginning with `#` become highlighted points.
 - `*** *** ***` or `<<< >>>` becomes a divider.
 - Blank lines create paragraph spacing.
+
+### Date note for the first sample
+The first existing entry currently uses `2026-10-05` as its date. If the original Facebook post was published on another date, change only that `date` value in `posts-data.js`.
