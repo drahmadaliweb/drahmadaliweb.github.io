@@ -58,3 +58,16 @@ if(ticker){
   ticker.addEventListener('focusin',()=>clearInterval(tickerTimer));
   ticker.addEventListener('focusout',startTicker);
 }
+const siteUpdates={
+  en:[
+    {text:'2026 research: “The Islamization of Existing Laws in Bangladesh”',href:'publications.html'},
+    {text:'New books: Adhunik Chintadhara O Motobad — Volumes I & II',href:'books.html'},
+    {text:'Ongoing project: Zubdatul Bayan — a full Bengali Qur’an tafsir',href:'about.html#research'}
+  ],
+
+  bn:[
+    {text:'২০২৬ গবেষণা: “বাংলাদেশের বিদ্যমান আইন ইসলামিকরণ”',href:'publications.html'},
+    {text:'নতুন গ্রন্থ: আধুনিক চিন্তাধারা ও মতবাদ — ১ম ও ২য় খণ্ড',href:'books.html'},
+    {text:'চলমান প্রকল্প: যুবদাতুল বায়ান — পূর্ণাঙ্গ বাংলা তাফসির',href:'about.html#research'}
+  ]
+};
