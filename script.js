@@ -13,7 +13,7 @@ function applyBooks(){if(!cards.length)return;const q=(search?.value||'').trim()
 filterBtns.forEach(btn=>btn.addEventListener('click',()=>{filterBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;applyBooks();}));
 if(search)search.addEventListener('input',applyBooks);
 
-/* Latest updates ticker
+/* Updates ticker
    Edit only the items below to add/change announcements. Any href works:
    an internal page (e.g. "books.html") or a full external URL. */
 const siteUpdates={
@@ -28,34 +28,49 @@ const siteUpdates={
     {text:'চলমান প্রকল্প: যুবদাতুল বায়ান — পূর্ণাঙ্গ বাংলা তাফসির',href:'about.html#research'}
   ]
 };
+
 const ticker=document.querySelector('.updates-ticker');
 if(ticker){
   const lang=ticker.dataset.lang==='bn'?'bn':'en';
   const items=siteUpdates[lang]||siteUpdates.en;
   const link=ticker.querySelector('.update-link');
+  const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let updateIndex=0;
-  let tickerTimer;
+  let tickerTimer=null;
+
   const renderUpdate=(index,animate=true)=>{
     if(!link||!items.length)return;
     const item=items[index%items.length];
     link.textContent=item.text+'  →';
     link.href=item.href;
-    if(animate){
-      link.classList.remove('is-changing');
+    link.classList.remove('is-changing');
+    if(animate&&!reduceMotion){
       void link.offsetWidth;
       link.classList.add('is-changing');
     }
   };
-  const startTicker=()=>{
-    if(items.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    clearInterval(tickerTimer);
-    tickerTimer=setInterval(()=>{updateIndex=(updateIndex+1)%items.length;renderUpdate(updateIndex,true);},5500);
+
+  const advanceUpdate=()=>{
+    updateIndex=(updateIndex+1)%items.length;
+    renderUpdate(updateIndex,true);
   };
+
+  const startTicker=()=>{
+    if(items.length<2)return;
+    if(tickerTimer)clearInterval(tickerTimer);
+    tickerTimer=setInterval(advanceUpdate,4500);
+  };
+
   renderUpdate(0,false);
   startTicker();
-  ticker.addEventListener('mouseenter',()=>clearInterval(tickerTimer));
-  ticker.addEventListener('mouseleave',startTicker);
-  ticker.addEventListener('focusin',()=>clearInterval(tickerTimer));
-  ticker.addEventListener('focusout',startTicker);
-}
 
+  /* Keep content rotation active even when reduced-motion is enabled.
+     Reduced-motion only disables the slide animation itself. */
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){
+      if(tickerTimer)clearInterval(tickerTimer);
+    }else{
+      startTicker();
+    }
+  });
+}
