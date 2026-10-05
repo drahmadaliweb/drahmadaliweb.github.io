@@ -96,17 +96,19 @@ html[lang="bn"] .language-switch a:last-child{font-family:var(--bangla);font-siz
   .language-switch a{height:19px;padding:0 6px}
 }
 
-/* Top utility row: rotating latest updates + language toggle */
+/* Top utility row: continuously scrolling updates + language toggle */
 .site-header{padding-top:0}
 .header-utility{border-bottom:1px solid rgba(221,215,203,.58);background:rgba(245,240,230,.7)}
 .utility-wrap{min-height:36px;display:flex;align-items:center;gap:18px}
-.updates-ticker{display:flex;align-items:center;gap:10px;min-width:0;flex:1;color:#4b5652;font-size:.73rem;font-weight:600}
-.update-label{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;padding:4px 9px;border-radius:6px;background:var(--forest);color:#fff;font-size:.63rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 2px 7px rgba(23,63,54,.14)}
-.update-viewport{min-width:0;flex:1;overflow:hidden;white-space:nowrap;line-height:1.2}
-.update-link{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;color:#44514d;transition:color .18s ease}
-.update-link:hover{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
-.update-link.is-changing{animation:updateSlide .42s ease both}
-@keyframes updateSlide{0%{opacity:0;transform:translateX(18px)}100%{opacity:1;transform:translateX(0)}}
+.updates-ticker{display:flex;align-items:center;gap:10px;min-width:0;flex:1;color:#4b5652;font-size:.73rem;font-weight:600;overflow:hidden}
+.update-label{position:relative;z-index:2;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;padding:4px 9px;border-radius:6px;background:var(--forest);color:#fff;font-size:.63rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 2px 7px rgba(23,63,54,.14)}
+.update-viewport{position:relative;min-width:0;flex:1;overflow:hidden;white-space:nowrap;line-height:1.2}
+.update-track{display:flex;align-items:center;width:max-content;will-change:transform;animation:tickerMarquee var(--marquee-duration,30s) linear infinite}
+.update-set{display:flex;align-items:center;flex:0 0 auto;width:max-content}
+.update-link{display:inline-block;flex:0 0 auto;text-decoration:none;color:#44514d;white-space:nowrap;transition:color .18s ease}
+.update-link:hover,.update-link:focus-visible{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+.update-gap{display:inline-block;flex:0 0 auto;white-space:pre}
+@keyframes tickerMarquee{from{transform:translateX(0)}to{transform:translateX(var(--marquee-shift,-500px))}}
 .header-utility .language-switch{position:static;top:auto;right:auto;z-index:auto;flex:0 0 auto;width:112px;height:27px;margin-left:auto}
 .nav-wrap{min-height:76px}
 html[lang="bn"] .update-label{font-family:var(--bangla);letter-spacing:0;text-transform:none;font-size:.72rem}
@@ -124,7 +126,5 @@ html[lang="bn"] .updates-ticker,html[lang="bn"] .update-link{font-family:var(--b
   .header-utility .language-switch{width:102px;height:25px}
   .header-utility .language-switch a{height:19px;padding:0 5px}
 }
-@media(max-width:390px){
-  .update-label{display:none}
-}
-@media(prefers-reduced-motion:reduce){.update-link.is-changing{animation:none}}
+@media(max-width:390px){.update-label{display:none}}
+@media(prefers-reduced-motion:reduce){.update-track{animation-duration:calc(var(--marquee-duration,30s) * 1.35)}}

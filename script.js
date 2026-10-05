@@ -13,7 +13,7 @@ function applyBooks(){if(!cards.length)return;const q=(search?.value||'').trim()
 filterBtns.forEach(btn=>btn.addEventListener('click',()=>{filterBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;applyBooks();}));
 if(search)search.addEventListener('input',applyBooks);
 
-/* Updates ticker
+/* Updates ticker / continuous marquee
    Edit only the items below to add/change announcements. Any href works:
    an internal page (e.g. "books.html") or a full external URL. */
 const siteUpdates={
@@ -33,44 +33,74 @@ const ticker=document.querySelector('.updates-ticker');
 if(ticker){
   const lang=ticker.dataset.lang==='bn'?'bn':'en';
   const items=siteUpdates[lang]||siteUpdates.en;
-  const link=ticker.querySelector('.update-link');
-  const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let updateIndex=0;
-  let tickerTimer=null;
+  const viewport=ticker.querySelector('.update-viewport');
 
-  const renderUpdate=(index,animate=true)=>{
-    if(!link||!items.length)return;
-    const item=items[index%items.length];
-    link.textContent=item.text+'  →';
-    link.href=item.href;
-    link.classList.remove('is-changing');
-    if(animate&&!reduceMotion){
-      void link.offsetWidth;
-      link.classList.add('is-changing');
+  if(viewport&&items.length){
+    /* Ten visible spaces separate every announcement, including the loop seam. */
+    const spacer='\u00A0'.repeat(10);
+
+    const makeSet=(duplicate=false)=>{
+      const set=document.createElement('div');
+      set.className='update-set';
+      items.forEach((item)=>{
+        const link=document.createElement('a');
+        link.className='update-link';
+        link.href=item.href;
+        link.textContent=item.text;
+        if(duplicate)link.tabIndex=-1;
+        set.appendChild(link);
+
+        const gap=document.createElement('span');
+        gap.className='update-gap';
+        gap.setAttribute('aria-hidden','true');
+        gap.textContent=spacer;
+        set.appendChild(gap);
+      });
+      return set;
+    };
+
+    viewport.replaceChildren();
+    viewport.removeAttribute('aria-live');
+
+    const track=document.createElement('div');
+    track.className='update-track';
+    const firstSet=makeSet(false);
+    const secondSet=makeSet(true);
+    secondSet.setAttribute('aria-hidden','true');
+    track.append(firstSet,secondSet);
+    viewport.appendChild(track);
+
+    /* Keep a common timeline in localStorage so changing pages does not restart
+       the banner at announcement #1. */
+    const epochKey=`ahmadAliUpdatesEpoch:${lang}`;
+    let epoch=0;
+    try{epoch=Number(localStorage.getItem(epochKey));}catch(_e){}
+    if(!Number.isFinite(epoch)||epoch<=0){
+      epoch=Date.now();
+      try{localStorage.setItem(epochKey,String(epoch));}catch(_e){}
     }
-  };
 
-  const advanceUpdate=()=>{
-    updateIndex=(updateIndex+1)%items.length;
-    renderUpdate(updateIndex,true);
-  };
+    const startMarquee=()=>{
+      const cycleWidth=firstSet.getBoundingClientRect().width;
+      if(!cycleWidth)return;
 
-  const startTicker=()=>{
-    if(items.length<2)return;
-    if(tickerTimer)clearInterval(tickerTimer);
-    tickerTimer=setInterval(advanceUpdate,4500);
-  };
+      const pixelsPerSecond=48;
+      const duration=cycleWidth/pixelsPerSecond;
+      const elapsed=(Date.now()-epoch)/1000;
+      const phase=((elapsed%duration)+duration)%duration;
 
-  renderUpdate(0,false);
-  startTicker();
+      track.style.setProperty('--marquee-shift',`-${cycleWidth}px`);
+      track.style.setProperty('--marquee-duration',`${duration}s`);
+      track.style.animationDelay=`-${phase}s`;
+      ticker.classList.add('marquee-ready');
+    };
 
-  /* Keep content rotation active even when reduced-motion is enabled.
-     Reduced-motion only disables the slide animation itself. */
-  document.addEventListener('visibilitychange',()=>{
-    if(document.hidden){
-      if(tickerTimer)clearInterval(tickerTimer);
+    /* Wait for web fonts when possible, because Bengali/Latin font widths affect
+       the exact seamless-loop distance. */
+    if(document.fonts&&document.fonts.ready){
+      document.fonts.ready.then(()=>requestAnimationFrame(startMarquee));
     }else{
-      startTicker();
+      requestAnimationFrame(startMarquee);
     }
-  });
+  }
 }
