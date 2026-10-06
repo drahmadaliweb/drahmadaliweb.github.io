@@ -22,12 +22,12 @@
   const categoryName=value=>isBn?(categoryBn[value]||value):value;
 
   const copy=isBn?{
-    all:'সব',details:'বিস্তারিত দেখুন',preview:'প্রিভিউ',pdf:'PDF',audio:'অডিওবুক',rokomari:'রকমারি',
+    all:'সব',details:'বিস্তারিত দেখুন',preview:'প্রিভিউ',pdf:'PDF',audio:'অডিওবুক',rokomari:'রকমারি',publisherLink:'প্রকাশক',order:'অর্ডার করুন',
     back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',binding:'বাঁধাই',country:'দেশ',language:'ভাষা',category:'বিষয়',
     listen:'অডিওবুক',readPdf:'PDF পড়ুন',openPreview:'প্রিভিউ দেখুন',missing:'গ্রন্থের বিস্তারিত তথ্য পাওয়া যায়নি।',forthcoming:'প্রকাশিতব্য',ongoing:'চলমান',
     catalog:'গ্রন্থ তালিকা',catalogNote:'বিষয় অনুসারে প্রকাশিত গ্রন্থসমূহ দেখুন।',noMatch:'কোনো মিলযুক্ত গ্রন্থ পাওয়া যায়নি।',external:'বাহ্যিক লিংক'
   }:{
-    all:'All',details:'View Details',preview:'Preview',pdf:'PDF',audio:'Audiobook',rokomari:'Rokomari',
+    all:'All',details:'View Details',preview:'Preview',pdf:'PDF',audio:'Audiobook',rokomari:'Rokomari',publisherLink:'Publisher',order:'Order Here',
     back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',isbn:'ISBN',edition:'Edition',pages:'Pages',binding:'Binding',country:'Country',language:'Language',category:'Category',
     listen:'Audiobook',readPdf:'Read PDF',openPreview:'Preview',missing:'Detailed information for this book is not available.',forthcoming:'Forthcoming',ongoing:'Ongoing',
     catalog:'Book catalog',catalogNote:'Browse published works by topic.',noMatch:'No matching books found.',external:'External links'
@@ -172,10 +172,10 @@
       if(m.preview){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.preview);a.target='_blank';a.rel='noopener';a.textContent=copy.openPreview;actions.appendChild(a);}
       if(m.pdf){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.pdf);a.target='_blank';a.rel='noopener';a.textContent=copy.readPdf;actions.appendChild(a);}
       if(Array.isArray(m.audio)&&m.audio.some(t=>t?.url)){const a=document.createElement('a');a.className='btn secondary';a.href='#audio';a.textContent=copy.listen;actions.appendChild(a);}
-      const links=[];
-      if(Array.isArray(book.links))book.links.forEach(x=>x?.url&&links.push(x));
-      if(book.rokomariUrl&&!links.some(x=>x.url===book.rokomariUrl))links.push({label:'Rokomari',labelBn:'রকমারি',url:book.rokomariUrl});
-      links.forEach(link=>{const a=document.createElement('a');a.className='btn quiet';a.href=link.url;a.target='_blank';a.rel='noopener';a.textContent=`${isBn?(link.labelBn||link.label):(link.label||link.labelBn)} ↗`;actions.appendChild(a);});
+      const publisherLink=Array.isArray(book.links)?book.links.find(x=>x?.url&&/^publisher(?:\s+catalog)?$/i.test(String(x.label||''))):null;
+      if(publisherLink){const a=document.createElement('a');a.className='btn quiet';a.href=publisherLink.url;a.target='_blank';a.rel='noopener';a.textContent=`${copy.publisherLink} ↗`;actions.appendChild(a);}
+      if(book.rokomariUrl){const a=document.createElement('a');a.className='btn quiet';a.href=book.rokomariUrl;a.target='_blank';a.rel='noopener';a.textContent=`${copy.rokomari} ↗`;actions.appendChild(a);}
+      const order=document.createElement('a');order.className='btn primary';order.href=`contact.html?subject=book-order&bookId=${encodeURIComponent(book.id)}#inquiry-form`;order.textContent=copy.order;actions.appendChild(order);
       actions.hidden=!actions.children.length;
     }
 

@@ -6,18 +6,7 @@ export default {
   "category": "Aqidah & Thought",
   "series": "usulul-iman",
   "rokomariUrl": "https://www.rokomari.com/book/305723",
-  "links": [
-    {
-      "label": "PBS",
-      "labelBn": "পিবিএস",
-      "url": "https://pbs.com.bd/book/2305333/usulul-iman-2nd-part"
-    },
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/64acdd276f3911eea35e2a6c60b8696b/usulul-iman-2nd.html"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Usul al-Iman — Volume 2",
     "originalTitle": "উসূলুল ঈমান — ২য় খণ্ড",

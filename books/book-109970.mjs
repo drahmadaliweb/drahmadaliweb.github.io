@@ -6,13 +6,7 @@ export default {
   "category": "Governance & Society",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/109970/sarbovoumotto-islami-dristikon",
-  "links": [
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/5397eeea186f11edb3ec2a6c60b8696b/sarbovoumotto-islami-dristikon.html"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Sovereignty: An Islamic Perspective",
     "originalTitle": "সার্বভৌমত্ব: ইসলামী দৃষ্টিকোণ",

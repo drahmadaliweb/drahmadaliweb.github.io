@@ -8,8 +8,8 @@ export default {
   "rokomariUrl": "https://www.rokomari.com/book/574219",
   "links": [
     {
-      "label": "ILRC Publications",
-      "labelBn": "আইএলআরসি প্রকাশনা",
+      "label": "Publisher",
+      "labelBn": "প্রকাশক",
       "url": "https://ilrcbd.org/en/publications/"
     }
   ],

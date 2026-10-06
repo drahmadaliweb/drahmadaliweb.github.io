@@ -6,13 +6,7 @@ export default {
   "category": "Fiqh & Law",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/45163",
-  "links": [
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/a6edb68617c811edb3ec2a6c60b8696b/islamer-shasti-ayin.html"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Islamic Penal Law",
     "originalTitle": "ইসলামের শাস্তি আইন",

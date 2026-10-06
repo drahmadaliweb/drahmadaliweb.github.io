@@ -8,8 +8,8 @@ export default {
   "rokomariUrl": "https://www.rokomari.com/book/187234/tulonamulok-fiqho",
   "links": [
     {
-      "label": "ILRC",
-      "labelBn": "আইএলআরসি",
+      "label": "Publisher",
+      "labelBn": "প্রকাশক",
       "url": "https://ilrcbd.org/product/tulonamulok-fiqh-1st-part/"
     }
   ],

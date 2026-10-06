@@ -6,13 +6,7 @@ export default {
   "category": "Qur’an & Tafsir",
   "series": "zubdatul-bayan",
   "rokomariUrl": "https://www.rokomari.com/book/185781/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir/",
-  "links": [
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/78a7a7c13f5611edb3ec2a6c60b8696b/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir.html"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Zubdat al-Bayan fi Idah Umm al-Qur’an",
     "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহি উম্মিল কুরআন",

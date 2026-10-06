@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=20261008-header-consistency" rel="stylesheet"/>
+<link href="styles.css?v=20261009-order-form" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header" id="top"><div class="header-utility"><div class="utility-wrap container"><div aria-label="Latest updates" class="updates-ticker" data-lang="en"><span class="update-label">Updates</span><div class="update-viewport"></div></div><a aria-label="Search site" class="site-search-control" href="search.html">⌕  Search</a><div aria-label="Language" class="language-switch"><a aria-current="page" class="active" href="contact.html">EN</a><span aria-hidden="true">/</span><a href="bn/contact.html">বাংলা</a></div></div></div>
@@ -27,6 +27,28 @@
 <article class="contact-block reveal"><p class="eyebrow">Institution</p><h2>University of Chittagong</h2><p>Professor<br/>Department of Islamic Studies<br/>University of Chittagong<br/>Chattogram 4331, Bangladesh</p></article>
 <article class="contact-block reveal delay-1"><p class="eyebrow">Email</p><h2>Write to Dr. Ali</h2><a href="mailto:ahmadali@cu.ac.bd">ahmadali@cu.ac.bd</a><a href="mailto:drahmadiscu@gmail.com">drahmadiscu@gmail.com</a><p class="privacy-note">This public website intentionally does not display his residential address or private personal details.</p></article>
 </div></section>
+<section class="section-pad contact-form-section" id="inquiry-form">
+<div class="container contact-form-layout">
+<div class="contact-form-intro reveal">
+<p class="eyebrow">Inquiry &amp; Book Order</p>
+<h2>Send a message.</h2>
+<p>Use this form for book orders, academic discussion, questions, or other correspondence. Fields marked with <strong>*</strong> are required.</p>
+<p class="form-privacy">Information submitted here is used only to respond to your inquiry or process your book request.</p>
+</div>
+<form class="contact-form reveal delay-1" id="contactForm" novalidate>
+<div class="form-grid">
+<label class="form-field"><span>Full Name <b>*</b></span><input autocomplete="name" id="fullName" name="full_name" required type="text"/></label>
+<label class="form-field"><span>Email <b>*</b></span><input autocomplete="email" id="email" name="email" required type="email"/></label>
+<label class="form-field"><span>Phone Number</span><input autocomplete="tel" id="phone" name="phone" type="tel"/></label>
+<label class="form-field"><span>Subject <b>*</b></span><select id="subject" name="subject" required><option value="">Select a subject</option><option value="book-order">Book Order</option><option value="academic-discussion">Academic Discussion / Inquiry</option><option value="question">Question for Dr. Ahmad Ali</option><option value="other">Other</option></select></label>
+<label class="form-field form-field-wide book-title-field" id="bookTitleField" hidden><span>Book</span><input id="bookTitle" name="book_title" type="text" placeholder="Book title"/></label>
+<label class="form-field form-field-wide"><span>Message <b>*</b></span><textarea id="message" name="message" required rows="7" placeholder="Select a subject above, then tell us how we can help."></textarea><small id="messageHelp">Please provide enough detail for an appropriate response.</small></label>
+</div>
+<input aria-hidden="true" autocomplete="off" class="form-honeypot" id="websiteField" name="_honey" tabindex="-1" type="text"/>
+<div class="form-submit-row"><button class="btn primary" id="contactSubmit" type="submit">Submit</button><p aria-live="polite" class="form-status" id="formStatus"></p></div>
+</form>
+</div>
+</section>
 <section class="cv-banner"><div class="container reveal"><div><p class="eyebrow">Academic CV</p><h2>Need the full professional record?</h2></div><a class="btn primary" href="assets/Dr_Ahmad_Ali_CV.pdf" rel="noopener" target="_blank">Download / View CV ↗</a></div></section>
 </main>
 <footer>
@@ -35,6 +57,6 @@
 <div class="footer-links"><a href="assets/Dr_Ahmad_Ali_CV.pdf" rel="noopener" target="_blank">CV</a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div>
 </div>
 </footer>
-<script src="updates-manifest.js?v=20261005-updates"></script><script src="script.js?v=20261006-library"></script>
+<script src="books-manifest.js?v=20261009-order-form"></script><script src="contact-form.js?v=20261009-order-form"></script><script src="updates-manifest.js?v=20261005-updates"></script><script src="script.js?v=20261006-library"></script>
 </body>
 </html>

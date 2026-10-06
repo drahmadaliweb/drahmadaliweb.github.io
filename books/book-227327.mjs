@@ -6,13 +6,7 @@ export default {
   "category": "Islamic Thought",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/227327/prokrito-alimer-sondhane",
-  "links": [
-    {
-      "label": "PBS",
-      "labelBn": "পিবিএস",
-      "url": "https://www.pbs.com.bd/book/2204470/prokrito-alimer-sondhane"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "In Search of the True Scholar",
     "originalTitle": "প্রকৃত আলিমের সন্ধানে",

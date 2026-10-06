@@ -6,13 +6,7 @@ export default {
   "category": "Qur’an & Tafsir",
   "series": "zubdatul-bayan",
   "rokomariUrl": "https://www.rokomari.com/book/234566/zubdatul-bayan-fee-eedahil-quran",
-  "links": [
-    {
-      "label": "Mamun Books",
-      "labelBn": "মামুন বুকস",
-      "url": "https://mamunbooks.com/product-details/23509--"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Zubdat al-Bayan fi Idah al-Qur’an — Volume 2",
     "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",

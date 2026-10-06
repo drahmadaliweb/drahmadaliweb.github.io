@@ -6,18 +6,7 @@ export default {
   "category": "Aqidah & Thought",
   "series": "usulul-iman",
   "rokomariUrl": "https://www.rokomari.com/book/394656",
-  "links": [
-    {
-      "label": "PBS",
-      "labelBn": "পিবিএস",
-      "url": "https://pbs.com.bd/book/2402475/usulul-iman-4th-part"
-    },
-    {
-      "label": "Progoti Boighor",
-      "labelBn": "প্রগতি বইঘর",
-      "url": "https://progotiboighor.com/books/usulul-iman-4th-part/"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Usul al-Iman — Volume 4",
     "originalTitle": "উসূলুল ঈমান — ৪র্থ খণ্ড",

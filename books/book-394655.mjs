@@ -6,18 +6,7 @@ export default {
   "category": "Aqidah & Thought",
   "series": "usulul-iman",
   "rokomariUrl": "https://www.rokomari.com/book/394655",
-  "links": [
-    {
-      "label": "Wafilife",
-      "labelBn": "ওয়াফিলাইফ",
-      "url": "https://www.wafilife.com/usulul-iman-3rd-part/pd/32920"
-    },
-    {
-      "label": "Progoti Boighor",
-      "labelBn": "প্রগতি বইঘর",
-      "url": "https://progotiboighor.com/books/usulul-iman-3rd-part/"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Usul al-Iman — Volume 3",
     "originalTitle": "উসূলুল ঈমান — ৩য় খণ্ড",

@@ -6,18 +6,7 @@ export default {
   "category": "Spirituality",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/189588/tasaufer-sborup",
-  "links": [
-    {
-      "label": "Chittagong University Library",
-      "labelBn": "চট্টগ্রাম বিশ্ববিদ্যালয় গ্রন্থাগার",
-      "url": "https://koha.cu.ac.bd/bib/103411"
-    },
-    {
-      "label": "Boishala",
-      "labelBn": "বইশালা",
-      "url": "https://www.boishala.com/book/377463/"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "The Nature of Tasawwuf",
     "originalTitle": "তাসাউফের স্বরূপ",

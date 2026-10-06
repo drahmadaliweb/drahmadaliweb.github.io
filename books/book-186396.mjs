@@ -8,8 +8,8 @@ export default {
   "rokomariUrl": "https://www.rokomari.com/book/186396",
   "links": [
     {
-      "label": "ILRC",
-      "labelBn": "আইএলআরসি",
+      "label": "Publisher",
+      "labelBn": "প্রকাশক",
       "url": "https://ilrcbd.org/product/bidat-1st-part/"
     }
   ],

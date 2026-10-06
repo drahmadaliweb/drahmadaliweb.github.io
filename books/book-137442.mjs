@@ -6,18 +6,7 @@ export default {
   "category": "Spirituality",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/137442",
-  "links": [
-    {
-      "label": "eBoighar",
-      "labelBn": "ইবইঘর",
-      "url": "https://www.eboighar.com/index.php/booksdetails/46923/%E0%A6%A4%E0%A6%BE%E0%A6%AF%E0%A6%95%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A4%E0%A7%81%E0%A6%A8-%E0%A6%A8%E0%A6%BE%E0%A6%AB%E0%A6%B8"
-    },
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/85319dd817c911edb3ec2a6c60b8696b/tazkiatun-nafs"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Tazkiyat al-Nafs",
     "originalTitle": "তাযকিয়াতুন নাফস",

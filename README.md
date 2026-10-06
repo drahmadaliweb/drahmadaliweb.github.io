@@ -213,3 +213,10 @@ source: {
   url: ''
 }
 ```
+
+
+## Contact / book-order form
+
+The shared bilingual contact form is implemented on `contact.html` and `bn/contact.html`. Book-detail **Order Here / অর্ডার করুন** buttons deep-link to the same form with the selected book prefilled.
+
+Form submissions are sent from GitHub Pages through FormSubmit to `drahmadiscu@gmail.com`. On the **first live submission**, FormSubmit sends a one-time activation/confirmation email to that inbox. Confirm it once; subsequent submissions are delivered automatically. The form includes required-field validation, a honeypot field, dynamic subject-specific guidance, and an in-page success/error message.

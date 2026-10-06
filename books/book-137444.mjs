@@ -6,18 +6,7 @@ export default {
   "category": "Islamic Ethics & Society",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/137444/islamer-drestite-pohak-porda-o-sajsojja",
-  "links": [
-    {
-      "label": "Kitabghor",
-      "labelBn": "কিতাবঘর",
-      "url": "https://www.kitabghor.com/products/details/3e476fbe17df11edb3ec2a6c60b8696b/islamer-drestite-pohak-porda-o-sajsojja.html"
-    },
-    {
-      "label": "Wafilife",
-      "labelBn": "ওয়াফিলাইফ",
-      "url": "https://www.wafilife.com/islamer-dristy-te-posak-porda-o-sajsojja/pd/1090"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Clothing, Veiling and Adornment in the Light of Islam",
     "originalTitle": "ইসলামের দৃষ্টিতে পোশাক পর্দা ও সাজসজ্জা",

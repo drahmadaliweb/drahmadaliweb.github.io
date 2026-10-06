@@ -6,13 +6,7 @@ export default {
   "category": "Arabic Language & Literature",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/161012/muslim-lipikala-utpatti-o-bikash/",
-  "links": [
-    {
-      "label": "Mamun Books",
-      "labelBn": "মামুন বুকস",
-      "url": "https://mamunbooks.com/index.php/product-details/30610--"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Muslim Calligraphy: Origin and Development",
     "originalTitle": "মুসলিম লিপিকলা: উৎপত্তি ও বিকাশ",

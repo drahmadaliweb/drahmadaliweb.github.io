@@ -6,13 +6,7 @@ export default {
   "category": "Fiqh & Law",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/192236/namaze-cheyarer-byobohar",
-  "links": [
-    {
-      "label": "Boishala",
-      "labelBn": "বইশালা",
-      "url": "https://www.boishala.com/book/374966/"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Using a Chair in Prayer",
     "originalTitle": "নামাযে চেয়ারের ব্যবহার",

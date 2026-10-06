@@ -6,18 +6,7 @@ export default {
   "category": "Governance & Society",
   "series": null,
   "rokomariUrl": "https://www.rokomari.com/book/189691/gonotontro-islami-drishtikon",
-  "links": [
-    {
-      "label": "Wafilife",
-      "labelBn": "ওয়াফিলাইফ",
-      "url": "https://www.wafilife.com/gonotontro-islami-dristikon/pd/5507"
-    },
-    {
-      "label": "Boishala",
-      "labelBn": "বইশালা",
-      "url": "https://www.boishala.com/book/377364/"
-    }
-  ],
+  "links": [],
   "en": {
     "title": "Democracy: An Islamic Perspective",
     "originalTitle": "গণতন্ত্র: ইসলামী দৃষ্টিকোণ",

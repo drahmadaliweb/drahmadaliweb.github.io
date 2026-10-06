@@ -147,13 +147,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/109961/abu-bakor-assidik-rh",
     "links": [
       {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/7878021f17a411edb3ec2a6c60b8696b/abu-bakor-assidik-rh.html"
-      },
-      {
-        "label": "Publisher catalog",
-        "labelBn": "প্রকাশকের তালিকা",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://www.dhakabic.com/book-list-table"
       }
     ],
@@ -197,13 +192,7 @@ window.ahmadAliBookDetails = [
     "category": "Islamic Thought",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/281303/alim-somajer-oikko",
-    "links": [
-      {
-        "label": "Falastin",
-        "labelBn": "ফালাস্তিন",
-        "url": "https://www.falastin.com.bd/product/%E0%A6%86%E0%A6%B2%E0%A6%BF%E0%A6%AE-%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%B0-%E0%A6%90%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%85%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A7%9F-%E0%A6%93-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE-%3A-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BF%E0%A6%A4-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Unity among the Ulama",
       "originalTitle": "আলিম সমাজের ঐক্য",
@@ -244,13 +233,7 @@ window.ahmadAliBookDetails = [
     "category": "Qur’an & Hadith",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/45164",
-    "links": [
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/184adf3417a511edb3ec2a6c60b8696b/ilmul-tafsir-ilmul-hadis-ilmul-fikoh.html"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "The Sciences of Tafsir, Hadith and Fiqh",
       "originalTitle": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
@@ -332,13 +315,7 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/510823/islami-bankinge-sharia-poripalon-o-longon-somossa-o-uttoron-vabna",
-    "links": [
-      {
-        "label": "Prothoma",
-        "labelBn": "প্রথমা",
-        "url": "https://www.prothoma.com/shop/islami-bankinge-sharia-poripalon-o-longon-somossa-o-uttoron-vabna-77442"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Shariah Compliance and Violations in Islamic Banking",
       "originalTitle": "ইসলামী ব্যাংকিংয়ে শরীয়া পরিপালন ও লঙ্ঘন : সমস্যা ও উত্তরণ ভাবনা",
@@ -378,13 +355,7 @@ window.ahmadAliBookDetails = [
     "category": "Governance & Society",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/45172/islami-rastre-omuslim-nagoriker-odhikar-o-morjada",
-    "links": [
-      {
-        "label": "eBoighar",
-        "labelBn": "ইবইঘর",
-        "url": "https://eboighar.com/bn/booksdetails/46917"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Rights and Dignity of Non-Muslim Citizens in an Islamic State",
       "originalTitle": "ইসলামী রাষ্ট্রে অমুসলিম নাগরিকের অধিকার ও মর্যাদা",
@@ -430,11 +401,6 @@ window.ahmadAliBookDetails = [
         "label": "Publisher",
         "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/publications-2/"
-      },
-      {
-        "label": "Boishala",
-        "labelBn": "বইশালা",
-        "url": "https://www.boishala.com/book/379345/"
       }
     ],
     "en": {
@@ -477,18 +443,7 @@ window.ahmadAliBookDetails = [
     "category": "Islamic Ethics & Society",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/137444/islamer-drestite-pohak-porda-o-sajsojja",
-    "links": [
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/3e476fbe17df11edb3ec2a6c60b8696b/islamer-drestite-pohak-porda-o-sajsojja.html"
-      },
-      {
-        "label": "Wafilife",
-        "labelBn": "ওয়াফিলাইফ",
-        "url": "https://www.wafilife.com/islamer-dristy-te-posak-porda-o-sajsojja/pd/1090"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Clothing, Veiling and Adornment in the Light of Islam",
       "originalTitle": "ইসলামের দৃষ্টিতে পোশাক পর্দা ও সাজসজ্জা",
@@ -529,13 +484,7 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/45163",
-    "links": [
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/a6edb68617c811edb3ec2a6c60b8696b/islamer-shasti-ayin.html"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Islamic Penal Law",
       "originalTitle": "ইসলামের শাস্তি আইন",
@@ -617,18 +566,7 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/305723",
-    "links": [
-      {
-        "label": "PBS",
-        "labelBn": "পিবিএস",
-        "url": "https://pbs.com.bd/book/2305333/usulul-iman-2nd-part"
-      },
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/64acdd276f3911eea35e2a6c60b8696b/usulul-iman-2nd.html"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Usul al-Iman — Volume 2",
       "originalTitle": "উসূলুল ঈমান — ২য় খণ্ড",
@@ -669,18 +607,7 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/394655",
-    "links": [
-      {
-        "label": "Wafilife",
-        "labelBn": "ওয়াফিলাইফ",
-        "url": "https://www.wafilife.com/usulul-iman-3rd-part/pd/32920"
-      },
-      {
-        "label": "Progoti Boighor",
-        "labelBn": "প্রগতি বইঘর",
-        "url": "https://progotiboighor.com/books/usulul-iman-3rd-part/"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Usul al-Iman — Volume 3",
       "originalTitle": "উসূলুল ঈমান — ৩য় খণ্ড",
@@ -721,18 +648,7 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/394656",
-    "links": [
-      {
-        "label": "PBS",
-        "labelBn": "পিবিএস",
-        "url": "https://pbs.com.bd/book/2402475/usulul-iman-4th-part"
-      },
-      {
-        "label": "Progoti Boighor",
-        "labelBn": "প্রগতি বইঘর",
-        "url": "https://progotiboighor.com/books/usulul-iman-4th-part/"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Usul al-Iman — Volume 4",
       "originalTitle": "উসূলুল ঈমান — ৪র্থ খণ্ড",
@@ -799,7 +715,8 @@ window.ahmadAliBookDetails = [
       "preview": null,
       "pdf": null,
       "audio": []
-    }
+    },
+    "links": []
   },
   {
     "id": "usulul-iman-vol-6",
@@ -835,7 +752,8 @@ window.ahmadAliBookDetails = [
       "preview": null,
       "pdf": null,
       "audio": []
-    }
+    },
+    "links": []
   },
   {
     "id": "book-189691",
@@ -845,18 +763,7 @@ window.ahmadAliBookDetails = [
     "category": "Governance & Society",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/189691/gonotontro-islami-drishtikon",
-    "links": [
-      {
-        "label": "Wafilife",
-        "labelBn": "ওয়াফিলাইফ",
-        "url": "https://www.wafilife.com/gonotontro-islami-dristikon/pd/5507"
-      },
-      {
-        "label": "Boishala",
-        "labelBn": "বইশালা",
-        "url": "https://www.boishala.com/book/377364/"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Democracy: An Islamic Perspective",
       "originalTitle": "গণতন্ত্র: ইসলামী দৃষ্টিকোণ",
@@ -938,18 +845,7 @@ window.ahmadAliBookDetails = [
     "category": "Spirituality",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/137442",
-    "links": [
-      {
-        "label": "eBoighar",
-        "labelBn": "ইবইঘর",
-        "url": "https://www.eboighar.com/index.php/booksdetails/46923/%E0%A6%A4%E0%A6%BE%E0%A6%AF%E0%A6%95%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A4%E0%A7%81%E0%A6%A8-%E0%A6%A8%E0%A6%BE%E0%A6%AB%E0%A6%B8"
-      },
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/85319dd817c911edb3ec2a6c60b8696b/tazkiatun-nafs"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Tazkiyat al-Nafs",
       "originalTitle": "তাযকিয়াতুন নাফস",
@@ -990,18 +886,7 @@ window.ahmadAliBookDetails = [
     "category": "Spirituality",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/189588/tasaufer-sborup",
-    "links": [
-      {
-        "label": "Chittagong University Library",
-        "labelBn": "চট্টগ্রাম বিশ্ববিদ্যালয় গ্রন্থাগার",
-        "url": "https://koha.cu.ac.bd/bib/103411"
-      },
-      {
-        "label": "Boishala",
-        "labelBn": "বইশালা",
-        "url": "https://www.boishala.com/book/377463/"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "The Nature of Tasawwuf",
       "originalTitle": "তাসাউফের স্বরূপ",
@@ -1044,8 +929,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/187234/tulonamulok-fiqho",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/product/tulonamulok-fiqh-1st-part/"
       }
     ],
@@ -1089,13 +974,7 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/192236/namaze-cheyarer-byobohar",
-    "links": [
-      {
-        "label": "Boishala",
-        "labelBn": "বইশালা",
-        "url": "https://www.boishala.com/book/374966/"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Using a Chair in Prayer",
       "originalTitle": "নামাযে চেয়ারের ব্যবহার",
@@ -1136,13 +1015,7 @@ window.ahmadAliBookDetails = [
     "category": "Islamic Thought",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/227327/prokrito-alimer-sondhane",
-    "links": [
-      {
-        "label": "PBS",
-        "labelBn": "পিবিএস",
-        "url": "https://www.pbs.com.bd/book/2204470/prokrito-alimer-sondhane"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "In Search of the True Scholar",
       "originalTitle": "প্রকৃত আলিমের সন্ধানে",
@@ -1185,8 +1058,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/574219",
     "links": [
       {
-        "label": "ILRC Publications",
-        "labelBn": "আইএলআরসি প্রকাশনা",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/en/publications/"
       }
     ],
@@ -1232,8 +1105,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/186396",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/product/bidat-1st-part/"
       }
     ],
@@ -1279,8 +1152,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/186398",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bidat-2nd-part/"
       }
     ],
@@ -1326,8 +1199,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/194779",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bidat-3rd-khondo/"
       }
     ],
@@ -1373,8 +1246,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/206454",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bidat-4th-part/"
       }
     ],
@@ -1420,8 +1293,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/214109",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bidat-5-part/"
       }
     ],
@@ -1467,8 +1340,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/234608",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bid-at-6th-part/"
       }
     ],
@@ -1514,8 +1387,8 @@ window.ahmadAliBookDetails = [
     "rokomariUrl": "https://www.rokomari.com/book/273066",
     "links": [
       {
-        "label": "ILRC",
-        "labelBn": "আইএলআরসি",
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
         "url": "https://ilrcbd.org/ar/product/bidat-soptom-khondo/"
       }
     ],
@@ -1606,13 +1479,7 @@ window.ahmadAliBookDetails = [
     "category": "Arabic Language & Literature",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/161012/muslim-lipikala-utpatti-o-bikash/",
-    "links": [
-      {
-        "label": "Mamun Books",
-        "labelBn": "মামুন বুকস",
-        "url": "https://mamunbooks.com/index.php/product-details/30610--"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Muslim Calligraphy: Origin and Development",
       "originalTitle": "মুসলিম লিপিকলা: উৎপত্তি ও বিকাশ",
@@ -1653,13 +1520,7 @@ window.ahmadAliBookDetails = [
     "category": "Qur’an & Tafsir",
     "series": "zubdatul-bayan",
     "rokomariUrl": "https://www.rokomari.com/book/185781/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir/",
-    "links": [
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/78a7a7c13f5611edb3ec2a6c60b8696b/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir.html"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Zubdat al-Bayan fi Idah Umm al-Qur’an",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহি উম্মিল কুরআন",
@@ -1700,13 +1561,7 @@ window.ahmadAliBookDetails = [
     "category": "Qur’an & Tafsir",
     "series": "zubdatul-bayan",
     "rokomariUrl": "https://www.rokomari.com/book/234566/zubdatul-bayan-fee-eedahil-quran",
-    "links": [
-      {
-        "label": "Mamun Books",
-        "labelBn": "মামুন বুকস",
-        "url": "https://mamunbooks.com/product-details/23509--"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Zubdat al-Bayan fi Idah al-Qur’an — Volume 2",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",
@@ -1747,13 +1602,7 @@ window.ahmadAliBookDetails = [
     "category": "Qur’an & Tafsir",
     "series": "zubdatul-bayan",
     "rokomariUrl": "https://www.rokomari.com/book/204536/zubdatul-bayan-fee-eedahil-quran",
-    "links": [
-      {
-        "label": "eBoighar",
-        "labelBn": "ইবইঘর",
-        "url": "https://www.eboighar.com/bn/booksdetails/46765/%E0%A6%AF%E0%A7%81%E0%A6%AC%E0%A6%A6%E0%A6%BE%E0%A6%A4%E0%A7%81%E0%A6%B2%20%E0%A6%AC%E0%A6%BE%E0%A7%9F%E0%A6%BE%E0%A6%A8%20%E0%A6%AB%E0%A7%80%20%E0%A6%88%E0%A6%A6%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%B2%20%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A6%86%E0%A6%A8%20%28%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A5%E0%A6%AE%20%E0%A6%96%E0%A6%A3%E0%A7%8D%E0%A6%A1%29%20%28%E0%A6%B8%E0%A7%82%E0%A6%B0%E0%A6%BE%20%E0%A6%AB%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0%20%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%B8%E0%A7%80%E0%A6%B0%29"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Zubdat al-Bayan fi Idah al-Qur’an — Volume 1",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — প্রথম খণ্ড",
@@ -1794,13 +1643,7 @@ window.ahmadAliBookDetails = [
     "category": "Governance & Society",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/109970/sarbovoumotto-islami-dristikon",
-    "links": [
-      {
-        "label": "Kitabghor",
-        "labelBn": "কিতাবঘর",
-        "url": "https://www.kitabghor.com/products/details/5397eeea186f11edb3ec2a6c60b8696b/sarbovoumotto-islami-dristikon.html"
-      }
-    ],
+    "links": [],
     "en": {
       "title": "Sovereignty: An Islamic Perspective",
       "originalTitle": "সার্বভৌমত্ব: ইসলামী দৃষ্টিকোণ",
