@@ -23,12 +23,12 @@
 
   const copy=isBn?{
     all:'সব',details:'বিস্তারিত দেখুন',preview:'প্রিভিউ',pdf:'PDF',audio:'অডিওবুক',rokomari:'রকমারি',
-    back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',language:'ভাষা',category:'বিষয়',
+    back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',binding:'বাঁধাই',country:'দেশ',language:'ভাষা',category:'বিষয়',
     listen:'অডিওবুক',readPdf:'PDF পড়ুন',openPreview:'প্রিভিউ দেখুন',missing:'গ্রন্থের বিস্তারিত তথ্য পাওয়া যায়নি।',forthcoming:'প্রকাশিতব্য',ongoing:'চলমান',
     catalog:'গ্রন্থ তালিকা',catalogNote:'বিষয় অনুসারে প্রকাশিত গ্রন্থসমূহ দেখুন।',noMatch:'কোনো মিলযুক্ত গ্রন্থ পাওয়া যায়নি।',external:'বাহ্যিক লিংক'
   }:{
     all:'All',details:'View Details',preview:'Preview',pdf:'PDF',audio:'Audiobook',rokomari:'Rokomari',
-    back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',isbn:'ISBN',edition:'Edition',pages:'Pages',language:'Language',category:'Category',
+    back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',isbn:'ISBN',edition:'Edition',pages:'Pages',binding:'Binding',country:'Country',language:'Language',category:'Category',
     listen:'Audiobook',readPdf:'Read PDF',openPreview:'Preview',missing:'Detailed information for this book is not available.',forthcoming:'Forthcoming',ongoing:'Ongoing',
     catalog:'Book catalog',catalogNote:'Browse published works by topic.',noMatch:'No matching books found.',external:'External links'
   };
@@ -187,6 +187,8 @@
         [copy.isbn,m.isbn],
         [copy.edition,isBn?(m.editionBn||m.edition):m.edition],
         [copy.pages,m.pages],
+        [copy.binding,isBn?(m.bindingBn||m.binding):m.binding],
+        [copy.country,isBn?(m.countryBn||m.country):m.country],
         [copy.language,isBn?(m.languageBn||m.language):m.language],
         [copy.category,categoryName(book.category)]
       ].filter(([,v])=>v);

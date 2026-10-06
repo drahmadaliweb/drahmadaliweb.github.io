@@ -1,24 +1,52 @@
 export default {
-  id: "book-394655",
-  order: 21,
-  status: 'published',
-  rokomariId: "394655",
-  category: "Aqidah & Thought",
-  series: null,
-  rokomariUrl: "https://www.rokomari.com/book/394655",
-  en: {
-    title: "উসূলুল ঈমান — ৩য় খণ্ড",
-    originalTitle: "উসূলুল ঈমান — ৩য় খণ্ড",
-    subtitle: '',
-    summary: ''
+  "id": "book-394655",
+  "order": 21,
+  "status": "published",
+  "rokomariId": "394655",
+  "category": "Aqidah & Thought",
+  "series": "usulul-iman",
+  "rokomariUrl": "https://www.rokomari.com/book/394655",
+  "links": [
+    {
+      "label": "Wafilife",
+      "labelBn": "ওয়াফিলাইফ",
+      "url": "https://www.wafilife.com/usulul-iman-3rd-part/pd/32920"
+    },
+    {
+      "label": "Progoti Boighor",
+      "labelBn": "প্রগতি বইঘর",
+      "url": "https://progotiboighor.com/books/usulul-iman-3rd-part/"
+    }
+  ],
+  "en": {
+    "title": "Usul al-Iman — Volume 3",
+    "originalTitle": "উসূলুল ঈমান — ৩য় খণ্ড",
+    "subtitle": "Fundamental Islamic Beliefs and Related Matters",
+    "summary": "The third volume develops the series through a focused discussion of fundamental Islamic beliefs and related doctrinal questions, continuing the project’s systematic presentation of the foundations of iman."
   },
-  bn: {
-    title: "উসূলুল ঈমান — ৩য় খণ্ড",
-    subtitle: '',
-    summary: ''
+  "bn": {
+    "title": "উসূলুল ঈমান — ৩য় খণ্ড",
+    "subtitle": "ইসলামের মৌলিক আকিদা ও আনুষঙ্গিক বিষয়াদি",
+    "summary": "সিরিজের তৃতীয় খণ্ডে ইসলামের মৌলিক আকিদা ও সংশ্লিষ্ট আনুষঙ্গিক বিষয়সমূহ আলোচিত হয়েছে। ঈমানের ভিত্তিগুলোকে সুসংবদ্ধভাবে ব্যাখ্যা করার ধারাবাহিক প্রয়াসের অংশ এটি।"
   },
-  meta: {
-    publisher: '', publisherBn: '', isbn: '', edition: '', editionBn: '', pages: '', language: 'Bangla', languageBn: 'বাংলা'
+  "meta": {
+    "publisher": "Guardian Publications",
+    "publisherBn": "গার্ডিয়ান পাবলিকেশনস",
+    "isbn": "",
+    "edition": "1st Published, 2024",
+    "editionBn": "প্রথম প্রকাশ, ২০২৪",
+    "pages": "368",
+    "binding": "Hardcover",
+    "bindingBn": "হার্ডকভার",
+    "country": "Bangladesh",
+    "countryBn": "বাংলাদেশ",
+    "language": "Bangla",
+    "languageBn": "বাংলা"
   },
-  media: { cover: null, preview: null, pdf: null, audio: [] }
+  "media": {
+    "cover": null,
+    "preview": null,
+    "pdf": null,
+    "audio": []
+  }
 };

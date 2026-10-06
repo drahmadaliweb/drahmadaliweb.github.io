@@ -10,24 +10,29 @@ window.ahmadAliBookDetails = [
     "category": "Arabic Language & Literature",
     "series": null,
     "rokomariUrl": null,
+    "links": [],
     "en": {
-      "title": "আধুনিক আরবী কাব্য সাহিত্য — ১ম খণ্ড",
+      "title": "Modern Arabic Poetry & Literature — Volume 1",
       "originalTitle": "আধুনিক আরবী কাব্য সাহিত্য — ১ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "The Neo-Classical School of Poets",
+      "summary": "The first volume of Dr. Ahmad Ali’s study of modern Arabic poetry and literature, with particular attention to the neo-classical school of poets and its place in the development of modern Arabic literary culture."
     },
     "bn": {
       "title": "আধুনিক আরবী কাব্য সাহিত্য — ১ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "নব্য-প্রাচীনপন্থী কবিসম্প্রদায়",
+      "summary": "আধুনিক আরবি কাব্য ও সাহিত্য নিয়ে ড. আহমদ আলীর গবেষণার প্রথম খণ্ড। গ্রন্থটিতে বিশেষভাবে নব্য-প্রাচীনপন্থী কবিসম্প্রদায় এবং আধুনিক আরবি সাহিত্যধারায় তাদের অবস্থান ও অবদান আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "Al Akib Publications, Chattogram",
-      "publisherBn": "আল আকিব পাবলিকেশন্স, চট্টগ্রাম",
+      "publisher": "Al-Akik Publications",
+      "publisherBn": "আল-আকিক প্রকাশনী",
       "isbn": "",
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -46,16 +51,23 @@ window.ahmadAliBookDetails = [
     "category": "Islamic Thought",
     "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/509331/adhunik-cintadhara-o-motabad-vol-1",
+    "links": [
+      {
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
+        "url": "https://ilrcbd.org/product/adhunik-cintadara-o-motbad-vol-1/"
+      }
+    ],
     "en": {
       "title": "Modern Currents of Thought and Ideologies — Volume 1",
       "originalTitle": "আধুনিক চিন্তাধারা ও মতবাদ — ১ম খণ্ড",
       "subtitle": "Bid‘ah, Volume 8 — Part 1",
-      "summary": "Part one of the eighth volume of the Bid‘ah project, this book examines modern currents of thought and ideology in relation to Islamic intellectual foundations. It is positioned within the series as an engagement with contemporary philosophical and ideological questions."
+      "summary": "Part one of the eighth volume of the Bid‘ah series. The book surveys the emergence and development of modern currents of thought and ideology and evaluates what the author regards as their errors and departures from Islamic intellectual foundations. The publisher presents it as a research work engaging contemporary philosophical and ideological questions."
     },
     "bn": {
       "title": "আধুনিক চিন্তাধারা ও মতবাদ — ১ম খণ্ড",
       "subtitle": "বিদ‘আত ৮ম খণ্ড — ১ম ভাগ",
-      "summary": "বিদ‘আত প্রকল্পের অষ্টম খণ্ডের প্রথম ভাগ। আধুনিক চিন্তাধারা ও মতবাদকে ইসলামী বুদ্ধিবৃত্তিক ভিত্তির আলোকে পর্যালোচনা করার প্রয়াস এতে রয়েছে এবং সমকালীন দর্শন ও মতাদর্শগত প্রশ্নের সঙ্গে সংলাপ স্থাপন করা হয়েছে।"
+      "summary": "বিদ‘আত সিরিজের অষ্টম খণ্ডের প্রথম ভাগ। আধুনিক বিভিন্ন চিন্তাধারা ও মতবাদের উদ্ভব ও বিকাশ এবং লেখকের দৃষ্টিতে সেগুলোর ভ্রান্তি ও বিচ্যুতি এখানে বিশ্লেষণ করা হয়েছে। প্রকাশকের বর্ণনা অনুযায়ী এটি সমকালীন দর্শন ও মতাদর্শগত প্রশ্ন নিয়ে একটি গবেষণামূলক কাজ।"
     },
     "meta": {
       "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
@@ -64,10 +76,15 @@ window.ahmadAliBookDetails = [
       "edition": "1st Published, 2025",
       "editionBn": "প্রথম প্রকাশ, ২০২৫",
       "pages": "356",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
     "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []
@@ -79,26 +96,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "511409",
     "category": "Islamic Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/511409",
+    "links": [
+      {
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
+        "url": "https://ilrcbd.org/product/adhunik-cintadara-o-motbad-vol-2/"
+      }
+    ],
     "en": {
-      "title": "আধুনিক চিন্তাধারা ও মতবাদ — ২য় খণ্ড",
+      "title": "Modern Currents of Thought and Ideologies — Volume 2",
       "originalTitle": "আধুনিক চিন্তাধারা ও মতবাদ — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Bid‘ah, Volume 8 — Part 2",
+      "summary": "Part two of the eighth volume of the Bid‘ah series. Continuing the first part, it examines the origins, development and intellectual claims of modern ideologies and discusses what the author identifies as doctrinal or conceptual departures from Islamic teachings."
     },
     "bn": {
       "title": "আধুনিক চিন্তাধারা ও মতবাদ — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "বিদ‘আত ৮ম খণ্ড — ২য় ভাগ",
+      "summary": "বিদ‘আত সিরিজের অষ্টম খণ্ডের দ্বিতীয় ভাগ। প্রথম ভাগের ধারাবাহিকতায় আধুনিক বিভিন্ন মতবাদের উৎপত্তি, বিকাশ ও বুদ্ধিবৃত্তিক দাবিগুলো আলোচনা করে লেখকের দৃষ্টিতে ইসলামী শিক্ষার সঙ্গে সংশ্লিষ্ট মতপার্থক্য ও বিচ্যুতিগুলো বিশ্লেষণ করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849613992",
+      "edition": "1st Published, 2025",
+      "editionBn": "প্রথম প্রকাশ, ২০২৫",
+      "pages": "352",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -116,25 +144,41 @@ window.ahmadAliBookDetails = [
     "rokomariId": "109961",
     "category": "Sirah & Biography",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/109961",
+    "rokomariUrl": "https://www.rokomari.com/book/109961/abu-bakor-assidik-rh",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/7878021f17a411edb3ec2a6c60b8696b/abu-bakor-assidik-rh.html"
+      },
+      {
+        "label": "Publisher catalog",
+        "labelBn": "প্রকাশকের তালিকা",
+        "url": "https://www.dhakabic.com/book-list-table"
+      }
+    ],
     "en": {
-      "title": "আবু বাকর আছছিদ্দিক (রা.)",
+      "title": "Abu Bakr al-Siddiq (RA)",
       "originalTitle": "আবু বাকর আছছিদ্দিক (রা.)",
       "subtitle": "",
-      "summary": ""
+      "summary": "A biographical study of Abu Bakr al-Siddiq (RA), the first of the Rightly Guided Caliphs. Retail catalogues classify the work under biographies of the Khulafa al-Rashidun and the Companions."
     },
     "bn": {
       "title": "আবু বাকর আছছিদ্দিক (রা.)",
       "subtitle": "",
-      "summary": ""
+      "summary": "প্রথম খলিফা হযরত আবু বাকর আছছিদ্দিক (রা.)-এর জীবন ও ব্যক্তিত্বভিত্তিক গ্রন্থ। বইটি খুলাফায়ে রাশেদিন ও সাহাবিদের জীবনী বিষয়ক গ্রন্থ হিসেবে প্রকাশক ও বইবিক্রেতাদের তালিকায় অন্তর্ভুক্ত।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
+      "edition": "First published, 2016",
+      "editionBn": "প্রথম প্রকাশ, ২০১৬",
       "pages": "",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -152,25 +196,36 @@ window.ahmadAliBookDetails = [
     "rokomariId": "281303",
     "category": "Islamic Thought",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/281303",
+    "rokomariUrl": "https://www.rokomari.com/book/281303/alim-somajer-oikko",
+    "links": [
+      {
+        "label": "Falastin",
+        "labelBn": "ফালাস্তিন",
+        "url": "https://www.falastin.com.bd/product/%E0%A6%86%E0%A6%B2%E0%A6%BF%E0%A6%AE-%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%B0-%E0%A6%90%E0%A6%95%E0%A7%8D%E0%A6%AF-%E0%A6%85%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A7%9F-%E0%A6%93-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE-%3A-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BF%E0%A6%A4-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6"
+      }
+    ],
     "en": {
-      "title": "আলিম সমাজের ঐক্য",
+      "title": "Unity among the Ulama",
       "originalTitle": "আলিম সমাজের ঐক্য",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Obstacles and Processes: Bangladesh in Perspective",
+      "summary": "A study of Muslim unity with particular emphasis on the role of the ulama. Framed in the context of Bangladesh, the book discusses the causes of division among religious scholars, obstacles to greater unity, and possible processes for building cooperation around shared Islamic commitments."
     },
     "bn": {
       "title": "আলিম সমাজের ঐক্য",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "অন্তরায় ও প্রক্রিয়া : প্রেক্ষিত বাংলাদেশ",
+      "summary": "মুসলিম উম্মাহর ঐক্য এবং বিশেষভাবে আলিম সমাজের ভূমিকা নিয়ে রচিত গবেষণাধর্মী গ্রন্থ। বাংলাদেশের প্রেক্ষাপটে আলিমদের মধ্যে বিভেদের কারণ, ঐক্যের পথে অন্তরায় এবং সহযোগিতা ও ঐক্য প্রতিষ্ঠার সম্ভাব্য প্রক্রিয়া এতে আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Prochchhod Prokashon",
+      "publisherBn": "প্রচ্ছদ প্রকাশন",
+      "isbn": "9789849694656",
+      "edition": "1st Published, January 2023",
+      "editionBn": "প্রথম প্রকাশ, জানুয়ারি ২০২৩",
+      "pages": "296",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -189,24 +244,35 @@ window.ahmadAliBookDetails = [
     "category": "Qur’an & Hadith",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/45164",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/184adf3417a511edb3ec2a6c60b8696b/ilmul-tafsir-ilmul-hadis-ilmul-fikoh.html"
+      }
+    ],
     "en": {
-      "title": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
+      "title": "The Sciences of Tafsir, Hadith and Fiqh",
       "originalTitle": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A concise work bringing together introductory discussions of three major Islamic scholarly disciplines: the science of Qur’anic exegesis (tafsir), the science of Hadith, and the science of Islamic jurisprudence (fiqh)."
     },
     "bn": {
       "title": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
       "subtitle": "",
-      "summary": ""
+      "summary": "ইসলামী জ্ঞানচর্চার তিনটি প্রধান শাস্ত্র—তাফসীর, হাদীস ও ফিকহ—সম্পর্কে সংক্ষিপ্ত পরিচয়ধর্মী আলোচনা একত্রে উপস্থাপন করা হয়েছে এই গ্রন্থে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -225,16 +291,17 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": null,
     "rokomariUrl": null,
+    "links": [],
     "en": {
-      "title": "ইসমাতুল আম্বিয়া",
+      "title": "Ismat al-Anbiya — The Infallibility of the Prophets",
       "originalTitle": "ইসমাতুল আম্বিয়া",
       "subtitle": "",
-      "summary": ""
+      "summary": "A theological study of the doctrine of ʿismah al-anbiya—the protection or infallibility of the prophets—and its place within Islamic creed and scholarly discussion."
     },
     "bn": {
       "title": "ইসমাতুল আম্বিয়া",
       "subtitle": "",
-      "summary": ""
+      "summary": "নবী-রাসূলগণের ইসমত বা আল্লাহপ্রদত্ত সুরক্ষা ও নিষ্পাপতার ধারণা নিয়ে আকীদাভিত্তিক গবেষণামূলক গ্রন্থ। ইসলামী বিশ্বাস ও আলিমদের আলোচনায় ইসমাতুল আম্বিয়ার অবস্থান এতে পর্যালোচিত হয়েছে।"
     },
     "meta": {
       "publisher": "Al Akib Publications, Chattogram",
@@ -243,6 +310,10 @@ window.ahmadAliBookDetails = [
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -261,24 +332,35 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/510823/islami-bankinge-sharia-poripalon-o-longon-somossa-o-uttoron-vabna",
+    "links": [
+      {
+        "label": "Prothoma",
+        "labelBn": "প্রথমা",
+        "url": "https://www.prothoma.com/shop/islami-bankinge-sharia-poripalon-o-longon-somossa-o-uttoron-vabna-77442"
+      }
+    ],
     "en": {
       "title": "Shariah Compliance and Violations in Islamic Banking",
       "originalTitle": "ইসলামী ব্যাংকিংয়ে শরীয়া পরিপালন ও লঙ্ঘন : সমস্যা ও উত্তরণ ভাবনা",
       "subtitle": "Problems and Paths Forward",
-      "summary": "A research-based examination of Islamic banking in theory and practice. The book considers the aims of Islamic banking, areas of Shariah compliance and violation, practical shortcomings, and possible paths for addressing institutional and operational challenges."
+      "summary": "A research-based examination of Islamic banking in theory and practice. The book asks how Islamic banks should operate in light of their stated objectives, evaluates areas of Shariah compliance and violation in current practice, identifies institutional and operational shortcomings, and discusses possible paths for reform."
     },
     "bn": {
       "title": "ইসলামী ব্যাংকিংয়ে শরীয়া পরিপালন ও লঙ্ঘন : সমস্যা ও উত্তরণ ভাবনা",
       "subtitle": "সমস্যা ও উত্তরণ ভাবনা",
-      "summary": "ইসলামী ব্যাংকিংয়ের তত্ত্ব ও বাস্তব প্রয়োগ নিয়ে গবেষণাধর্মী আলোচনা। ইসলামী ব্যাংকের লক্ষ্য-উদ্দেশ্য, শরীয়া পরিপালনের বাস্তবতা, শরীয়া লঙ্ঘন ও ত্রুটি-বিচ্যুতি এবং এসব সংকট থেকে উত্তরণের সম্ভাব্য পথ বইটিতে বিশ্লেষণ করা হয়েছে।"
+      "summary": "ইসলামী ব্যাংক প্রতিষ্ঠার লক্ষ্য-উদ্দেশ্যের আলোকে এর কার্যক্রম কেমন হওয়া উচিত, বাস্তবে বর্তমানে কেমন চলছে, কোথায় শরীয়া পরিপালন ও লঙ্ঘনের সমস্যা রয়েছে এবং নানান সংকট ও ত্রুটি থেকে উত্তরণের কী পথ হতে পারে—এসব বিষয় নিয়ে গবেষণাধর্মী আলোচনা।"
     },
     "meta": {
       "publisher": "Prochchhod Prokashon",
       "publisherBn": "প্রচ্ছদ প্রকাশন",
       "isbn": "",
-      "edition": "1st Published, 2025",
-      "editionBn": "প্রথম প্রকাশ, ২০২৫",
+      "edition": "Published, 2025",
+      "editionBn": "প্রকাশ, ২০২৫",
       "pages": "576",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -293,27 +375,38 @@ window.ahmadAliBookDetails = [
     "order": 1,
     "status": "published",
     "rokomariId": "45172",
-    "category": "Fiqh & Law",
+    "category": "Governance & Society",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/45172",
+    "rokomariUrl": "https://www.rokomari.com/book/45172/islami-rastre-omuslim-nagoriker-odhikar-o-morjada",
+    "links": [
+      {
+        "label": "eBoighar",
+        "labelBn": "ইবইঘর",
+        "url": "https://eboighar.com/bn/booksdetails/46917"
+      }
+    ],
     "en": {
-      "title": "ইসলামী রাষ্ট্রে অমুসলিম নাগরিকের অধিকার ও মর্যাদা",
+      "title": "Rights and Dignity of Non-Muslim Citizens in an Islamic State",
       "originalTitle": "ইসলামী রাষ্ট্রে অমুসলিম নাগরিকের অধিকার ও মর্যাদা",
       "subtitle": "",
-      "summary": ""
+      "summary": "A concise study of the rights, civic status and dignity of non-Muslim citizens within an Islamic polity, situated at the intersection of Islamic law, governance and political thought."
     },
     "bn": {
       "title": "ইসলামী রাষ্ট্রে অমুসলিম নাগরিকের অধিকার ও মর্যাদা",
       "subtitle": "",
-      "summary": ""
+      "summary": "ইসলামী রাষ্ট্রব্যবস্থায় অমুসলিম নাগরিকদের অধিকার, নাগরিক মর্যাদা ও অবস্থান নিয়ে সংক্ষিপ্ত গবেষণামূলক আলোচনা। বিষয়টি ইসলামী আইন, শাসনব্যবস্থা ও রাজনৈতিক চিন্তার পরিসরে উপস্থাপিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
       "edition": "",
       "editionBn": "",
-      "pages": "",
+      "pages": "60",
+      "binding": "Paperback",
+      "bindingBn": "পেপারব্যাক",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -329,29 +422,45 @@ window.ahmadAliBookDetails = [
     "order": 31,
     "status": "published",
     "rokomariId": "187227",
-    "category": "Islamic Ethics & Society",
+    "category": "Fiqh & Law",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/187227",
+    "rokomariUrl": "https://www.rokomari.com/book/187227/islamer-aloke-basosthaner-odhikar-o-nirapotta",
+    "links": [
+      {
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
+        "url": "https://ilrcbd.org/publications-2/"
+      },
+      {
+        "label": "Boishala",
+        "labelBn": "বইশালা",
+        "url": "https://www.boishala.com/book/379345/"
+      }
+    ],
     "en": {
-      "title": "ইসলামের আলোকে বাসস্থানের অধিকার ও নিরাপত্তা",
+      "title": "The Right to Housing and Security in the Light of Islam",
       "originalTitle": "ইসলামের আলোকে বাসস্থানের অধিকার ও নিরাপত্তা",
       "subtitle": "",
-      "summary": ""
+      "summary": "A study of housing as a human and social right from an Islamic legal perspective, with attention to access to shelter, security of residence and the ethical and legal principles that protect the home and its occupants."
     },
     "bn": {
       "title": "ইসলামের আলোকে বাসস্থানের অধিকার ও নিরাপত্তা",
       "subtitle": "",
-      "summary": ""
+      "summary": "ইসলামী আইন ও নৈতিকতার আলোকে বাসস্থানকে মানবিক ও সামাজিক অধিকার হিসেবে পর্যালোচনা করা হয়েছে। আবাসের অধিকার, নিরাপত্তা, গৃহে প্রবেশ ও বসবাসের সুরক্ষা—এসব বিষয়ের শরিয়াগত ভিত্তি গ্রন্থটির আলোচ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849020899",
+      "edition": "1st Published, 2015",
+      "editionBn": "প্রথম প্রকাশ, ২০১৫",
+      "pages": "163",
+      "binding": "Paperback",
+      "bindingBn": "পেপারব্যাক",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -367,25 +476,41 @@ window.ahmadAliBookDetails = [
     "rokomariId": "137444",
     "category": "Islamic Ethics & Society",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/137444",
+    "rokomariUrl": "https://www.rokomari.com/book/137444/islamer-drestite-pohak-porda-o-sajsojja",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/3e476fbe17df11edb3ec2a6c60b8696b/islamer-drestite-pohak-porda-o-sajsojja.html"
+      },
+      {
+        "label": "Wafilife",
+        "labelBn": "ওয়াফিলাইফ",
+        "url": "https://www.wafilife.com/islamer-dristy-te-posak-porda-o-sajsojja/pd/1090"
+      }
+    ],
     "en": {
-      "title": "ইসলামের দৃষ্টিতে পোশাক পর্দা ও সাজসজ্জা",
+      "title": "Clothing, Veiling and Adornment in the Light of Islam",
       "originalTitle": "ইসলামের দৃষ্টিতে পোশাক পর্দা ও সাজসজ্জা",
       "subtitle": "",
-      "summary": ""
+      "summary": "A Qur’an- and hadith-based study of clothing, modesty, veiling and personal adornment. The book treats dress as both a basic human need and an expression of identity, while discussing beautification within the ethical and legal boundaries of the Shariah."
     },
     "bn": {
       "title": "ইসলামের দৃষ্টিতে পোশাক পর্দা ও সাজসজ্জা",
       "subtitle": "",
-      "summary": ""
+      "summary": "পোশাক, পর্দা ও ব্যক্তিগত সাজসজ্জা বিষয়ে কুরআন, হাদীস ও প্রামাণ্য গ্রন্থের আলোকে গবেষণামূলক আলোচনা। পোশাককে মৌলিক মানবিক প্রয়োজন ও ব্যক্তিত্বের প্রকাশ হিসেবে বিবেচনা করে শরীআতের সীমারেখার মধ্যে সৌন্দর্যচর্চার নীতিমালাও এতে ব্যাখ্যা করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+      "isbn": "9789848921005",
+      "edition": "1st Published, 2014",
+      "editionBn": "প্রথম প্রকাশ, ২০১৪",
+      "pages": "224",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -404,24 +529,35 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/45163",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/a6edb68617c811edb3ec2a6c60b8696b/islamer-shasti-ayin.html"
+      }
+    ],
     "en": {
-      "title": "ইসলামের শাস্তি আইন",
+      "title": "Islamic Penal Law",
       "originalTitle": "ইসলামের শাস্তি আইন",
       "subtitle": "",
-      "summary": ""
+      "summary": "A research-oriented Bengali study of Islamic criminal and penal law. It examines the legal framework and rationale of punishments in Islamic jurisprudence and is catalogued by booksellers under religious law and legal studies."
     },
     "bn": {
       "title": "ইসলামের শাস্তি আইন",
       "subtitle": "",
-      "summary": ""
+      "summary": "ইসলামী অপরাধ ও শাস্তি আইন নিয়ে গবেষণামূলক বাংলা গ্রন্থ। ইসলামী ফিকহে দণ্ডবিধির কাঠামো, নীতিগত ভিত্তি ও শাস্তির যৌক্তিকতা নিয়ে আলোচনা করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -433,13 +569,14 @@ window.ahmadAliBookDetails = [
     }
   },
   {
+    "id": "usulul-iman-vol-1",
     "order": 4,
     "status": "published",
-    "id": "usulul-iman-vol-1",
     "rokomariId": "305722",
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/305722/usulul-iman-1st-part",
+    "links": [],
     "en": {
       "title": "Usul al-Iman — Volume 1",
       "originalTitle": "উসূলুল ঈমান — ১ম খণ্ড",
@@ -458,10 +595,15 @@ window.ahmadAliBookDetails = [
       "edition": "1st Edition, 2023",
       "editionBn": "১ম সংস্করণ, ২০২৩",
       "pages": "248",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
     "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []
@@ -473,26 +615,42 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "305723",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/305723",
+    "links": [
+      {
+        "label": "PBS",
+        "labelBn": "পিবিএস",
+        "url": "https://pbs.com.bd/book/2305333/usulul-iman-2nd-part"
+      },
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/64acdd276f3911eea35e2a6c60b8696b/usulul-iman-2nd.html"
+      }
+    ],
     "en": {
-      "title": "উসূলুল ঈমান — ২য় খণ্ড",
+      "title": "Usul al-Iman — Volume 2",
       "originalTitle": "উসূলুল ঈমান — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Foundations and Responsibilities of Faith",
+      "summary": "The second volume continues the systematic study of iman: what genuine faith means, what it demands from a believer, and the ways faith may be weakened or damaged. It is part of Dr. Ahmad Ali’s multi-volume treatment of Islamic creed."
     },
     "bn": {
       "title": "উসূলুল ঈমান — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ঈমানের ভিত্তি, দাবি ও দায়িত্ব",
+      "summary": "উসূলুল ঈমান সিরিজের দ্বিতীয় খণ্ডে খাঁটি ঈমানের অর্থ, ঈমানের দাবি ও দায়িত্ব এবং কীভাবে ঈমান ক্ষতিগ্রস্ত বা নষ্ট হতে পারে—এসব বিষয় পদ্ধতিগতভাবে আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Guardian Publications",
+      "publisherBn": "গার্ডিয়ান পাবলিকেশনস",
+      "isbn": "9789849766025",
+      "edition": "1st Published, 2023",
+      "editionBn": "প্রথম প্রকাশ, ২০২৩",
+      "pages": "328",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -509,26 +667,42 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "394655",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/394655",
+    "links": [
+      {
+        "label": "Wafilife",
+        "labelBn": "ওয়াফিলাইফ",
+        "url": "https://www.wafilife.com/usulul-iman-3rd-part/pd/32920"
+      },
+      {
+        "label": "Progoti Boighor",
+        "labelBn": "প্রগতি বইঘর",
+        "url": "https://progotiboighor.com/books/usulul-iman-3rd-part/"
+      }
+    ],
     "en": {
-      "title": "উসূলুল ঈমান — ৩য় খণ্ড",
+      "title": "Usul al-Iman — Volume 3",
       "originalTitle": "উসূলুল ঈমান — ৩য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Fundamental Islamic Beliefs and Related Matters",
+      "summary": "The third volume develops the series through a focused discussion of fundamental Islamic beliefs and related doctrinal questions, continuing the project’s systematic presentation of the foundations of iman."
     },
     "bn": {
       "title": "উসূলুল ঈমান — ৩য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ইসলামের মৌলিক আকিদা ও আনুষঙ্গিক বিষয়াদি",
+      "summary": "সিরিজের তৃতীয় খণ্ডে ইসলামের মৌলিক আকিদা ও সংশ্লিষ্ট আনুষঙ্গিক বিষয়সমূহ আলোচিত হয়েছে। ঈমানের ভিত্তিগুলোকে সুসংবদ্ধভাবে ব্যাখ্যা করার ধারাবাহিক প্রয়াসের অংশ এটি।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Guardian Publications",
+      "publisherBn": "গার্ডিয়ান পাবলিকেশনস",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "edition": "1st Published, 2024",
+      "editionBn": "প্রথম প্রকাশ, ২০২৪",
+      "pages": "368",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -545,26 +719,42 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "394656",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "usulul-iman",
     "rokomariUrl": "https://www.rokomari.com/book/394656",
+    "links": [
+      {
+        "label": "PBS",
+        "labelBn": "পিবিএস",
+        "url": "https://pbs.com.bd/book/2402475/usulul-iman-4th-part"
+      },
+      {
+        "label": "Progoti Boighor",
+        "labelBn": "প্রগতি বইঘর",
+        "url": "https://progotiboighor.com/books/usulul-iman-4th-part/"
+      }
+    ],
     "en": {
-      "title": "উসূলুল ঈমান — ৪র্থ খণ্ড",
+      "title": "Usul al-Iman — Volume 4",
       "originalTitle": "উসূলুল ঈমান — ৪র্থ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Belief in the Hereafter and Divine Decree",
+      "summary": "The fourth volume of Usul al-Iman concentrates on two major articles of faith: belief in the Hereafter and belief in divine decree (qadr), presented within the series’ broader systematic treatment of Islamic creed."
     },
     "bn": {
       "title": "উসূলুল ঈমান — ৪র্থ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "আখিরাত ও কদরের ওপর ঈমান",
+      "summary": "উসূলুল ঈমান সিরিজের চতুর্থ খণ্ডে ঈমানের দুটি গুরুত্বপূর্ণ বিষয়—আখিরাতের ওপর ঈমান এবং কদরের ওপর ঈমান—সুবিন্যস্তভাবে আলোচনা করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Guardian Publications",
+      "publisherBn": "গার্ডিয়ান পাবলিকেশনস",
+      "isbn": "9789849890072",
+      "edition": "1st Published, 2024",
+      "editionBn": "প্রথম প্রকাশ, ২০২৪",
+      "pages": "274",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -654,27 +844,43 @@ window.ahmadAliBookDetails = [
     "rokomariId": "189691",
     "category": "Governance & Society",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/189691",
+    "rokomariUrl": "https://www.rokomari.com/book/189691/gonotontro-islami-drishtikon",
+    "links": [
+      {
+        "label": "Wafilife",
+        "labelBn": "ওয়াফিলাইফ",
+        "url": "https://www.wafilife.com/gonotontro-islami-dristikon/pd/5507"
+      },
+      {
+        "label": "Boishala",
+        "labelBn": "বইশালা",
+        "url": "https://www.boishala.com/book/377364/"
+      }
+    ],
     "en": {
-      "title": "গণতন্ত্র: ইসলামী দৃষ্টিকোণ",
+      "title": "Democracy: An Islamic Perspective",
       "originalTitle": "গণতন্ত্র: ইসলামী দৃষ্টিকোণ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A concise examination of democracy as both a political concept and a practical system from an Islamic perspective. The book stresses that democracy is internally diverse and that sweeping one-line judgments cannot adequately address its theoretical and real-world complexity."
     },
     "bn": {
       "title": "গণতন্ত্র: ইসলামী দৃষ্টিকোণ",
       "subtitle": "",
-      "summary": ""
+      "summary": "গণতন্ত্রকে রাজনৈতিক পরিভাষা ও বাস্তব শাসনপদ্ধতি—উভয় দিক থেকে ইসলামী দৃষ্টিকোণে পর্যালোচনা করা হয়েছে। গণতন্ত্রের তাত্ত্বিক ও ব্যবহারিক বৈচিত্র্য বিবেচনা করে বিষয়টি সম্পর্কে সরলীকৃত একবাক্যের সিদ্ধান্তের বদলে বিশ্লেষণধর্মী পাঠ উপস্থাপন করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Prochchhod Prokashon",
+      "publisherBn": "প্রচ্ছদ প্রকাশন",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "edition": "2nd Edition, 2026",
+      "editionBn": "২য় সংস্করণ, ২০২৬",
+      "pages": "152",
+      "binding": "Paperback",
+      "bindingBn": "পেপারব্যাক",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -691,16 +897,17 @@ window.ahmadAliBookDetails = [
     "category": "Islamic Thought",
     "series": null,
     "rokomariUrl": null,
+    "links": [],
     "en": {
-      "title": "জঙ্গিবাদের উত্থান বনাম ইসলামের শাশ্বত শিক্ষা",
+      "title": "The Rise of Militancy versus Islam’s Enduring Teachings",
       "originalTitle": "জঙ্গিবাদের উত্থান বনাম ইসলামের শাশ্বত শিক্ষা",
       "subtitle": "",
-      "summary": ""
+      "summary": "A study contrasting militancy and violent extremism with Islamic teachings on peace, lawful authority, social order and moderation. The work addresses the misuse of religious concepts in extremist narratives and argues for responding through sound knowledge, ethics and lawful civic processes."
     },
     "bn": {
       "title": "জঙ্গিবাদের উত্থান বনাম ইসলামের শাশ্বত শিক্ষা",
       "subtitle": "",
-      "summary": ""
+      "summary": "জঙ্গিবাদ ও সহিংস চরমপন্থার বিপরীতে ইসলামের শান্তি, বৈধ কর্তৃত্ব, সামাজিক শৃঙ্খলা ও মধ্যপন্থার শিক্ষা নিয়ে আলোচনা। ধর্মীয় পরিভাষার অপব্যবহার, উগ্রতার কারণ এবং সঠিক জ্ঞান, নৈতিকতা ও আইনসম্মত সামাজিক প্রক্রিয়ার প্রয়োজনীয়তা এতে গুরুত্ব পেয়েছে।"
     },
     "meta": {
       "publisher": "Department of Islamic Studies, University of Chittagong",
@@ -709,6 +916,10 @@ window.ahmadAliBookDetails = [
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -727,26 +938,42 @@ window.ahmadAliBookDetails = [
     "category": "Spirituality",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/137442",
+    "links": [
+      {
+        "label": "eBoighar",
+        "labelBn": "ইবইঘর",
+        "url": "https://www.eboighar.com/index.php/booksdetails/46923/%E0%A6%A4%E0%A6%BE%E0%A6%AF%E0%A6%95%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A4%E0%A7%81%E0%A6%A8-%E0%A6%A8%E0%A6%BE%E0%A6%AB%E0%A6%B8"
+      },
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/85319dd817c911edb3ec2a6c60b8696b/tazkiatun-nafs"
+      }
+    ],
     "en": {
-      "title": "তাযকিয়াতুন নাফস",
+      "title": "Tazkiyat al-Nafs",
       "originalTitle": "তাযকিয়াতুন নাফস",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Purification of the Soul",
+      "summary": "A study of spiritual purification in the light of the Qur’an and hadith. It discusses the meaning of tazkiyat al-nafs, diseases and defects of the nafs and heart, and practical paths toward purification and moral discipline."
     },
     "bn": {
       "title": "তাযকিয়াতুন নাফস",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "আত্মশুদ্ধি",
+      "summary": "কুরআন ও হাদীসের আলোকে নাফসের পরিশুদ্ধি, নাফস ও কলবের ব্যাধি ও ত্রুটি এবং সেগুলো দূর করার উপায় নিয়ে গবেষণামূলক আলোচনা। আত্মশুদ্ধিকে ঈমান ও আমলের পরিপূর্ণতার অপরিহার্য অংশ হিসেবে ব্যাখ্যা করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+      "isbn": "9848430290",
+      "edition": "4th Edition",
+      "editionBn": "৪র্থ সংস্করণ",
+      "pages": "280",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -762,25 +989,41 @@ window.ahmadAliBookDetails = [
     "rokomariId": "189588",
     "category": "Spirituality",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/189588",
+    "rokomariUrl": "https://www.rokomari.com/book/189588/tasaufer-sborup",
+    "links": [
+      {
+        "label": "Chittagong University Library",
+        "labelBn": "চট্টগ্রাম বিশ্ববিদ্যালয় গ্রন্থাগার",
+        "url": "https://koha.cu.ac.bd/bib/103411"
+      },
+      {
+        "label": "Boishala",
+        "labelBn": "বইশালা",
+        "url": "https://www.boishala.com/book/377463/"
+      }
+    ],
     "en": {
-      "title": "তাসাউফের স্বরূপ",
+      "title": "The Nature of Tasawwuf",
       "originalTitle": "তাসাউফের স্বরূপ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A scholarly Bengali study of tasawwuf (Sufism), examining its nature and place within Islamic thought and spiritual practice."
     },
     "bn": {
       "title": "তাসাউফের স্বরূপ",
       "subtitle": "",
-      "summary": ""
+      "summary": "তাসাউফের স্বরূপ, ধারণাগত ভিত্তি এবং ইসলামী চিন্তা ও আধ্যাত্মিক সাধনায় এর অবস্থান নিয়ে গবেষণামূলক বাংলা গ্রন্থ।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+      "isbn": "9789843471178",
+      "edition": "1st Published, 2019",
+      "editionBn": "প্রথম প্রকাশ, ২০১৯",
+      "pages": "520",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -792,13 +1035,20 @@ window.ahmadAliBookDetails = [
     }
   },
   {
+    "id": "tulonamulok-fiqh-vol-1",
     "order": 9,
     "status": "published",
-    "id": "tulonamulok-fiqh-vol-1",
     "rokomariId": "187234",
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/187234/tulonamulok-fiqho",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/product/tulonamulok-fiqh-1st-part/"
+      }
+    ],
     "en": {
       "title": "Comparative Fiqh — Volume 1",
       "originalTitle": "তুলনামূলক ফিকহ — প্রথম খণ্ড",
@@ -817,10 +1067,15 @@ window.ahmadAliBookDetails = [
       "edition": "3rd Printed, 2024",
       "editionBn": "৩য় মুদ্রণ, ২০২৪",
       "pages": "712",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla & Arabic",
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []
@@ -833,25 +1088,36 @@ window.ahmadAliBookDetails = [
     "rokomariId": "192236",
     "category": "Fiqh & Law",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/192236",
+    "rokomariUrl": "https://www.rokomari.com/book/192236/namaze-cheyarer-byobohar",
+    "links": [
+      {
+        "label": "Boishala",
+        "labelBn": "বইশালা",
+        "url": "https://www.boishala.com/book/374966/"
+      }
+    ],
     "en": {
-      "title": "নামাযে চেয়ারের ব্যবহার",
+      "title": "Using a Chair in Prayer",
       "originalTitle": "নামাযে চেয়ারের ব্যবহার",
       "subtitle": "",
-      "summary": ""
+      "summary": "A concise fiqh guide to the use of a chair during salah, addressing the circumstances in which a worshipper may pray seated and the practical rulings associated with doing so."
     },
     "bn": {
       "title": "নামাযে চেয়ারের ব্যবহার",
       "subtitle": "",
-      "summary": ""
+      "summary": "সালাতে চেয়ারের ব্যবহার সম্পর্কিত সংক্ষিপ্ত ফিকহী নির্দেশিকা। কোন অবস্থায় বসে সালাত আদায় করা যাবে এবং চেয়ার ব্যবহারের সঙ্গে সংশ্লিষ্ট ব্যবহারিক মাসআলা এতে আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "edition": "1st Published, 2019",
+      "editionBn": "প্রথম প্রকাশ, ২০১৯",
+      "pages": "48",
+      "binding": "Paperback",
+      "bindingBn": "পেপারব্যাক",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -869,25 +1135,36 @@ window.ahmadAliBookDetails = [
     "rokomariId": "227327",
     "category": "Islamic Thought",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/227327",
+    "rokomariUrl": "https://www.rokomari.com/book/227327/prokrito-alimer-sondhane",
+    "links": [
+      {
+        "label": "PBS",
+        "labelBn": "পিবিএস",
+        "url": "https://www.pbs.com.bd/book/2204470/prokrito-alimer-sondhane"
+      }
+    ],
     "en": {
-      "title": "প্রকৃত আলিমের সন্ধানে",
+      "title": "In Search of the True Scholar",
       "originalTitle": "প্রকৃত আলিমের সন্ধানে",
       "subtitle": "",
-      "summary": ""
+      "summary": "A Qur’an- and hadith-based study of who qualifies as a true religious scholar, the knowledge and character expected of such scholars, and their responsibilities. It also helps readers distinguish rabbani scholars from misleading or merely performative religious authority."
     },
     "bn": {
       "title": "প্রকৃত আলিমের সন্ধানে",
       "subtitle": "",
-      "summary": ""
+      "summary": "কুরআন ও হাদীসের আলোকে প্রকৃত আলিমের পরিচয়, যোগ্যতা, গুণাবলি ও দায়িত্ব নিয়ে তাত্ত্বিক ও বাস্তবিক আলোচনা। আলিমে রব্বানি, আলিমে সূ এবং সত্যিকার ও ভণ্ড ধর্মীয় কর্তৃত্বের পার্থক্য বুঝতেও বইটি সহায়তা করে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Guardian Publications",
+      "publisherBn": "গার্ডিয়ান পাবলিকেশনস",
+      "isbn": "9789849633787",
+      "edition": "1st Published, 2022",
+      "editionBn": "প্রথম প্রকাশ, ২০২২",
+      "pages": "208",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -906,24 +1183,35 @@ window.ahmadAliBookDetails = [
     "category": "Fiqh & Law",
     "series": null,
     "rokomariUrl": "https://www.rokomari.com/book/574219",
+    "links": [
+      {
+        "label": "ILRC Publications",
+        "labelBn": "আইএলআরসি প্রকাশনা",
+        "url": "https://ilrcbd.org/en/publications/"
+      }
+    ],
     "en": {
-      "title": "প্রচলিত আইনের ইসলামিকরণ",
+      "title": "Islamization of Existing Laws",
       "originalTitle": "প্রচলিত আইনের ইসলামিকরণ",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Bangladesh in Perspective",
+      "summary": "An expanded study of the relationship between Bangladesh’s existing legal system and Islamic legal thought. It examines compatibility and applicability, the sources and nature of law, constitutional and democratic pathways, practical challenges, and possible approaches to reform."
     },
     "bn": {
       "title": "প্রচলিত আইনের ইসলামিকরণ",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "পরিপ্রেক্ষিত বাংলাদেশ",
+      "summary": "বাংলাদেশের বিদ্যমান আইনব্যবস্থার সঙ্গে ইসলামী আইনচিন্তার সম্পর্ক, সামঞ্জস্য ও প্রয়োগযোগ্যতা নিয়ে বিস্তৃত গবেষণা। আইনের উৎস ও প্রকৃতি, সাংবিধানিক ও গণতান্ত্রিক কাঠামোয় প্রয়োগের সম্ভাবনা, প্রতিবন্ধকতা এবং উত্তরণের পন্থা আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
+      "edition": "Published, September 2026",
+      "editionBn": "প্রকাশ, সেপ্টেম্বর ২০২৬",
       "pages": "",
+      "binding": "Paperback",
+      "bindingBn": "পেপারব্যাক",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -940,26 +1228,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "186396",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/186396",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/product/bidat-1st-part/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ১ম খণ্ড",
+      "title": "Bid‘ah — Volume 1",
       "originalTitle": "বিদআত — ১ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Definition, Classification and Consequences",
+      "summary": "This opening volume defines bid‘ah, lays out its governing principles and classifications, and discusses its religious consequences. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ১ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "পরিচয়, প্রকরণ ও পরিণাম",
+      "summary": "প্রথম খণ্ডে বিদ‘আতের পরিচয়, মৌলিক নীতিমালা, শ্রেণিবিভাগ ও পরিণাম আলোচনা করা হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849371021",
+      "edition": "4th Edition, 2023",
+      "editionBn": "৪র্থ সংস্করণ, ২০২৩",
+      "pages": "206",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -976,26 +1275,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "186398",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/186398",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bidat-2nd-part/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ২য় খণ্ড",
+      "title": "Bid‘ah — Volume 2",
       "originalTitle": "বিদআত — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Innovations Related to Islamic Creed",
+      "summary": "This volume focuses on innovations connected with Islamic creed and the rulings used to assess them. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ২য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ইসলামী আকীদা",
+      "summary": "দ্বিতীয় খণ্ডে ইসলামী আকীদার সঙ্গে সংশ্লিষ্ট বিদ‘আত ও সেগুলোর বিধান আলোচিত হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849371038",
+      "edition": "2nd Edition, 2024",
+      "editionBn": "২য় সংস্করণ, ২০২৪",
+      "pages": "588",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1012,26 +1322,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "194779",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/194779",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bidat-3rd-khondo/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ৩য় খণ্ড",
+      "title": "Bid‘ah — Volume 3",
       "originalTitle": "বিদআত — ৩য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Innovations Related to Worship",
+      "summary": "This volume concentrates on innovations associated with acts of worship and the relevant legal principles. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ৩য় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ইবাদত-সংক্রান্ত বিদ‘আত",
+      "summary": "তৃতীয় খণ্ডে ইবাদতের সঙ্গে সংশ্লিষ্ট বিদ‘আত ও সংশ্লিষ্ট শরঈ বিধান নিয়ে আলোচনা করা হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849371045",
+      "edition": "2nd Edition, 2022",
+      "editionBn": "২য় সংস্করণ, ২০২২",
+      "pages": "486",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1048,28 +1369,39 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "206454",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/206454",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bidat-4th-part/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ৪র্থ খণ্ড",
+      "title": "Bid‘ah — Volume 4",
       "originalTitle": "বিদআত — ৪র্থ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Funeral Prayer, Graves, Grave Visitation and Isal al-Sawab",
+      "summary": "This volume examines practices and innovations connected with janazah, graves, grave visitation and isal al-sawab, together with the relevant rulings. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ৪র্থ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "জানাযা, কবর যিয়ারত ও ঈছালে সওয়াব",
+      "summary": "চতুর্থ খণ্ডে জানাযা, কবর, কবর যিয়ারত ও ঈছালে সওয়াবের সঙ্গে সংশ্লিষ্ট প্রচলিত বিদ‘আত ও বিধান আলোচিত হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849371083",
+      "edition": "3rd Edition; first published 2020",
+      "editionBn": "৩য় সংস্করণ; প্রথম প্রকাশ ২০২০",
+      "pages": "312",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -1084,26 +1416,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "214109",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/214109",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bidat-5-part/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ৫ম খণ্ড",
+      "title": "Bid‘ah — Volume 5",
       "originalTitle": "বিদআত — ৫ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Eid-e-Milad-un-Nabi and Religious & Social Ceremonies",
+      "summary": "This volume addresses practices surrounding Eid-e-Milad-un-Nabi and a range of religious and social ceremonies, assessing them through the series’ evidentiary framework. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ৫ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ঈদে মীলাদুন্নবী, ধর্মীয় ও সামাজিক আচার-অনুষ্ঠান",
+      "summary": "পঞ্চম খণ্ডে ঈদে মীলাদুন্নবী এবং বিভিন্ন ধর্মীয় ও সামাজিক আচার-অনুষ্ঠানের সঙ্গে সংশ্লিষ্ট বিদ‘আত বিশ্লেষণ করা হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849371090",
+      "edition": "2nd Edition, 2021",
+      "editionBn": "২য় সংস্করণ, ২০২১",
+      "pages": "400",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1120,26 +1463,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "234608",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/234608",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bid-at-6th-part/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ৬ষ্ঠ খণ্ড",
+      "title": "Bid‘ah — Volume 6",
       "originalTitle": "বিদআত — ৬ষ্ঠ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Tasawwuf",
+      "summary": "The sixth volume takes tasawwuf as its central subject and evaluates related beliefs and practices within the broader Bid‘ah project. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ৬ষ্ঠ খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "তাসাউফ",
+      "summary": "ষষ্ঠ খণ্ডের কেন্দ্রীয় প্রসঙ্গ তাসাউফ; তাসাউফ-সংশ্লিষ্ট বিভিন্ন বিশ্বাস ও আমলকে বিদ‘আত সিরিজের সামগ্রিক গবেষণা কাঠামোর মধ্যে পর্যালোচনা করা হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849613916",
+      "edition": "2nd Published, 2022",
+      "editionBn": "২য় প্রকাশ, ২০২২",
+      "pages": "536",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1156,28 +1510,39 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "273066",
     "category": "Aqidah & Thought",
-    "series": null,
+    "series": "bidat",
     "rokomariUrl": "https://www.rokomari.com/book/273066",
+    "links": [
+      {
+        "label": "ILRC",
+        "labelBn": "আইএলআরসি",
+        "url": "https://ilrcbd.org/ar/product/bidat-soptom-khondo/"
+      }
+    ],
     "en": {
-      "title": "বিদআত — ৭ম খণ্ড",
+      "title": "Bid‘ah — Volume 7",
       "originalTitle": "বিদআত — ৭ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Islam’s Various Theological Thoughts and Schools",
+      "summary": "The seventh volume examines a range of theological ideas and schools found in Islamic intellectual history, discussing them within the research framework of the Bid‘ah series. Part of Dr. Ahmad Ali’s eight-volume Bid‘ah series, a research project identifying religious innovations through scriptural and juristic analysis while distinguishing them from established Islamic teachings and practice."
     },
     "bn": {
       "title": "বিদআত — ৭ম খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "ইসলামের নানা ধর্মতাত্ত্বিক চিন্তা ও মতবাদ",
+      "summary": "সপ্তম খণ্ডে ইসলামের ইতিহাসে গড়ে ওঠা নানা ধর্মতাত্ত্বিক চিন্তা ও মতবাদকে বিদ‘আত সিরিজের গবেষণা কাঠামোর মধ্যে পর্যালোচনা করা হয়েছে। ড. আহমদ আলীর আট খণ্ডের বিদ‘আত সিরিজের অংশ। দলীল-প্রমাণ ও ফিকহী বিশ্লেষণের মাধ্যমে প্রচলিত বিদ‘আত চিহ্নিত করা এবং সেগুলোকে প্রতিষ্ঠিত ইসলামী শিক্ষা ও আমল থেকে পৃথক করে দেখানো এ সিরিজের মূল লক্ষ্য।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+      "isbn": "9789849613923",
+      "edition": "1st Edition",
+      "editionBn": "১ম সংস্করণ",
+      "pages": "544",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -1193,25 +1558,36 @@ window.ahmadAliBookDetails = [
     "rokomariId": "343636",
     "category": "Aqidah & Thought",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/343636",
+    "rokomariUrl": "https://www.rokomari.com/book/343636/munaphier-porichoy-o-swarup",
+    "links": [
+      {
+        "label": "Publisher",
+        "labelBn": "প্রকাশক",
+        "url": "https://www.kalantorprokashoni.com/book/munafiker-porichoy-o-swarup/"
+      }
+    ],
     "en": {
-      "title": "মুনাফিকের পরিচয় ও স্বরূপ",
+      "title": "The Identity and Nature of the Hypocrite",
       "originalTitle": "মুনাফিকের পরিচয় ও স্বরূপ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A study of nifaq and the munafiq: definitions and types, characteristic traits, causes and consequences, threats posed to religious and communal life, and ways of protecting oneself from hypocrisy. The publisher presents it as a synthesis of earlier literature with additions for contemporary circumstances."
     },
     "bn": {
       "title": "মুনাফিকের পরিচয় ও স্বরূপ",
       "subtitle": "",
-      "summary": ""
+      "summary": "নিফাক ও মুনাফিকের পরিচয় ও প্রকারভেদ, বৈশিষ্ট্য, কারণ ও পরিণাম, দ্বীন ও মিল্লাতের বিরুদ্ধে তাদের ক্ষতিকর ভূমিকা এবং নিফাক থেকে বাঁচার উপায় নিয়ে আলোচনা। পূর্ববর্তী সাহিত্যকে সময় ও অবস্থার আলোকে নতুন সংযোজনসহ উপস্থাপন করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "publisher": "Kalantor Prokashoni",
+      "publisherBn": "কালান্তর প্রকাশনী",
+      "isbn": "9789849801375",
+      "edition": "1st Edition, October 2023",
+      "editionBn": "১ম সংস্করণ, অক্টোবর ২০২৩",
+      "pages": "232",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1226,28 +1602,39 @@ window.ahmadAliBookDetails = [
     "id": "muslim-lipikala",
     "order": 100,
     "status": "published",
-    "rokomariId": null,
+    "rokomariId": "161012",
     "category": "Arabic Language & Literature",
     "series": null,
-    "rokomariUrl": null,
+    "rokomariUrl": "https://www.rokomari.com/book/161012/muslim-lipikala-utpatti-o-bikash/",
+    "links": [
+      {
+        "label": "Mamun Books",
+        "labelBn": "মামুন বুকস",
+        "url": "https://mamunbooks.com/index.php/product-details/30610--"
+      }
+    ],
     "en": {
-      "title": "মুসলিম লিপিকলা: উৎপত্তি ও বিকাশ",
+      "title": "Muslim Calligraphy: Origin and Development",
       "originalTitle": "মুসলিম লিপিকলা: উৎপত্তি ও বিকাশ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A historical and cultural study tracing the origin and development of Muslim calligraphy and its place in Islamic civilization and artistic tradition."
     },
     "bn": {
       "title": "মুসলিম লিপিকলা: উৎপত্তি ও বিকাশ",
       "subtitle": "",
-      "summary": ""
+      "summary": "মুসলিম লিপিকলার উৎপত্তি, ক্রমবিকাশ এবং ইসলামী সভ্যতা ও শিল্প-ঐতিহ্যে এর অবস্থান নিয়ে ঐতিহাসিক ও সাংস্কৃতিক গবেষণা।"
     },
     "meta": {
       "publisher": "Bangla Academy, Dhaka",
       "publisherBn": "বাংলা একাডেমি, ঢাকা",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "isbn": "9840756508",
+      "edition": "1st Published, 2017",
+      "editionBn": "প্রথম প্রকাশ, ২০১৭",
+      "pages": "312",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1264,28 +1651,39 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "185781",
     "category": "Qur’an & Tafsir",
-    "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/185781",
+    "series": "zubdatul-bayan",
+    "rokomariUrl": "https://www.rokomari.com/book/185781/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir/",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/78a7a7c13f5611edb3ec2a6c60b8696b/zubodatul-bayan-fi-idahi-ummil-quran-sura-fatihar-tafsir.html"
+      }
+    ],
     "en": {
-      "title": "যুবদাতুল বায়ান ফী ঈদাহি উম্মিল কুরআন",
+      "title": "Zubdat al-Bayan fi Idah Umm al-Qur’an",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহি উম্মিল কুরআন",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Tafsir of Surah al-Fatihah",
+      "summary": "The 2019 Surah al-Fatihah study that preceded the later numbered Zubdat al-Bayan volumes. It forms part of Dr. Ahmad Ali’s continuing effort to produce a detailed Bengali tafsir of the Qur’an."
     },
     "bn": {
       "title": "যুবদাতুল বায়ান ফী ঈদাহি উম্মিল কুরআন",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "সূরা ফাতিহার তাফসীর",
+      "summary": "২০১৯ সালে প্রকাশিত সূরা ফাতিহার তাফসীরভিত্তিক গ্রন্থ, যা পরবর্তী সংখ্যায়িত যুবদাতুল বায়ান খণ্ডসমূহের পূর্ববর্তী প্রকাশনা। এটি ড. আহমদ আলীর পূর্ণাঙ্গ বাংলা তাফসীর রচনার চলমান উদ্যোগের অংশ।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
+      "publisher": "Prochchhod Prokashon",
+      "publisherBn": "প্রচ্ছদ প্রকাশন",
+      "isbn": "9789849207429",
+      "edition": "1st Published, 2019",
+      "editionBn": "প্রথম প্রকাশ, ২০১৯",
+      "pages": "181",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla & Arabic",
+      "languageBn": "বাংলা ও আরবি"
     },
     "media": {
       "cover": null,
@@ -1300,26 +1698,37 @@ window.ahmadAliBookDetails = [
     "status": "published",
     "rokomariId": "234566",
     "category": "Qur’an & Tafsir",
-    "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/234566",
+    "series": "zubdatul-bayan",
+    "rokomariUrl": "https://www.rokomari.com/book/234566/zubdatul-bayan-fee-eedahil-quran",
+    "links": [
+      {
+        "label": "Mamun Books",
+        "labelBn": "মামুন বুকস",
+        "url": "https://mamunbooks.com/product-details/23509--"
+      }
+    ],
     "en": {
-      "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",
+      "title": "Zubdat al-Bayan fi Idah al-Qur’an — Volume 2",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "Tafsir of Surah al-Baqarah: Ruku 1–4",
+      "summary": "The second numbered volume of Dr. Ahmad Ali’s continuing Bengali tafsir project. It covers the first four ruku of Surah al-Baqarah and follows an academic format that includes contextual introductions, lexical analysis, verse-by-verse explanation, related Qur’anic and hadith evidence, juristic issues, practical lessons and detailed references."
     },
     "bn": {
       "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",
-      "subtitle": "",
-      "summary": ""
+      "subtitle": "সূরা বাকারাহর তাফসীর: ১–৪ রূকূ",
+      "summary": "ড. আহমদ আলীর চলমান পূর্ণাঙ্গ বাংলা তাফসীর প্রকল্পের দ্বিতীয় সংখ্যায়িত খণ্ড। এতে সূরা বাকারাহর প্রথম চার রূকূর তাফসীর রয়েছে; সূরার পরিচিতি, শাব্দিক বিশ্লেষণ, আয়াতভিত্তিক ব্যাখ্যা, সংশ্লিষ্ট আয়াত-হাদীস, ফিকহী মাসআলা, শিক্ষণীয় দিক ও বিস্তারিত তথ্যসূত্র একাডেমিক বিন্যাসে উপস্থাপিত হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Prochchhod Prokashon",
+      "publisherBn": "প্রচ্ছদ প্রকাশন",
       "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
+      "edition": "1st Published, 2022",
+      "editionBn": "প্রথম প্রকাশ, ২০২২",
+      "pages": "336",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -1331,23 +1740,30 @@ window.ahmadAliBookDetails = [
     }
   },
   {
+    "id": "zubdatul-bayan-vol-1",
     "order": 17,
     "status": "published",
-    "id": "zubdatul-bayan-vol-1",
     "rokomariId": "204536",
     "category": "Qur’an & Tafsir",
     "series": "zubdatul-bayan",
     "rokomariUrl": "https://www.rokomari.com/book/204536/zubdatul-bayan-fee-eedahil-quran",
+    "links": [
+      {
+        "label": "eBoighar",
+        "labelBn": "ইবইঘর",
+        "url": "https://www.eboighar.com/bn/booksdetails/46765/%E0%A6%AF%E0%A7%81%E0%A6%AC%E0%A6%A6%E0%A6%BE%E0%A6%A4%E0%A7%81%E0%A6%B2%20%E0%A6%AC%E0%A6%BE%E0%A7%9F%E0%A6%BE%E0%A6%A8%20%E0%A6%AB%E0%A7%80%20%E0%A6%88%E0%A6%A6%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%B2%20%E0%A6%95%E0%A7%81%E0%A6%B0%E0%A6%86%E0%A6%A8%20%28%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A5%E0%A6%AE%20%E0%A6%96%E0%A6%A3%E0%A7%8D%E0%A6%A1%29%20%28%E0%A6%B8%E0%A7%82%E0%A6%B0%E0%A6%BE%20%E0%A6%AB%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0%20%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%B8%E0%A7%80%E0%A6%B0%29"
+      }
+    ],
     "en": {
       "title": "Zubdat al-Bayan fi Idah al-Qur’an — Volume 1",
       "originalTitle": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — প্রথম খণ্ড",
       "subtitle": "Tafsir of Surah al-Fatihah",
-      "summary": "The first volume of Dr. Ahmad Ali’s continuing project to produce a complete Bengali tafsir of the Qur’an. The work is organized in an academic style, with references and discussion intended to connect classical tafsir with questions relevant to contemporary readers."
+      "summary": "The first numbered volume of Dr. Ahmad Ali’s continuing project to produce a complete Bengali tafsir of the Qur’an. The Surah al-Fatihah volume is arranged in an academic style with extensive references and explanatory discussion."
     },
     "bn": {
       "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — প্রথম খণ্ড",
       "subtitle": "সূরা ফাতিহার তাফসীর",
-      "summary": "ড. আহমদ আলীর পূর্ণাঙ্গ বাংলা তাফসীর রচনার চলমান প্রকল্পের প্রথম খণ্ড। একাডেমিক বিন্যাস, তথ্যসূত্র ও প্রাসঙ্গিক আলোচনার মাধ্যমে ক্লাসিক্যাল তাফসীর-ঐতিহ্যকে সমকালীন পাঠকের প্রয়োজনের সঙ্গে সংযুক্ত করার প্রয়াস এতে দেখা যায়।"
+      "summary": "ড. আহমদ আলীর পূর্ণাঙ্গ বাংলা তাফসীর রচনার চলমান প্রকল্পের প্রথম সংখ্যায়িত খণ্ড। সূরা ফাতিহার তাফসীরটি একাডেমিক বিন্যাস, প্রামাণ্য তথ্যসূত্র ও ব্যাখ্যামূলক আলোচনায় সাজানো হয়েছে।"
     },
     "meta": {
       "publisher": "Prochchhod Prokashon",
@@ -1356,10 +1772,15 @@ window.ahmadAliBookDetails = [
       "edition": "2nd Edition, 2020",
       "editionBn": "২য় সংস্করণ, ২০২০",
       "pages": "256",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
     "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1372,25 +1793,36 @@ window.ahmadAliBookDetails = [
     "rokomariId": "109970",
     "category": "Governance & Society",
     "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/109970",
+    "rokomariUrl": "https://www.rokomari.com/book/109970/sarbovoumotto-islami-dristikon",
+    "links": [
+      {
+        "label": "Kitabghor",
+        "labelBn": "কিতাবঘর",
+        "url": "https://www.kitabghor.com/products/details/5397eeea186f11edb3ec2a6c60b8696b/sarbovoumotto-islami-dristikon.html"
+      }
+    ],
     "en": {
-      "title": "সার্বভৌমত্ব: ইসলামী দৃষ্টিকোণ",
+      "title": "Sovereignty: An Islamic Perspective",
       "originalTitle": "সার্বভৌমত্ব: ইসলামী দৃষ্টিকোণ",
       "subtitle": "",
-      "summary": ""
+      "summary": "A study of the concept of sovereignty from an Islamic perspective, placing questions of ultimate authority, political order and governance within the framework of Islamic political thought."
     },
     "bn": {
       "title": "সার্বভৌমত্ব: ইসলামী দৃষ্টিকোণ",
       "subtitle": "",
-      "summary": ""
+      "summary": "সার্বভৌমত্বের ধারণাকে ইসলামী দৃষ্টিকোণ থেকে বিশ্লেষণ করে চূড়ান্ত কর্তৃত্ব, রাজনৈতিক ব্যবস্থা ও শাসনব্যবস্থার প্রশ্নগুলোকে ইসলামী রাজনৈতিক চিন্তার কাঠামোয় উপস্থাপন করা হয়েছে।"
     },
     "meta": {
-      "publisher": "",
-      "publisherBn": "",
+      "publisher": "Bangladesh Islamic Centre",
+      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
       "isbn": "",
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "Hardcover",
+      "bindingBn": "হার্ডকভার",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },

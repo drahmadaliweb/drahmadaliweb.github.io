@@ -29,6 +29,10 @@ export default {
     edition: '',
     editionBn: '',
     pages: '',
+    binding: '',
+    bindingBn: '',
+    country: '',
+    countryBn: '',
     language: '',
     languageBn: ''
   },
