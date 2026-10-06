@@ -491,3 +491,62 @@ html[lang="bn"] .nav-links a:hover,html[lang="bn"] .nav-links a.active{color:var
 .book-detail-actions .btn.primary{padding-inline:18px}
 html[lang="bn"] .contact-form-intro>p:not(.eyebrow),html[lang="bn"] .form-field>span,html[lang="bn"] .form-field input,html[lang="bn"] .form-field select,html[lang="bn"] .form-field textarea,html[lang="bn"] .form-field small,html[lang="bn"] .form-status{font-family:var(--bangla-sans)}
 @media(max-width:760px){.contact-form-layout{grid-template-columns:1fr;gap:18px}.form-grid{grid-template-columns:1fr}.form-field-wide{grid-column:auto}.contact-form{padding:16px}.form-submit-row{align-items:flex-start;flex-direction:column}}
+
+/* 2026-10-10 — Contact page: form-first layout and institutional mailing address */
+.mailing-address-section{padding-top:44px;border-top:1px solid var(--line);background:var(--paper)}
+.mailing-address-card{max-width:980px;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:50px;align-items:start;padding:27px 30px;border:1px solid var(--line);border-radius:12px;background:var(--ivory)}
+.mailing-address-heading h2{font-size:1.75rem;margin:0 0 9px}.mailing-address-heading>p:not(.eyebrow){margin:0;color:var(--muted);font-size:.84rem;line-height:1.62}
+.mailing-address-card address{margin:0;padding-left:28px;border-left:1px solid var(--line);font-style:normal;color:var(--muted);font-size:.86rem;line-height:1.7}.mailing-address-card address strong{color:var(--forest);font-family:var(--serif);font-size:1.13rem}
+html[lang="bn"] .mailing-address-heading>p:not(.eyebrow),html[lang="bn"] .mailing-address-card address{font-family:var(--bangla-sans)}html[lang="bn"] .mailing-address-card address strong{font-family:var(--bangla)}
+@media(max-width:760px){.mailing-address-card{grid-template-columns:1fr;gap:20px;padding:20px}.mailing-address-card address{padding-left:0;padding-top:18px;border-left:0;border-top:1px solid var(--line)}}
+
+
+/* ===== Main-page title consistency =====
+   All primary section pages use the same compact one-line title scale.
+   Content titles (individual books/articles) keep their own wrapping rules. */
+.page-hero h1,
+.biography-hero h1{
+  font-size:clamp(2.15rem,3.8vw,3.15rem);
+  line-height:1.06;
+  max-width:none;
+  white-space:nowrap;
+}
+@media(max-width:760px){
+  .page-hero h1,
+  .biography-hero h1{font-size:clamp(1.72rem,7.6vw,2.35rem);letter-spacing:-.032em}
+}
+@media(max-width:420px){
+  .page-hero h1,
+  .biography-hero h1{font-size:clamp(1.48rem,7.1vw,1.9rem);letter-spacing:-.025em}
+}
+
+/* 2026-10-11 — Descriptive page titles, shared scale */
+.page-hero .container.narrow,
+.biography-hero .container{
+  width:min(1440px,calc(100% - 96px));
+  max-width:1440px;
+}
+.page-hero h1,
+.biography-hero h1{
+  font-size:clamp(1.8rem,2.8vw,2.75rem);
+  line-height:1.08;
+  max-width:none;
+  white-space:nowrap;
+  letter-spacing:-.035em;
+}
+.biography-hero-grid{grid-template-columns:minmax(0,1fr) 190px;gap:30px}
+.bio-hero-photo{width:190px}
+@media(max-width:960px){
+  .page-hero .container.narrow,
+  .biography-hero .container{width:min(100% - 48px,1440px)}
+  .biography-hero-grid{grid-template-columns:minmax(0,1fr) 145px;gap:22px}
+  .bio-hero-photo{width:145px}
+}
+@media(max-width:760px){
+  .page-hero .container.narrow,
+  .biography-hero .container{width:min(100% - 26px,1440px)}
+  .page-hero h1,
+  .biography-hero h1{font-size:clamp(1.72rem,7.6vw,2.15rem);white-space:normal;letter-spacing:-.025em}
+  .biography-hero-grid{grid-template-columns:1fr}
+  .bio-hero-photo{width:min(210px,65vw)}
+}
