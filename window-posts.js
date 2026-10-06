@@ -189,31 +189,60 @@
 
   function detailHref(post,index){ return `post.html?id=${encodeURIComponent(postId(post,index))}`; }
 
+  function sourceType(post){
+    const t=String(post?.source?.type||'website').toLowerCase();
+    return ['facebook','newspaper','magazine','blog','website','other'].includes(t)?t:'other';
+  }
+  const typeLabels=lang==='bn'?{
+    all:'সব',facebook:'ফেসবুক',newspaper:'সংবাদপত্র',magazine:'সাময়িকী',blog:'ব্লগ',website:'ওয়েবসাইটের লেখা',other:'অন্যান্য'
+  }:{
+    all:'All',facebook:'Facebook',newspaper:'Newspaper',magazine:'Magazine',blog:'Blog',website:'Website essays',other:'Other'
+  };
+
   const archive=document.getElementById('postsArchive');
   if(archive){
     if(!posts.length){ archive.textContent=copy.empty; return; }
-    archive.replaceChildren();
-    posts.forEach((post,index)=>{
-      const loc=localized(post);
-      const card=document.createElement('article');
-      card.className=`writing-card${index===0?' featured':''}`;
+    const filterHost=document.getElementById('writingFilters');
+    const present=[...new Set(posts.map(sourceType))];
+    let activeType='all';
 
-      const meta=document.createElement('div'); meta.className='writing-meta';
-      if(index===0){ const latest=document.createElement('span'); latest.className='latest-chip'; latest.textContent=copy.latest; meta.appendChild(latest); }
-      const date=document.createElement('time'); date.dateTime=post.date||''; date.textContent=formatDate(post.date); meta.appendChild(date);
-      const src=sourceLink(post,true); if(src) meta.appendChild(src);
+    function renderArchive(){
+      archive.replaceChildren();
+      const shown=activeType==='all'?posts:posts.filter(p=>sourceType(p)===activeType);
+      if(!shown.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.empty;archive.appendChild(p);return;}
+      shown.forEach((post)=>{
+        const index=posts.indexOf(post);
+        const loc=localized(post);
+        const card=document.createElement('article');
+        card.className=`writing-card${index===0?' featured':''}`;
 
-      const title=document.createElement('h2');
-      const titleLink=document.createElement('a'); titleLink.href=detailHref(post,index); titleLink.textContent=loc.title||''; title.appendChild(titleLink);
-      const ex=document.createElement('p'); ex.className='writing-excerpt'; ex.textContent=loc.excerpt || excerpt(loc.body);
-      const actions=document.createElement('div'); actions.className='writing-actions';
-      const read=document.createElement('a'); read.className='read-full-link'; read.href=detailHref(post,index); read.textContent=`${copy.read} →`; actions.appendChild(read);
-      if(post.source?.url){
-        const original=originalLogoLink(post);
-        if(original) actions.appendChild(original);
-      }
-      card.append(meta,title,ex,actions); archive.appendChild(card);
-    });
+        const meta=document.createElement('div'); meta.className='writing-meta';
+        if(index===0){ const latest=document.createElement('span'); latest.className='latest-chip'; latest.textContent=copy.latest; meta.appendChild(latest); }
+        const date=document.createElement('time'); date.dateTime=post.date||''; date.textContent=formatDate(post.date); meta.appendChild(date);
+        const src=sourceLink(post,true); if(src) meta.appendChild(src);
+
+        const title=document.createElement('h2');
+        const titleLink=document.createElement('a'); titleLink.href=detailHref(post,index); titleLink.textContent=loc.title||''; title.appendChild(titleLink);
+        const ex=document.createElement('p'); ex.className='writing-excerpt'; ex.textContent=loc.excerpt || excerpt(loc.body);
+        const actions=document.createElement('div'); actions.className='writing-actions';
+        const read=document.createElement('a'); read.className='read-full-link'; read.href=detailHref(post,index); read.textContent=`${copy.read} →`; actions.appendChild(read);
+        if(post.source?.url){
+          const original=originalLogoLink(post);
+          if(original) actions.appendChild(original);
+        }
+        card.append(meta,title,ex,actions); archive.appendChild(card);
+      });
+    }
+
+    if(filterHost){
+      filterHost.replaceChildren();
+      ['all',...present].forEach(type=>{
+        const btn=document.createElement('button');btn.type='button';btn.className=`writing-filter-btn${type==='all'?' active':''}`;btn.dataset.type=type;btn.textContent=typeLabels[type]||type;
+        btn.addEventListener('click',()=>{activeType=type;filterHost.querySelectorAll('.writing-filter-btn').forEach(b=>b.classList.toggle('active',b===btn));renderArchive();});
+        filterHost.appendChild(btn);
+      });
+    }
+    renderArchive();
   }
 
   const detail=document.getElementById('postDetail');

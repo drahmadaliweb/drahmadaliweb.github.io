@@ -98,3 +98,118 @@ Manual rebuild fallback:
 ```bash
 node scripts/build-post-index.mjs
 ```
+
+## Compact modern design pass
+The site-wide typography and spacing were tightened for a denser editorial/academic look. The change is centralized in `styles.css`, so it applies to English and Bengali pages, the homepage, profile, biography, books, publications, writings archive, full article reader, updates archive, and contact page.
+
+## Dense editorial homepage
+The homepage is intentionally publication-first and compact: a short hero, Recent Updates, the latest items from **Through the Window of Time**, then Featured Books and Featured Publications. Academic profile/research/service details live on the Profile page.
+
+# Book library, series and detailed book pages
+
+The Books page is now **source-neutral**. Rokomari is not treated as the catalog; it is only one optional availability/source link attached to a book. Books documented from the CV and books that also happen to be available through Rokomari appear together in one catalog. Forthcoming books remain separate.
+
+Every catalog item uses **one file per book** in `books/` and therefore has an internal detail page. Five books currently have richer descriptions and publication metadata; the remaining records can be expanded later without redesigning the catalog.
+
+```text
+books/
+  _template.mjs
+  usulul-iman-vol-1.mjs
+  zubdatul-bayan-vol-1.mjs
+  adhunik-chintadhara-vol-1.mjs
+  tulonamulok-fiqh-vol-1.mjs
+  islami-banking-sharia-compliance.mjs
+  ...one file per additional book
+```
+
+On the Books page, hovering/focusing a book reveals **View Details / বিস্তারিত দেখুন** over the cover. There are no Rokomari/action links underneath the cover. Any Rokomari, publisher, preview, PDF, audiobook, or other source links belong on the book's detail page.
+
+To add or expand a book, copy `books/_template.mjs`, fill in the available metadata, and commit it. GitHub Actions rebuilds `books-manifest.js` automatically.
+
+The Books page also groups the major series: **Bid‘ah**, **Usul al-Iman**, and **Zubdat al-Bayan**.
+
+Manual rebuild fallback:
+
+```bash
+node scripts/build-book-index.mjs
+```
+
+## Adding cover art, a PDF, preview or audiobook
+
+Each book file supports:
+
+```js
+media: {
+  cover: null,
+  preview: null,
+  pdf: null,
+  audio: []
+}
+```
+
+You can use either local website files or external URLs.
+
+Example with files stored in the repository:
+
+```text
+media/books/usulul-iman-vol-1/
+  cover.jpg
+  preview.pdf
+  full-book.pdf
+  01-introduction.mp3
+  02-chapter-one.mp3
+```
+
+Then edit the corresponding book file:
+
+```js
+media: {
+  cover: 'media/books/usulul-iman-vol-1/cover.jpg',
+  preview: 'media/books/usulul-iman-vol-1/preview.pdf',
+  pdf: 'media/books/usulul-iman-vol-1/full-book.pdf',
+  audio: [
+    {
+      title: 'Introduction',
+      titleBn: 'ভূমিকা',
+      url: 'media/books/usulul-iman-vol-1/01-introduction.mp3'
+    }
+  ]
+}
+```
+
+External availability links can also be added to the book record. `rokomariUrl` remains supported, and additional links can use a `links` array. The site hides buttons for resources that are not supplied. For large audio files, prefer a suitable external media host instead of committing very large files to GitHub.
+
+Only upload/distribute PDFs or audio for which Dr. Ahmad Ali/publisher has permission to publish online.
+
+# Site-wide search
+
+A compact **Search / খুঁজুন** control appears in the top utility bar. `search.html` / `bn/search.html` searches across:
+
+- detailed books and the wider Books catalog,
+- research publications,
+- Through the Window of Time writings,
+- Updates,
+- Profile/Biography and the main archive pages.
+
+No separate search index needs normal manual maintenance.
+
+# Writing archive filters
+
+`Through the Window of Time / সময়ের সঙ্গে বাতায়ন` automatically creates filters from the source types actually present in `/posts`:
+
+- Facebook
+- Newspaper
+- Magazine
+- Blog
+- Website essays
+- Other
+
+For an original article published only on this website, use:
+
+```js
+source: {
+  type: 'website',
+  label: 'Dr. Ahmad Ali Website',
+  url: ''
+}
+```

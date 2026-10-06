@@ -6,6 +6,8 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInte
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const search=document.getElementById('bookSearch');
+const initialBookQuery=new URLSearchParams(location.search).get('q');
+if(search&&initialBookQuery)search.value=initialBookQuery;
 const cards=[...document.querySelectorAll('.book-card')];
 const filterBtns=[...document.querySelectorAll('.filter-btn')];
 const empty=document.getElementById('bookEmpty');
@@ -124,4 +126,34 @@ if(search)search.addEventListener('input',applyBooks);
     track.style.setProperty('--marquee-shift',`-${cycleWidth}px`);track.style.setProperty('--marquee-duration',`${duration}s`);track.style.animationDelay=`-${phase}s`;ticker.classList.add('marquee-ready');
   };
   if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>requestAnimationFrame(startMarquee));}else{requestAnimationFrame(startMarquee);}
+})();
+
+/* Latest writings on the homepage. Content comes from /posts/*.mjs via posts-manifest.js. */
+(() => {
+  const host=document.getElementById('homeWritingsList');
+  if(!host)return;
+  const lang=document.documentElement.lang==='bn'?'bn':'en';
+  const locale=lang==='bn'?'bn-BD':'en-GB';
+  const posts=Array.isArray(window.windowOfTimePosts)?window.windowOfTimePosts.slice():[];
+  const copy=lang==='bn'?{empty:'এখনও কোনো লেখা যোগ করা হয়নি।',read:'পুরোটি পড়ুন'}:{empty:'No writings have been added yet.',read:'View Full'};
+  const parseDate=v=>{const d=new Date(`${v||''}T12:00:00`);return Number.isNaN(d.getTime())?null:d;};
+  const fmt=v=>{const d=parseDate(v);return d?new Intl.DateTimeFormat(locale,{year:'numeric',month:'short',day:'numeric'}).format(d):'';};
+  const clean=body=>String(body||'').split(/\r?\n/).map(s=>s.trim()).filter(Boolean).filter(line=>!/^\*{3}(?:\s+\*{3})+$/u.test(line)&&!/^<{3}.*>{3}$/u.test(line)).map(line=>line.replace(/^#\s*/u,'')).join(' ').replace(/\s+/g,' ').trim();
+  const excerpt=(body,max=180)=>{const t=clean(body);if(t.length<=max)return t;const cut=t.slice(0,max);const stop=Math.max(cut.lastIndexOf('।'),cut.lastIndexOf('.'),cut.lastIndexOf(' '));return `${cut.slice(0,stop>95?stop:max).trim()}…`;};
+  const slugify=text=>String(text||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u0980-\u09ff]+/g,'-').replace(/^-+|-+$/g,'').slice(0,90);
+  const postId=(post,index)=>post.id?String(post.id):`${post.date||'undated'}-${slugify(post.en?.title||post.bn?.title||`post-${index+1}`)||`post-${index+1}`}`;
+  posts.sort((a,b)=>(parseDate(b.date)?.getTime()||0)-(parseDate(a.date)?.getTime()||0));
+  host.replaceChildren();
+  if(!posts.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.empty;host.appendChild(p);return;}
+  posts.slice(0,3).forEach((post,index)=>{
+    const loc=post?.[lang]||post?.en||post?.bn||{};
+    const a=document.createElement('a');a.className='home-writing-item';a.href=`post.html?id=${encodeURIComponent(postId(post,index))}`;
+    const time=document.createElement('time');time.dateTime=post.date||'';time.textContent=fmt(post.date);
+    const c=document.createElement('div');c.className='home-writing-copy';
+    const h=document.createElement('h3');h.textContent=loc.title||'';
+    const p=document.createElement('p');p.textContent=loc.excerpt||excerpt(loc.body);
+    c.append(h,p);
+    const action=document.createElement('span');action.className='home-writing-action';action.textContent=`${copy.read} →`;
+    a.append(time,c,action);host.appendChild(a);
+  });
 })();
