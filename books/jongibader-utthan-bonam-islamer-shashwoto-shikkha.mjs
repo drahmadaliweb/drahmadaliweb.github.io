@@ -33,7 +33,7 @@ export default {
     "languageBn": "বাংলা"
   },
   "media": {
-    "cover": null,
+    "cover": "media/books/jongibader-utthan-bonam-islamer-shashwoto-shikkha/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []

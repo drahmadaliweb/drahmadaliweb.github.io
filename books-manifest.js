@@ -37,7 +37,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/adhunik-arabi-kabya-sahitya-vol-1/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -84,7 +84,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/adhunik-chintadhara-vol-1/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -131,7 +131,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-511409/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -178,7 +178,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-109961/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -219,7 +219,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-281303/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -301,7 +301,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/ismatul-ambiya/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -342,6 +342,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
+      "cover": "media/books/islami-banking-sharia-compliance/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -382,7 +383,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-45172/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -429,7 +430,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-187227/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -470,7 +471,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-137444/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -511,7 +512,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-45163/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -552,7 +553,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/usulul-iman-vol-1/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -593,7 +594,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-305723/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -634,7 +635,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-394655/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -675,7 +676,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-394656/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -790,7 +791,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-189691/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -831,7 +832,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/jongibader-utthan-bonam-islamer-shashwoto-shikkha/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -872,7 +873,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-137442/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -913,7 +914,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-189588/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -960,7 +961,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/tulonamulok-fiqh-vol-1/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1001,7 +1002,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-192236/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1042,7 +1043,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-227327/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1089,7 +1090,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-574219/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1136,7 +1137,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-186396/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1183,7 +1184,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-186398/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1230,7 +1231,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-194779/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1277,7 +1278,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-206454/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1324,7 +1325,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-214109/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1371,7 +1372,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-234608/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1418,7 +1419,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা ও আরবি"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-273066/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1465,7 +1466,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-343636/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1506,7 +1507,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/muslim-lipikala/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1588,7 +1589,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-234566/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1629,7 +1630,7 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/zubdatul-bayan-vol-1/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1670,7 +1671,48 @@ window.ahmadAliBookDetails = [
       "languageBn": "বাংলা"
     },
     "media": {
-      "cover": null,
+      "cover": "media/books/book-109970/cover.jpg",
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "salatut-tarabih",
+    "order": 38,
+    "status": "published",
+    "rokomariId": null,
+    "category": "Fiqh & Law",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Salat al-Tarawih",
+      "originalTitle": "সালাতুত তারাবীহ",
+      "subtitle": "The Ramadan night prayer",
+      "summary": "A standalone work by Dr. Ahmad Ali devoted to Salat al-Tarawih, the Ramadan night prayer, and its place in Islamic devotional practice and jurisprudential discussion."
+    },
+    "bn": {
+      "title": "সালাতুত তারাবীহ",
+      "subtitle": "রমযানের তারাবীহ সালাত",
+      "summary": "রমযান মাসের তারাবীহ সালাতকে কেন্দ্র করে ড. আহমদ আলীর একটি স্বতন্ত্র গ্রন্থ। এ ইবাদতের ইসলামী বিধান ও সংশ্লিষ্ট ফিকহী আলোচনাকে গ্রন্থটির বিষয় করা হয়েছে।"
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": "media/books/salatut-tarabih/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []

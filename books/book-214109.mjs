@@ -39,7 +39,7 @@ export default {
     "languageBn": "বাংলা"
   },
   "media": {
-    "cover": null,
+    "cover": "media/books/book-214109/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []

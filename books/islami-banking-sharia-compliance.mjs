@@ -33,6 +33,7 @@ export default {
     "languageBn": "বাংলা"
   },
   "media": {
+    "cover": "media/books/islami-banking-sharia-compliance/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []

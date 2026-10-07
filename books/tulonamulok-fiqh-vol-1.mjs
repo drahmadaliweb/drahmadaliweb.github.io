@@ -39,7 +39,7 @@ export default {
     "languageBn": "বাংলা ও আরবি"
   },
   "media": {
-    "cover": null,
+    "cover": "media/books/tulonamulok-fiqh-vol-1/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []

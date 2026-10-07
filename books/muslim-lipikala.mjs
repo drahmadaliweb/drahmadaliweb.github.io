@@ -33,7 +33,7 @@ export default {
     "languageBn": "বাংলা"
   },
   "media": {
-    "cover": null,
+    "cover": "media/books/muslim-lipikala/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []

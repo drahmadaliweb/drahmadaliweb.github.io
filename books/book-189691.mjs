@@ -33,7 +33,7 @@ export default {
     "languageBn": "বাংলা ও আরবি"
   },
   "media": {
-    "cover": null,
+    "cover": "media/books/book-189691/cover.jpg",
     "preview": null,
     "pdf": null,
     "audio": []
