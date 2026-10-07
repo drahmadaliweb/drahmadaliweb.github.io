@@ -220,3 +220,15 @@ source: {
 The shared bilingual contact form is implemented on `contact.html` and `bn/contact.html`. Book-detail **Order Here / অর্ডার করুন** buttons deep-link to the same form with the selected book prefilled.
 
 Form submissions are sent from GitHub Pages through FormSubmit to `drahmadiscu@gmail.com`. On the **first live submission**, FormSubmit sends a one-time activation/confirmation email to that inbox. Confirm it once; subsequent submissions are delivered automatically. The form includes required-field validation, a honeypot field, dynamic subject-specific guidance, and an in-page success/error message.
+
+
+## Book cover integration
+
+User-supplied cover photographs are stored under `media/books/<book-id>/cover.jpg` and referenced from each book's `.mjs` record. The public package includes only the selected primary cover for each book, not duplicate/reference working images. As of this package, 36 book records have supplied cover images, including the newly added `salatut-tarabih` record.
+
+
+## Reader reviews (2026-10-07)
+
+Book detail pages now include a bilingual, collapsible reader-review form and a dated review archive. Reviews are sorted newest first. Persistent storage is implemented through Supabase RPC functions; see `READER_REVIEWS_SETUP.md` and `reviews/supabase-setup.sql` for the one-time setup. New submissions are moderated by default and reviewer email addresses are never displayed publicly.
+
+Book-cover placeholders now use the same 2:3 frame as photographed covers on both the catalog and detail pages.
