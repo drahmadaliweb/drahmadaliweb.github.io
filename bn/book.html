@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20261011-page-titles" rel="stylesheet"/>
+<link href="../styles.css?v=20261007-reviews" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header" id="top"><div class="header-utility"><div class="utility-wrap container"><div aria-label="সাম্প্রতিক আপডেট" class="updates-ticker" data-lang="bn"><span class="update-label">আপডেট</span><div class="update-viewport"></div></div><a aria-label="সাইটে খুঁজুন" class="site-search-control" href="search.html">⌕ খুঁজুন</a><div aria-label="ভাষা" class="language-switch"><a href="../book.html">EN</a><span aria-hidden="true">/</span><a aria-current="page" class="active" href="book.html">বাংলা</a></div></div></div>
@@ -26,8 +26,29 @@
 <section class="book-spec-panel reveal"><h2>প্রকাশনা তথ্য</h2><dl class="book-specs" id="bookSpecs"></dl></section>
 <section class="book-media-panel reveal" hidden="" id="bookMedia"><h2>পাঠ ও শ্রবণ</h2><div id="bookAudio"></div></section>
 </div>
+<section class="reader-reviews reveal" id="readerReviews">
+  <div class="reader-review-intro">
+    <p class="eyebrow">পাঠক মতামত</p>
+    <h2>পাঠকের পর্যালোচনা</h2>
+    <p>আপনি কি এই বইটি পড়েছেন? বইটি সম্পর্কে আপনার মতামত ও পাঠ-অভিজ্ঞতা অন্য পাঠকদের সঙ্গে ভাগ করে নিন। <button class="review-toggle-link" id="reviewFormToggle" type="button" aria-expanded="false" aria-controls="bookReviewForm">রিভিউ দিতে এখানে ক্লিক করুন।</button></p>
+  </div>
+  <form class="book-review-form" id="bookReviewForm" hidden novalidate>
+    <div class="review-form-grid">
+      <label class="review-field"><span>নাম <b>*</b></span><input id="reviewName" name="name" type="text" maxlength="100" autocomplete="name" required></label>
+      <label class="review-field"><span>ইমেইল</span><input id="reviewEmail" name="email" type="email" maxlength="200" autocomplete="email"><small>আপনার ইমেইল কখনোই প্রকাশ্যে দেখানো হবে না।</small></label>
+      <label class="review-field review-field-wide"><span>রিভিউ <b>*</b></span><textarea id="reviewText" name="review" rows="6" maxlength="3000" required placeholder="বইটি সম্পর্কে আপনার রিভিউ লিখুন…"></textarea></label>
+      <label class="review-honeypot" aria-hidden="true">Website<input id="reviewWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <div class="review-submit-row"><button class="btn primary" id="reviewSubmit" type="submit">রিভিউ জমা দিন</button><p class="review-form-status" id="reviewFormStatus" role="status" aria-live="polite"></p></div>
+  </form>
+  <div class="reader-review-archive">
+    <div class="reader-review-archive-head"><h3>পাঠকদের রিভিউ</h3><span id="reviewCount"></span></div>
+    <div class="reader-review-list" id="bookReviewList"></div>
+    <p class="reader-review-empty" id="bookReviewEmpty">এই বইটির জন্য এখনো কোনো পাঠক-রিভিউ প্রকাশিত হয়নি।</p>
+  </div>
+</section>
 </div></section>
 </main>
 <footer><div class="footer-wrap container"><div><strong>ড. আহমদ আলী</strong><span>অধ্যাপক, ইসলামিক স্টাডিজ বিভাগ · চট্টগ্রাম বিশ্ববিদ্যালয়</span></div><div class="footer-links"><a href="books.html">গ্রন্থসমূহ</a><a href="publications.html">গবেষণা প্রকাশনা</a><a href="contact.html">যোগাযোগ</a></div></div></footer>
-<script src="../books-manifest.js?v=20261009-order-form"></script><script src="../book-library.js?v=20261009-order-form"></script><script src="../updates-manifest.js?v=20261005-updates"></script><script src="../script.js?v=20261006-library"></script>
+<script src="../books-manifest.js?v=20261007-covers"></script><script src="../book-library.js?v=20261007-covers"></script><script src="../reviews-config.js?v=20261007-reviews"></script><script src="../book-reviews.js?v=20261007-reviews"></script><script src="../updates-manifest.js?v=20261005-updates"></script><script src="../script.js?v=20261006-library"></script>
 </body></html>
