@@ -37,6 +37,12 @@ export default {
     "cover": "media/books/book-45163/cover.jpg",
     "preview": null,
     "pdf": "https://drive.google.com/file/d/1Oww1_27ZpEVyueA2TyaYwIXLUqsPqjEh/view?usp=sharing",
-    "audio": []
+    "audio": [
+      {
+        "title": "Audiobook",
+        "titleBn": "অডিওবুক",
+        "url": "https://music.youtube.com/watch?v=Mfw1hAhQzlY&si=MW6STijRLSVvLUsj"
+      }
+    ]
   }
 };
