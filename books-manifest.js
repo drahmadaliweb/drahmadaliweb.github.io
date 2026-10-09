@@ -1637,6 +1637,7 @@ window.ahmadAliBookDetails = [
     "meta": {
       "publisher": "Bangla Academy, Dhaka",
       "publisherBn": "বাংলা একাডেমি, ঢাকা",
+      "publicationYear": "",
       "isbn": "9840756508",
       "edition": "1st Published, 2017",
       "editionBn": "প্রথম প্রকাশ, ২০১৭",
@@ -1651,7 +1652,7 @@ window.ahmadAliBookDetails = [
     "media": {
       "cover": "media/books/muslim-lipikala/cover.jpg",
       "preview": null,
-      "pdf": null,
+      "pdf": "https://drive.google.com/file/d/1ORikvO4DaWCWc5NPd6djpFw12UiyMCwi/view?usp=sharing",
       "audio": []
     }
   },
