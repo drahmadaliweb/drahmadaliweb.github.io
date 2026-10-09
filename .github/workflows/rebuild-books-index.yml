@@ -1,0 +1,30 @@
+name: Rebuild book index
+on:
+  push:
+    paths:
+      - 'books/**'
+      - 'scripts/build-book-index.mjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/build-book-index.mjs
+      - name: Commit generated manifest
+        run: |
+          if git diff --quiet books-manifest.js; then
+            echo "No manifest changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add books-manifest.js
+          git commit -m "Rebuild book index"
+          git push
