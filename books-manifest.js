@@ -6,10 +6,10 @@ window.ahmadAliBookDetails = [
     "id": "adhunik-arabi-kabya-sahitya-vol-1",
     "order": 101,
     "status": "published",
-    "rokomariId": null,
+    "rokomariId": "",
     "category": "Arabic Language & Literature",
     "series": null,
-    "rokomariUrl": null,
+    "rokomariUrl": "",
     "links": [],
     "en": {
       "title": "Modern Arabic Poetry & Literature — Volume 1",
@@ -23,8 +23,9 @@ window.ahmadAliBookDetails = [
       "summary": "আধুনিক আরবি কাব্য ও সাহিত্য নিয়ে ড. আহমদ আলীর গবেষণার প্রথম খণ্ড। গ্রন্থটিতে বিশেষভাবে নব্য-প্রাচীনপন্থী কবিসম্প্রদায় এবং আধুনিক আরবি সাহিত্যধারায় তাদের অবস্থান ও অবদান আলোচিত হয়েছে।"
     },
     "meta": {
-      "publisher": "Al-Akik Publications",
-      "publisherBn": "আল-আকিক প্রকাশনী",
+      "publisher": "Al-Akib Publications",
+      "publisherBn": "আল-আকিব প্রকাশনী",
+      "publicationYear": "",
       "isbn": "",
       "edition": "",
       "editionBn": "",
