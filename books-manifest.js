@@ -167,6 +167,7 @@ window.ahmadAliBookDetails = [
     "meta": {
       "publisher": "Bangladesh Islamic Centre",
       "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+      "publicationYear": "",
       "isbn": "",
       "edition": "First published, 2016",
       "editionBn": "প্রথম প্রকাশ, ২০১৬",
@@ -181,7 +182,7 @@ window.ahmadAliBookDetails = [
     "media": {
       "cover": "media/books/book-109961/cover.jpg",
       "preview": null,
-      "pdf": null,
+      "pdf": "https://drive.google.com/file/d/16Av-X_mPzVdmCntnDBsF6RqfN5xWl8RV/view?usp=sharing",
       "audio": []
     }
   },
