@@ -166,9 +166,6 @@
     if(actions){
       actions.replaceChildren();
       const m=book.media||{};
-      if(m.preview){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.preview);a.target='_blank';a.rel='noopener';a.textContent=copy.openPreview;actions.appendChild(a);}
-      if(m.pdf){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.pdf);a.target='_blank';a.rel='noopener';a.textContent=copy.readPdf;actions.appendChild(a);}
-      if(Array.isArray(m.audio)&&m.audio.some(t=>t?.url)){const a=document.createElement('a');a.className='btn secondary';a.href='#audio';a.textContent=copy.listen;actions.appendChild(a);}
       const publisherLink=Array.isArray(book.links)?book.links.find(x=>x?.url&&/^publisher(?:\s+catalog)?$/i.test(String(x.label||''))):null;
       if(publisherLink){const a=document.createElement('a');a.className='btn quiet';a.href=publisherLink.url;a.target='_blank';a.rel='noopener';a.textContent=`${copy.publisherLink} ↗`;actions.appendChild(a);}
       if(book.rokomariUrl){const a=document.createElement('a');a.className='btn quiet';a.href=book.rokomariUrl;a.target='_blank';a.rel='noopener';a.textContent=`${copy.rokomari} ↗`;actions.appendChild(a);}
@@ -196,14 +193,24 @@
 
     const media=document.getElementById('bookMedia');
     if(media){
-      const m=book.media||{};const has=Boolean(m.preview||m.pdf||(Array.isArray(m.audio)&&m.audio.some(t=>t?.url)));
+      const m=book.media||{};const hasAudio=Array.isArray(m.audio)&&m.audio.some(t=>t?.url);const has=Boolean(m.preview||m.pdf||hasAudio);
       media.hidden=!has;
-      if(has){
-        const audioHost=document.getElementById('bookAudio');if(audioHost){audioHost.replaceChildren();(m.audio||[]).filter(t=>t?.url).forEach((track,i)=>{
+      const linksHost=document.getElementById('bookMediaLinks');
+      if(linksHost){
+        linksHost.replaceChildren();
+        if(m.preview){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.preview);a.target='_blank';a.rel='noopener';a.textContent=copy.openPreview;linksHost.appendChild(a);}
+        if(m.pdf){const a=document.createElement('a');a.className='btn secondary';a.href=asset(m.pdf);a.target='_blank';a.rel='noopener';a.textContent=copy.readPdf;linksHost.appendChild(a);}
+        linksHost.hidden=!linksHost.children.length;
+      }
+      const audioHost=document.getElementById('bookAudio');
+      if(audioHost){
+        audioHost.replaceChildren();
+        (m.audio||[]).filter(t=>t?.url).forEach((track,i)=>{
           const item=document.createElement('div');item.className='audio-track';
           const label=document.createElement('strong');label.textContent=(isBn?(track.titleBn||track.title):track.title)||`${copy.audio} ${i+1}`;
           const player=document.createElement('audio');player.controls=true;player.preload='none';player.src=asset(track.url);item.append(label,player);audioHost.appendChild(item);
-        });}
+        });
+        audioHost.hidden=!hasAudio;
       }
     }
     document.querySelectorAll('.language-switch a').forEach(a=>{const href=a.getAttribute('href');if(href)a.setAttribute('href',`${href}?id=${encodeURIComponent(book.id)}`);});

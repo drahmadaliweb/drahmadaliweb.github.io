@@ -686,3 +686,10 @@ html[lang="bn"] .archive-tool select{font-size:.77rem}
 @media(max-width:430px){
   .archive-hero-tools{grid-template-columns:1fr}
 }
+
+/* Digital book access */
+.book-spec-panel,.book-media-panel{align-self:start}
+.book-media-links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
+.book-media-links[hidden]{display:none}
+.book-media-panel #bookAudio[hidden]{display:none}
+.book-detail-lower:has(.book-media-panel[hidden]){grid-template-columns:1fr}
