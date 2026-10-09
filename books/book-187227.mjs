@@ -27,6 +27,7 @@ export default {
   "meta": {
     "publisher": "Bangladesh Islamic Law Research & Legal Aid Centre",
     "publisherBn": "বাংলাদেশ ইসলামিক ল’ রিসার্চ এন্ড লিগ্যাল এইড সেন্টার",
+    "publicationYear": "",
     "isbn": "9789849020899",
     "edition": "1st Published, 2015",
     "editionBn": "প্রথম প্রকাশ, ২০১৫",
@@ -41,7 +42,7 @@ export default {
   "media": {
     "cover": "media/books/book-187227/cover.jpg",
     "preview": null,
-    "pdf": null,
+    "pdf": "https://drive.google.com/file/d/1yCAuDhvcr0Gs_WvCa0oecbv10xeeiYf7/view?usp=sharing",
     "audio": []
   }
 };
