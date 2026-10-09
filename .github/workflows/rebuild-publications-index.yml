@@ -1,28 +1,8 @@
-name: Rebuild publications index
+name: Legacy rebuild-publications-index (disabled)
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'publications/**'
-      - 'scripts/build-publications-index.mjs'
   workflow_dispatch:
-permissions:
-  contents: write
 jobs:
-  build-index:
-    if: github.actor != 'github-actions[bot]'
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: node scripts/build-publications-index.mjs
-      - name: Commit updated index
-        run: |
-          if git diff --quiet -- publications-manifest.js; then exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add publications-manifest.js
-          git commit -m "Update publications index"
-          git push
+      - run: echo "Manifest rebuilding is now handled atomically by the private admin publisher."

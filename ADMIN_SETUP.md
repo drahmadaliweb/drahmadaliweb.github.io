@@ -1,19 +1,20 @@
 # Private Content Manager — one-time setup
 
-The site now includes a private admin UI at `/admin/`. It is not linked from public navigation and is blocked from search-engine crawling, but **security comes from Supabase login + an admin allow-list**, not from the hidden URL.
+The site includes a private admin UI at `/admin/`. Security comes from Supabase login + the `admin_users` allow-list.
 
-The admin can add, edit and delete:
-- Books (including cover, small PDF, preview/audio links, publisher/Rokomari details)
-- Through the Window of Time posts
-- Selected Articles
-- Publications (research, Arabic, edited works, translations)
-- Updates
+The admin can add, edit and delete Books, Through the Window of Time posts, Selected Articles, Publications and Updates.
 
-Publishing writes the source `.mjs` file to GitHub. GitHub Actions rebuild the generated manifests, so the public site updates automatically.
+## Important architecture change
 
-## 1. Reuse the existing Supabase project
+**Save & Publish now updates the source `.mjs` file and its generated manifest in the same GitHub commit.**
 
-Keep the same Supabase project used for Readers' Reviews. In `reviews-config.js`, set only the public values:
+There is no longer a second GitHub Action required to rebuild `books-manifest.js`, `posts-manifest.js`, `selected-articles-manifest.js`, `publications-manifest.js` or `updates-manifest.js`.
+
+The five old rebuild workflows included in `.github/workflows/` are intentionally disabled (manual-only legacy placeholders). GitHub Pages still deploys the site normally after the content commit.
+
+## 1. Supabase public configuration
+
+In `reviews-config.js`:
 
 ```js
 window.AHMAD_ALI_REVIEW_CONFIG = {
@@ -24,15 +25,13 @@ window.AHMAD_ALI_REVIEW_CONFIG = {
 
 Never put a service-role key or GitHub token in this public file.
 
-## 2. Create the two login accounts
+## 2. Admin login accounts
 
-In Supabase Dashboard → Authentication → Users, create/invite the accounts that should be allowed to administer the website (for example Dr. Ahmad Ali and you). Do not add a public sign-up form to the website.
+Supabase Dashboard → Authentication → Users. Create/invite the accounts that should administer the website.
 
-## 3. Create the administrator allow-list
+## 3. Administrator allow-list
 
-Open Supabase → SQL Editor and run `admin-setup.sql`.
-
-Then run this after replacing the two emails:
+Run `admin-setup.sql` in Supabase SQL Editor, then add your approved users:
 
 ```sql
 insert into public.admin_users(user_id,email)
@@ -42,24 +41,17 @@ where email in ('FATHER_EMAIL@example.com','YOUR_EMAIL@example.com')
 on conflict (user_id) do update set email=excluded.email;
 ```
 
-Only users present in this table can use the publishing function.
+## 4. GitHub token
 
-## 4. Create a GitHub fine-grained token
-
-On GitHub create a fine-grained Personal Access Token for the repository `drahmadaliweb.github.io`.
-Grant only the minimum repository permission needed:
+Create a fine-grained Personal Access Token restricted to `drahmadaliweb.github.io` with:
 
 - **Contents: Read and write**
 
-Do not put this token anywhere in the website files.
+No Actions write permission is required for content publishing anymore.
 
-## 5. Deploy the protected Supabase Edge Function
+## 5. Deploy/redeploy the Supabase Edge Function
 
-The function source is at:
-
-`supabase/functions/site-admin/index.ts`
-
-From your Mac, with the Supabase CLI installed and logged in:
+From the website folder on your Mac:
 
 ```bash
 supabase login
@@ -71,41 +63,23 @@ supabase secrets set GITHUB_BRANCH='main'
 supabase functions deploy site-admin --no-verify-jwt
 ```
 
-The function validates the Supabase access token itself and then checks `admin_users`. The GitHub token stays server-side as a secret.
+**If you already set up the admin earlier, you still must run the final `supabase functions deploy ...` command after installing this version**, because the Edge Function contains the new direct-manifest publisher.
 
-## 6. Allow GitHub Actions to update generated manifests
+## 6. Test
 
-In GitHub repository → Settings → Actions → General → Workflow permissions, choose **Read and write permissions**.
+Open `https://drahmadaliweb.github.io/admin/`, log in, add a small test Update/Post, and click Save & Publish.
 
-The repository contains rebuild workflows for books, posts, articles, publications and updates.
+The resulting GitHub commit should contain both the source record and its manifest. Example for a post:
 
-## 7. Open the private manager
+- `posts/<id>.mjs`
+- `posts-manifest.js`
 
-After deploying the website, go directly to:
-
-`https://drahmadaliweb.github.io/admin/`
-
-(or the equivalent `/admin/` URL on Cloudflare/your custom domain).
-
-Log in with one of the authorized Supabase accounts.
-
-## Publishing behavior
-
-- Saving or deleting content commits the source file to GitHub immediately.
-- GitHub Actions then regenerate the corresponding manifest. This usually takes a short time.
-- The public site may therefore take roughly tens of seconds to reflect a content edit.
-- The admin list updates immediately in the current browser session.
-
-## Files and PDFs
-
-Cover images and small PDFs can be uploaded from the Book/Publication forms. The admin interface caps direct uploads at 6 MB to keep browser → Edge Function → GitHub uploads reliable. For larger PDFs, upload them to an appropriate public file host and paste the PDF URL into the form.
+The admin list is refreshed directly from the source `.mjs` files in GitHub, so it can see a source record even if an older manifest was stale. Saving that record (or any record in the same section) regenerates the manifest directly in the publishing commit.
 
 ## Local Mac clone
 
-Because your father can now publish directly to GitHub, before you make local changes on your Mac run:
+Because the admin writes directly to GitHub, always run this before making local changes:
 
 ```bash
 git pull --rebase origin main
 ```
-
-That keeps your local master folder synchronized with edits made through `/admin/`.
