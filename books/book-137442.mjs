@@ -21,6 +21,7 @@ export default {
   "meta": {
     "publisher": "Bangladesh Islamic Centre",
     "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+    "publicationYear": "",
     "isbn": "9848430290",
     "edition": "4th Edition",
     "editionBn": "৪র্থ সংস্করণ",
@@ -36,6 +37,12 @@ export default {
     "cover": "media/books/book-137442/cover.jpg",
     "preview": null,
     "pdf": null,
-    "audio": []
+    "audio": [
+      {
+        "title": "Audiobook",
+        "titleBn": "অডিওবুক",
+        "url": "https://drive.google.com/file/d/1V2UaCXzH8stFEidWtlnoeCJa_Etskden/view?usp=share_link"
+      }
+    ]
   }
 };
