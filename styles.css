@@ -700,3 +700,42 @@ html[lang="bn"] .archive-tool select{font-size:.77rem}
 .reader-review-source a{color:var(--gold);text-decoration:none;font-weight:700}
 .reader-review-source a:hover{text-decoration:underline;text-underline-offset:3px}
 html[lang="bn"] .reader-review-source{font-family:var(--bangla-sans)}
+
+/* 2026-10-09 — external review source + consistent date alignment */
+.reader-review-meta{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:baseline;
+  gap:14px;
+}
+.reader-review-meta time{
+  justify-self:end;
+  white-space:nowrap;
+}
+.reader-review-source{
+  margin-top:6px;
+  font-size:.65rem;
+  color:var(--muted);
+}
+.reader-review-source a{
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:700;
+}
+.reader-review-source a:hover{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+html[lang="bn"] .reader-review-source{
+  font-family:var(--bangla-sans);
+}
+@media(max-width:680px){
+  .reader-review-meta{
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px;
+  }
+  .reader-review-meta time{
+    justify-self:end;
+  }
+}
+

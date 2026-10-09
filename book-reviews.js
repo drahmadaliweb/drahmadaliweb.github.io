@@ -59,26 +59,61 @@
 
   function apiHeaders(){return {'apikey':key,'Content-Type':'application/json'};}
 
+  function reviewDate(item){
+    if(item.source_date){
+      const d=new Date(`${item.source_date}T12:00:00`);
+      return Number.isNaN(d.getTime())?null:d;
+    }
+    if(item.source==='website'){
+      const d=new Date(item.created_at);
+      return Number.isNaN(d.getTime())?null:d;
+    }
+    return null;
+  }
+
+  function sourceLabel(item){
+    if(item.source==='rokomari')return isBn?'মূলত Rokomari-তে প্রকাশিত':'Originally posted on Rokomari';
+    if(item.source==='facebook')return isBn?'মূলত Facebook-এ প্রকাশিত':'Originally posted on Facebook';
+    if(item.source==='bdbooks')return isBn?'মূলত BDBOOKS-এ প্রকাশিত':'Originally posted on BDBOOKS';
+    if(item.source==='goodreads')return isBn?'মূলত Goodreads-এ প্রকাশিত':'Originally posted on Goodreads';
+    if(item.source==='iqaamah')return isBn?'মূলত Iqaamah Blog-এ প্রকাশিত':'Originally posted on Iqaamah Blog';
+    return '';
+  }
+
   function reviewCard(item){
     const article=document.createElement('article');article.className='reader-review-item';
     const head=document.createElement('div');head.className='reader-review-meta';
     const who=document.createElement('strong');who.textContent=String(item.name||'').trim();
-    const time=document.createElement('time');
-    const dt=new Date(item.created_at);
-    if(!Number.isNaN(dt.getTime())){time.dateTime=dt.toISOString();time.textContent=copy.date(dt);}
-    head.append(who,time);
+    head.append(who);
+
+    const dt=reviewDate(item);
+    if(dt){
+      const time=document.createElement('time');
+      time.dateTime=dt.toISOString();
+      time.textContent=copy.date(dt);
+      head.append(time);
+    }
+
     const p=document.createElement('p');
     const reviewText=isBn
       ? String(item.review||'').trim()
       : String(item.review_en||item.review||'').trim();
     p.textContent=reviewText;
     article.append(head,p);
-    if(item.source==='rokomari'){
+
+    const label=sourceLabel(item);
+    if(label){
       const source=document.createElement('div');source.className='reader-review-source';
-      const label=isBn?'মূলত Rokomari-তে প্রকাশিত':'Originally posted on Rokomari';
       if(item.source_url){
-        const a=document.createElement('a');a.href=String(item.source_url);a.target='_blank';a.rel='noopener';a.textContent=`${label} ↗`;source.append(a);
-      }else{source.textContent=label;}
+        const a=document.createElement('a');
+        a.href=String(item.source_url);
+        a.target='_blank';
+        a.rel='noopener';
+        a.textContent=`${label} ↗`;
+        source.append(a);
+      }else{
+        source.textContent=label;
+      }
       article.append(source);
     }
     return article;
@@ -98,7 +133,11 @@
       if(!response.ok)throw new Error(`HTTP ${response.status}`);
       const rows=await response.json();
       const reviews=Array.isArray(rows)?rows.slice():[];
-      reviews.sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
+      reviews.sort((a,b)=>{
+        const ad=a.source_date?new Date(`${a.source_date}T12:00:00`):new Date(a.created_at);
+        const bd=b.source_date?new Date(`${b.source_date}T12:00:00`):new Date(b.created_at);
+        return bd-ad;
+      });
       list.replaceChildren(...reviews.map(reviewCard));
       count.textContent=reviews.length?copy.count(reviews.length):'';
       empty.textContent=copy.none;empty.hidden=reviews.length>0;
