@@ -21,6 +21,7 @@ export default {
   "meta": {
     "publisher": "Bangladesh Islamic Centre",
     "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+    "publicationYear": "",
     "isbn": "",
     "edition": "",
     "editionBn": "",
@@ -35,7 +36,7 @@ export default {
   "media": {
     "cover": "media/books/book-45163/cover.jpg",
     "preview": null,
-    "pdf": null,
+    "pdf": "https://drive.google.com/file/d/1Oww1_27ZpEVyueA2TyaYwIXLUqsPqjEh/view?usp=sharing",
     "audio": []
   }
 };
