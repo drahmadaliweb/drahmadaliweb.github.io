@@ -19,6 +19,7 @@
     required:'নাম ও রিভিউ লিখুন।',email:'সঠিক ইমেইল ঠিকানা লিখুন অথবা ইমেইল ঘরটি খালি রাখুন।',
     unavailable:'রিভিউ জমা দেওয়ার সেবা এখনো চালু করা হয়নি।',error:'রিভিউ জমা দেওয়া যায়নি। অনুগ্রহ করে পরে আবার চেষ্টা করুন।',
     loading:'রিভিউ লোড হচ্ছে…',none:'এই বইটির জন্য এখনো কোনো পাঠক-রিভিউ প্রকাশিত হয়নি।',
+    seeMore:'পুরোটা পড়ুন',seeLess:'সংক্ষেপে দেখুন',
     count:n=>`${new Intl.NumberFormat('bn-BD').format(n)}টি রিভিউ`,
     date:d=>new Intl.DateTimeFormat('bn-BD',{day:'numeric',month:'long',year:'numeric'}).format(d)
   }:{
@@ -27,6 +28,7 @@
     required:'Please enter your name and review.',email:'Enter a valid email address, or leave the email field blank.',
     unavailable:'Reader-review submission has not been activated yet.',error:'We could not submit your review. Please try again later.',
     loading:'Loading reviews…',none:'No reader reviews have been published for this book yet.',
+    seeMore:'See More',seeLess:'See Less',
     count:n=>`${n} review${n===1?'':'s'}`,
     date:d=>new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric'}).format(d)
   };
@@ -80,6 +82,15 @@
     return '';
   }
 
+  function reviewPreview(text,limit=100){
+    const value=String(text||'');
+    const words=[...value.matchAll(/\S+/g)];
+    if(words.length<=limit)return null;
+    const last=words[limit-1];
+    const end=last.index+last[0].length;
+    return `${value.slice(0,end).trimEnd()}…`;
+  }
+
   function reviewCard(item){
     const article=document.createElement('article');article.className='reader-review-item';
     const head=document.createElement('div');head.className='reader-review-meta';
@@ -98,7 +109,26 @@
     const reviewText=isBn
       ? String(item.review||'').trim()
       : String(item.review_en||item.review||'').trim();
-    p.textContent=reviewText;
+    const preview=reviewPreview(reviewText);
+    if(preview){
+      const text=document.createElement('span');
+      text.textContent=preview;
+      const more=document.createElement('button');
+      more.type='button';
+      more.className='review-toggle-link';
+      more.textContent=copy.seeMore;
+      more.setAttribute('aria-expanded','false');
+      let expanded=false;
+      more.addEventListener('click',()=>{
+        expanded=!expanded;
+        text.textContent=expanded?reviewText:preview;
+        more.textContent=expanded?copy.seeLess:copy.seeMore;
+        more.setAttribute('aria-expanded',String(expanded));
+      });
+      p.append(text,document.createTextNode(' '),more);
+    }else{
+      p.textContent=reviewText;
+    }
     article.append(head,p);
 
     const label=sourceLabel(item);
