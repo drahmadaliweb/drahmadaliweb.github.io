@@ -693,3 +693,10 @@ html[lang="bn"] .archive-tool select{font-size:.77rem}
 .book-media-links[hidden]{display:none}
 .book-media-panel #bookAudio[hidden]{display:none}
 .book-detail-lower:has(.book-media-panel[hidden]){grid-template-columns:1fr}
+
+
+/* Rokomari review source */
+.reader-review-source{margin-top:6px;font-size:.65rem;color:var(--muted)}
+.reader-review-source a{color:var(--gold);text-decoration:none;font-weight:700}
+.reader-review-source a:hover{text-decoration:underline;text-underline-offset:3px}
+html[lang="bn"] .reader-review-source{font-family:var(--bangla-sans)}

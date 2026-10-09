@@ -67,8 +67,21 @@
     const dt=new Date(item.created_at);
     if(!Number.isNaN(dt.getTime())){time.dateTime=dt.toISOString();time.textContent=copy.date(dt);}
     head.append(who,time);
-    const p=document.createElement('p');p.textContent=String(item.review||'').trim();
-    article.append(head,p);return article;
+    const p=document.createElement('p');
+    const reviewText=isBn
+      ? String(item.review||'').trim()
+      : String(item.review_en||item.review||'').trim();
+    p.textContent=reviewText;
+    article.append(head,p);
+    if(item.source==='rokomari'){
+      const source=document.createElement('div');source.className='reader-review-source';
+      const label=isBn?'মূলত Rokomari-তে প্রকাশিত':'Originally posted on Rokomari';
+      if(item.source_url){
+        const a=document.createElement('a');a.href=String(item.source_url);a.target='_blank';a.rel='noopener';a.textContent=`${label} ↗`;source.append(a);
+      }else{source.textContent=label;}
+      article.append(source);
+    }
+    return article;
   }
 
   async function loadReviews(){
