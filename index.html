@@ -2,6 +2,18 @@
 
 <html lang="en">
 <head>
+
+<script data-default-language-redirect="bn">
+(() => {
+  const path = window.location.pathname;
+  const isBareRoot = path === "/" || path === "";
+
+  if (isBareRoot) {
+    const target = `/bn/${window.location.search}${window.location.hash}`;
+    window.location.replace(target);
+  }
+})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Academic website of Dr. Ahmad Ali, Professor of Islamic Studies at the University of Chittagong." name="description"/>
