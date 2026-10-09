@@ -20,7 +20,7 @@ export default {
   },
   "meta": {
     "publisher": "Al-Akib Publications",
-    "publisherBn": "আল-আকিক প্রকাশনী",
+    "publisherBn": "আল-আকিব প্রকাশনী",
     "publicationYear": "",
     "isbn": "",
     "edition": "",
