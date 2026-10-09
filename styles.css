@@ -739,3 +739,22 @@ html[lang="bn"] .reader-review-source{
   }
 }
 
+/* 2026-10-09 — Bengali single-font enforcement */
+/* Use the same Noto Sans Bengali family as the homepage update titles everywhere. */
+html[lang="bn"]{
+  --bangla:"Noto Sans Bengali","Noto Sans",Arial,sans-serif;
+  --bangla-sans:"Noto Sans Bengali","Noto Sans",Arial,sans-serif;
+  --bangla-serif:"Noto Sans Bengali","Noto Sans",Arial,sans-serif;
+}
+html[lang="bn"] body,
+html[lang="bn"] body *{
+  font-family:var(--bangla-sans)!important;
+}
+/* Arabic text and decorative Arabic glyphs keep an Arabic-capable serif fallback. */
+html[lang="bn"] [lang="ar"],
+html[lang="bn"] [lang="ar"] *,
+html[lang="bn"] .arabic,
+html[lang="bn"] .arabic *,
+html[lang="bn"] .book-glyph{
+  font-family:serif!important;
+}
