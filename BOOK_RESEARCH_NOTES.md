@@ -21,3 +21,10 @@ No third-party PDF download was added merely because a scan was found online. PD
 
 - **সালাতুত তারাবীহ**: added after a physical cover supplied by the site owner confirmed the title and authorship. An older online bibliography of Dr. Ahmad Ali listed this work as unpublished, while current major retailer/author pages do not provide reliable publisher, year, ISBN or page-count metadata. The site therefore includes the book and its supplied cover but leaves those bibliographic fields blank pending primary-source confirmation.
 - **Cover correction — তুলনামূলক ফিকহ — প্রথম খণ্ড**: one uploaded image had previously been filed as an alternate cover for *Usul al-Iman — Volume 1*. Visual verification confirms that it is actually *Comparative Fiqh — Volume 1*; the website mapping has been corrected.
+
+
+## বাংলাদেশে যাকাত-উশর আদায় ও বণ্টন: অব্যবস্থাপনা ও কার্যকর কর্মপন্থা
+- Cover supplied directly for the website by the user.
+- Chattolar Khabor (16 Feb 2025) and Dhaka Post (17 Feb 2025) confirm Dr. Ahmad Ali presented a paper with this exact title at a seminar in Chattogram on 16 Feb 2025.
+- No reliable public record for publisher, ISBN, page count, or retail listing was located as of Oct 2026; those fields are intentionally left blank.
+- Sources: https://chattolarkhabor.com/257613/98b6f1d1/ ; https://www.dhakapost.com/politics/344478

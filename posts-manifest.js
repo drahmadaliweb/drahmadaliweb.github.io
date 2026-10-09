@@ -4,6 +4,7 @@
 window.windowOfTimePosts = [
   {
     "date": "2026-10-05",
+    "topic_slug": "fiqh-sharia-contemporary",
     "source": {
       "type": "facebook",
       "label": "Facebook",

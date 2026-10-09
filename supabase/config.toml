@@ -1,0 +1,2 @@
+[functions.site-admin]
+verify_jwt = false

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import topicTaxonomy from '../topic-taxonomy.mjs';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const postsDir = path.join(root, 'posts');
@@ -28,6 +29,10 @@ for (const name of names) {
   if (!post.bn?.title || !post.bn?.body) {
     throw new Error(`${name}: Bengali title/body are required.`);
   }
+  if (!post.topic_slug || !topicTaxonomy[post.topic_slug]) {
+    throw new Error(`${name}: topic_slug must be one of the canonical topic slugs.`);
+  }
+  delete post.topic;
   if (!post.en?.title || !post.en?.body) {
     throw new Error(`${name}: English title/body are required.`);
   }

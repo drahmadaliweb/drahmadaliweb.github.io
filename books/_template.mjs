@@ -25,6 +25,7 @@ export default {
   meta: {
     publisher: '',
     publisherBn: '',
+    publicationYear: '',
     isbn: '',
     edition: '',
     editionBn: '',

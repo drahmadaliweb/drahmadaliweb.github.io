@@ -74,7 +74,7 @@ Manual rebuild fallback:
 node scripts/build-updates-index.mjs
 ```
 
-# Updating “Through the Window of Time” / “সময়ের সঙ্গে বাতায়ন”
+# Updating “Through the Window of Time” / “সময়ের সঙ্গে সংলাপ”
 
 The writings archive uses **one file per writing** in `posts/`.
 
@@ -107,7 +107,7 @@ The homepage is intentionally publication-first and compact: a short hero, Recen
 
 # Book library, series and detailed book pages
 
-The Books page is now **source-neutral**. Rokomari is not treated as the catalog; it is only one optional availability/source link attached to a book. Books documented from the CV and books that also happen to be available through Rokomari appear together in one catalog. Forthcoming books remain separate.
+The Books page is now **source-neutral**. Rokomari is not treated as the catalog; it is only one optional availability/source link attached to a book. Books documented from available bibliographic sources and books that also happen to be available through Rokomari appear together in one catalog. Forthcoming books remain separate.
 
 Every catalog item uses **one file per book** in `books/` and therefore has an internal detail page. Five books currently have richer descriptions and publication metadata; the remaining records can be expanded later without redesigning the catalog.
 
@@ -195,7 +195,7 @@ No separate search index needs normal manual maintenance.
 
 # Writing archive filters
 
-`Through the Window of Time / সময়ের সঙ্গে বাতায়ন` automatically creates filters from the source types actually present in `/posts`:
+`Through the Window of Time / সময়ের সঙ্গে সংলাপ` automatically creates filters from the source types actually present in `/posts`:
 
 - Facebook
 - Newspaper
@@ -232,3 +232,19 @@ User-supplied cover photographs are stored under `media/books/<book-id>/cover.jp
 Book detail pages now include a bilingual, collapsible reader-review form and a dated review archive. Reviews are sorted newest first. Persistent storage is implemented through Supabase RPC functions; see `READER_REVIEWS_SETUP.md` and `reviews/supabase-setup.sql` for the one-time setup. New submissions are moderated by default and reviewer email addresses are never displayed publicly.
 
 Book-cover placeholders now use the same 2:3 frame as photographed covers on both the catalog and detail pages.
+
+
+## Selected Articles / প্রবন্ধ সংকলন
+Selected Articles now uses one file per article under `/articles/`, parallel to `/posts/`. Each record contains a topic plus full Bengali/English body fields. Run `node scripts/build-article-index.mjs` after adding or editing an article. The eight earlier bibliography-only entries were migrated, but their full article texts were not available in the supplied project; their body fields are intentionally blank until authentic text is provided.
+
+
+## Fixed topic taxonomy for articles and writings
+
+Selected Articles and Through the Window of Time now use a single `topic_slug`. The bilingual labels are defined once in `topic-taxonomy.mjs` / `topic-taxonomy.js`. New content must choose one of those 15 slugs; Bengali and English labels are resolved automatically. This is the same list that a future content-admin dropdown should use.
+
+## Forthcoming books
+
+The Books page has a separate `Forthcoming Books / প্রকাশের পথে` grid. Forthcoming records live in `/books/` with `status: "forthcoming"` and do not appear in the published catalog.
+
+## Private content manager
+A protected content manager is available at `/admin/` after one-time Supabase/GitHub setup. It can add, edit, and delete books, posts, selected articles, publications, and updates without editing code. See `ADMIN_SETUP.md`.

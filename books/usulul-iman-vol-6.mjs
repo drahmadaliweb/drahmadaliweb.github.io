@@ -6,15 +6,16 @@ export default {
   "category": "Aqidah & Thought",
   "series": "usulul-iman",
   "rokomariUrl": null,
+  "links": [],
   "en": {
-    "title": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
-    "originalTitle": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
+    "title": "Usul al-Iman — Volume 6",
+    "originalTitle": "উসূলুল ঈমান ৬ষ্ঠ খণ্ড",
     "subtitle": "Forthcoming",
     "summary": ""
   },
   "bn": {
-    "title": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
-    "subtitle": "প্রকাশিতব্য",
+    "title": "উসূলুল ঈমান ৬ষ্ঠ খণ্ড",
+    "subtitle": "প্রকাশের পথে",
     "summary": ""
   },
   "meta": {
@@ -24,6 +25,10 @@ export default {
     "edition": "",
     "editionBn": "",
     "pages": "",
+    "binding": "",
+    "bindingBn": "",
+    "country": "Bangladesh",
+    "countryBn": "বাংলাদেশ",
     "language": "Bangla",
     "languageBn": "বাংলা"
   },
@@ -32,6 +37,5 @@ export default {
     "preview": null,
     "pdf": null,
     "audio": []
-  },
-  "links": []
+  }
 };

@@ -3,6 +3,7 @@
    posts-manifest.js is generated automatically for the browser. */
 (() => {
   const posts = Array.isArray(window.windowOfTimePosts) ? window.windowOfTimePosts.slice() : [];
+  const topicTaxonomy = window.ahmadAliTopicTaxonomy || {};
   const lang = document.documentElement.lang === 'bn' ? 'bn' : 'en';
   const locale = lang === 'bn' ? 'bn-BD' : 'en-GB';
 
@@ -13,7 +14,8 @@
     back: 'সব লেখা দেখুন',
     empty: 'এখনও কোনো লেখা যোগ করা হয়নি।',
     missing: 'লেখাটি পাওয়া যায়নি।',
-    source: 'উৎস'
+    source: 'উৎস',
+    noMatch: 'আপনার খোঁজ বা নির্বাচিত ফিল্টারের সঙ্গে মিলেছে এমন কোনো লেখা পাওয়া যায়নি।'
   } : {
     latest: 'Latest',
     read: 'View Full',
@@ -21,7 +23,8 @@
     back: 'Back to all writings',
     empty: 'No writings have been added yet.',
     missing: 'This writing could not be found.',
-    source: 'Source'
+    source: 'Source',
+    noMatch: 'No writings matched your search or selected filters.'
   };
 
   function normalizeDate(value){
@@ -42,6 +45,7 @@
   }
 
   function localized(post){ return post?.[lang] || post?.en || post?.bn || {}; }
+  function topicLabel(post){ const t=topicTaxonomy[post?.topic_slug]||{}; return lang==='bn' ? (t.bn||t.en||'') : (t.en||t.bn||''); }
 
   function slugify(text){
     return String(text || '')
@@ -203,13 +207,35 @@
   if(archive){
     if(!posts.length){ archive.textContent=copy.empty; return; }
     const filterHost=document.getElementById('writingFilters');
+    const topicSelect=document.getElementById('writingTopicFilter');
+    const searchInput=document.getElementById('writingSearch');
     const present=[...new Set(posts.map(sourceType))];
+    const presentTopicSlugs=[...new Set(posts.map(p=>p.topic_slug).filter(slug=>topicTaxonomy[slug]))];
     let activeType='all';
+    let activeTopic='all';
+    let searchQuery='';
+    const normalizeSearch=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+    const matchesSearch=post=>{
+      const q=normalizeSearch(searchQuery);
+      if(!q) return true;
+      const loc=localized(post);
+      const hay=normalizeSearch([loc.title,loc.excerpt,loc.body].filter(Boolean).join(' '));
+      return q.split(/\s+/).filter(Boolean).every(token=>hay.includes(token));
+    };
+    if(searchInput){
+      searchInput.addEventListener('input',()=>{searchQuery=searchInput.value||'';renderArchive();});
+    }
+    if(topicSelect){
+      topicSelect.replaceChildren();
+      const allOpt=document.createElement('option');allOpt.value='all';allOpt.textContent=lang==='bn'?'সব বিষয়':'All topics';topicSelect.appendChild(allOpt);
+      presentTopicSlugs.forEach(slug=>{const opt=document.createElement('option');opt.value=slug;const t=topicTaxonomy[slug]||{};opt.textContent=lang==='bn'?(t.bn||t.en):(t.en||t.bn);topicSelect.appendChild(opt);});
+      topicSelect.addEventListener('change',()=>{activeTopic=topicSelect.value||'all';renderArchive();});
+    }
 
     function renderArchive(){
       archive.replaceChildren();
-      const shown=activeType==='all'?posts:posts.filter(p=>sourceType(p)===activeType);
-      if(!shown.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.empty;archive.appendChild(p);return;}
+      const shown=posts.filter(p=>(activeType==='all'||sourceType(p)===activeType)&&(activeTopic==='all'||p.topic_slug===activeTopic)&&matchesSearch(p));
+      if(!shown.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.noMatch;archive.appendChild(p);return;}
       shown.forEach((post)=>{
         const index=posts.indexOf(post);
         const loc=localized(post);
@@ -219,6 +245,7 @@
         const meta=document.createElement('div'); meta.className='writing-meta';
         if(index===0){ const latest=document.createElement('span'); latest.className='latest-chip'; latest.textContent=copy.latest; meta.appendChild(latest); }
         const date=document.createElement('time'); date.dateTime=post.date||''; date.textContent=formatDate(post.date); meta.appendChild(date);
+        const topicText=topicLabel(post); if(topicText){ const topic=document.createElement('span'); topic.className='content-topic-chip'; topic.textContent=topicText; meta.appendChild(topic); }
         const src=sourceLink(post,true); if(src) meta.appendChild(src);
 
         const title=document.createElement('h2');
@@ -261,10 +288,12 @@
     const loc=localized(post);
     const title=document.getElementById('postDetailTitle');
     const date=document.getElementById('postDetailDate');
+    const topicSlot=document.getElementById('postDetailTopic');
     const sourceSlot=document.getElementById('postDetailSource');
     const body=document.getElementById('postDetailBody');
     if(title) title.textContent=loc.title||'';
     if(date){date.dateTime=post.date||''; date.textContent=formatDate(post.date);}
+    if(topicSlot){topicSlot.textContent=topicLabel(post); topicSlot.hidden=!topicSlot.textContent;}
     if(sourceSlot){const src=sourceLink(post,false); if(src) sourceSlot.replaceChildren(src); else sourceSlot.replaceChildren();}
     if(body) renderBody(body,loc.body);
     document.title=`${loc.title || 'Writing'} | ${lang==='bn'?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;

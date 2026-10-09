@@ -1,6 +1,8 @@
 // One writing = one file. This file is the source of truth for this post.
 export default {
   date: "2026-10-05",
+  topic_slug: 'fiqh-sharia-contemporary',
+
   source: {
       "type": "facebook",
       "label": "Facebook",

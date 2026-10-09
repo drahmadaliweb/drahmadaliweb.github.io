@@ -226,47 +226,6 @@ window.ahmadAliBookDetails = [
     }
   },
   {
-    "id": "book-45164",
-    "order": 33,
-    "status": "published",
-    "rokomariId": "45164",
-    "category": "Qur’an & Hadith",
-    "series": null,
-    "rokomariUrl": "https://www.rokomari.com/book/45164",
-    "links": [],
-    "en": {
-      "title": "The Sciences of Tafsir, Hadith and Fiqh",
-      "originalTitle": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
-      "subtitle": "",
-      "summary": "A concise work bringing together introductory discussions of three major Islamic scholarly disciplines: the science of Qur’anic exegesis (tafsir), the science of Hadith, and the science of Islamic jurisprudence (fiqh)."
-    },
-    "bn": {
-      "title": "ইলমুল তাফসীর, ইলমুল হাদীস, ইলমুল ফিকহ",
-      "subtitle": "",
-      "summary": "ইসলামী জ্ঞানচর্চার তিনটি প্রধান শাস্ত্র—তাফসীর, হাদীস ও ফিকহ—সম্পর্কে সংক্ষিপ্ত পরিচয়ধর্মী আলোচনা একত্রে উপস্থাপন করা হয়েছে এই গ্রন্থে।"
-    },
-    "meta": {
-      "publisher": "Bangladesh Islamic Centre",
-      "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
-      "isbn": "",
-      "edition": "",
-      "editionBn": "",
-      "pages": "",
-      "binding": "",
-      "bindingBn": "",
-      "country": "Bangladesh",
-      "countryBn": "বাংলাদেশ",
-      "language": "Bangla",
-      "languageBn": "বাংলা"
-    },
-    "media": {
-      "cover": null,
-      "preview": null,
-      "pdf": null,
-      "audio": []
-    }
-  },
-  {
     "id": "ismatul-ambiya",
     "order": 102,
     "status": "published",
@@ -690,15 +649,16 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": null,
+    "links": [],
     "en": {
-      "title": "উসূলুল ঈমান — ৫ম খণ্ড",
-      "originalTitle": "উসূলুল ঈমান — ৫ম খণ্ড",
+      "title": "Usul al-Iman — Volume 5",
+      "originalTitle": "উসূলুল ঈমান ৫ম খণ্ড",
       "subtitle": "Forthcoming",
       "summary": ""
     },
     "bn": {
-      "title": "উসূলুল ঈমান — ৫ম খণ্ড",
-      "subtitle": "প্রকাশিতব্য",
+      "title": "উসূলুল ঈমান ৫ম খণ্ড",
+      "subtitle": "প্রকাশের পথে",
       "summary": ""
     },
     "meta": {
@@ -708,6 +668,10 @@ window.ahmadAliBookDetails = [
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -716,8 +680,7 @@ window.ahmadAliBookDetails = [
       "preview": null,
       "pdf": null,
       "audio": []
-    },
-    "links": []
+    }
   },
   {
     "id": "usulul-iman-vol-6",
@@ -727,15 +690,16 @@ window.ahmadAliBookDetails = [
     "category": "Aqidah & Thought",
     "series": "usulul-iman",
     "rokomariUrl": null,
+    "links": [],
     "en": {
-      "title": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
-      "originalTitle": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
+      "title": "Usul al-Iman — Volume 6",
+      "originalTitle": "উসূলুল ঈমান ৬ষ্ঠ খণ্ড",
       "subtitle": "Forthcoming",
       "summary": ""
     },
     "bn": {
-      "title": "উসূলুল ঈমান — ৬ষ্ঠ খণ্ড",
-      "subtitle": "প্রকাশিতব্য",
+      "title": "উসূলুল ঈমান ৬ষ্ঠ খণ্ড",
+      "subtitle": "প্রকাশের পথে",
       "summary": ""
     },
     "meta": {
@@ -745,6 +709,10 @@ window.ahmadAliBookDetails = [
       "edition": "",
       "editionBn": "",
       "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
       "language": "Bangla",
       "languageBn": "বাংলা"
     },
@@ -753,8 +721,48 @@ window.ahmadAliBookDetails = [
       "preview": null,
       "pdf": null,
       "audio": []
+    }
+  },
+  {
+    "id": "awliya-allah-true-nature",
+    "order": 203,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Islamic Thought",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "In Search of the True Nature of the Awliya of Allah",
+      "originalTitle": "ওলী-আল্লাহর প্রকৃত স্বরূপ সন্ধানে",
+      "subtitle": "Forthcoming",
+      "summary": ""
     },
-    "links": []
+    "bn": {
+      "title": "ওলী-আল্লাহর প্রকৃত স্বরূপ সন্ধানে",
+      "subtitle": "প্রকাশের পথে",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
   },
   {
     "id": "book-189691",
@@ -1091,6 +1099,88 @@ window.ahmadAliBookDetails = [
     },
     "media": {
       "cover": "media/books/book-574219/cover.jpg",
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "selected-articles-vols-1-2",
+    "order": 207,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Islamic Thought",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Selected Articles — Volumes 1 & 2",
+      "originalTitle": "প্রবন্ধ সংকলন ১ম ও ২য় খণ্ড",
+      "subtitle": "Forthcoming",
+      "summary": ""
+    },
+    "bn": {
+      "title": "প্রবন্ধ সংকলন ১ম ও ২য় খণ্ড",
+      "subtitle": "প্রকাশের পথে",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "bangladeshe-zakat-ushr-aday-bonton",
+    "order": 999,
+    "status": "published",
+    "rokomariId": null,
+    "category": "Islamic Economics & Zakat",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Zakat and Ushr Collection and Distribution in Bangladesh",
+      "originalTitle": "বাংলাদেশে যাকাত-উশর আদায় ও বণ্টন: অব্যবস্থাপনা ও কার্যকর কর্মপন্থা",
+      "subtitle": "Mismanagement and Effective Strategies",
+      "summary": "A Bengali seminar paper/booklet by Dr. Ahmad Ali on the collection and distribution of zakat and ushr in Bangladesh. Presented at a seminar in Chattogram on 16 February 2025, the work examines weaknesses in current practice and discusses zakat as a social and economic mechanism for poverty relief, rehabilitation and collective welfare, together with practical directions for more effective collection and distribution."
+    },
+    "bn": {
+      "title": "বাংলাদেশে যাকাত-উশর আদায় ও বণ্টন",
+      "subtitle": "অব্যবস্থাপনা ও কার্যকর কর্মপন্থা",
+      "summary": "বাংলাদেশে যাকাত ও উশর আদায়-বণ্টনের বর্তমান অবস্থা, অব্যবস্থাপনা এবং অধিক কার্যকর ব্যবস্থাপনার করণীয় নিয়ে ড. আহমদ আলীর বাংলা সেমিনার প্রবন্ধ/পুস্তিকা। ১৬ ফেব্রুয়ারি ২০২৫ চট্টগ্রামে অনুষ্ঠিত একটি সেমিনারে তিনি এ প্রবন্ধ উপস্থাপন করেন। এতে দারিদ্র্য বিমোচন, পুনর্বাসন, সামাজিক সহযোগিতা ও অর্থনৈতিক নিরাপত্তায় যাকাতের ভূমিকা এবং সংগ্রহ-বণ্টন ব্যবস্থাকে কার্যকর করার প্রয়োজনীয়তা আলোচিত হয়েছে।"
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "Seminar paper/booklet, presented 16 February 2025",
+      "editionBn": "সেমিনার প্রবন্ধ/পুস্তিকা, উপস্থাপিত ১৬ ফেব্রুয়ারি ২০২৫",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": "media/books/bangladeshe-zakat-ushr-aday-bonton/cover.jpg",
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1473,6 +1563,47 @@ window.ahmadAliBookDetails = [
     }
   },
   {
+    "id": "muslim-thought-tradition-modernity",
+    "order": 204,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Islamic Thought",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Transformation of Muslim Thought: From Tradition to Modernity",
+      "originalTitle": "মুসলিম চিন্তার রূপান্তর : ঐতিহ্য থেকে আধুনিকতা",
+      "subtitle": "Ash‘ariyya, Kalam, Philosophy and the Tensions of Modernity",
+      "summary": ""
+    },
+    "bn": {
+      "title": "মুসলিম চিন্তার রূপান্তর : ঐতিহ্য থেকে আধুনিকতা",
+      "subtitle": "আশআরিয়্যাহ, কালাম, দর্শন ও আধুনিকতার দ্বন্দ্ব",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
     "id": "muslim-lipikala",
     "order": 100,
     "status": "published",
@@ -1508,6 +1639,47 @@ window.ahmadAliBookDetails = [
     },
     "media": {
       "cover": "media/books/muslim-lipikala/cover.jpg",
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "zubdatul-bayan-vol-3",
+    "order": 206,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Qur’an & Tafsir",
+    "series": "zubdatul-bayan",
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Zubdat al-Bayan — Volume 3",
+      "originalTitle": "যুবদাতুল বায়ান ৩য় খণ্ড",
+      "subtitle": "Forthcoming",
+      "summary": ""
+    },
+    "bn": {
+      "title": "যুবদাতুল বায়ান ৩য় খণ্ড",
+      "subtitle": "প্রকাশের পথে",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []
@@ -1631,6 +1803,88 @@ window.ahmadAliBookDetails = [
     },
     "media": {
       "cover": "media/books/zubdatul-bayan-vol-1/cover.jpg",
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "seerah-modern-civilization-crisis",
+    "order": 205,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Sirah & Biography",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "The Seerah of the Messenger ﷺ and the Crisis of Modern Civilization",
+      "originalTitle": "রাসূল ﷺ-এর সীরাত ও আধুনিক মানবসভ্যতার সংকট",
+      "subtitle": "A Re-reading in Light of Contemporary Questions",
+      "summary": ""
+    },
+    "bn": {
+      "title": "রাসূল ﷺ-এর সীরাত ও আধুনিক মানবসভ্যতার সংকট",
+      "subtitle": "সমকালীন জিজ্ঞাসার আলোকে একটি পুনঃপাঠ",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
+      "preview": null,
+      "pdf": null,
+      "audio": []
+    }
+  },
+  {
+    "id": "dialogue-with-time-vols-1-3",
+    "order": 208,
+    "status": "forthcoming",
+    "rokomariId": null,
+    "category": "Islamic Thought",
+    "series": null,
+    "rokomariUrl": null,
+    "links": [],
+    "en": {
+      "title": "Dialogue with Time — Volumes 1–3",
+      "originalTitle": "সময়ের সঙ্গে সংলাপ ১ম–৩য় খণ্ড",
+      "subtitle": "Selected Thoughts, Observations and Responses",
+      "summary": ""
+    },
+    "bn": {
+      "title": "সময়ের সঙ্গে সংলাপ ১ম–৩য় খণ্ড",
+      "subtitle": "নির্বাচিত ভাবনা, পর্যবেক্ষণ ও প্রতিক্রিয়া",
+      "summary": ""
+    },
+    "meta": {
+      "publisher": "",
+      "publisherBn": "",
+      "isbn": "",
+      "edition": "",
+      "editionBn": "",
+      "pages": "",
+      "binding": "",
+      "bindingBn": "",
+      "country": "Bangladesh",
+      "countryBn": "বাংলাদেশ",
+      "language": "Bangla",
+      "languageBn": "বাংলা"
+    },
+    "media": {
+      "cover": null,
       "preview": null,
       "pdf": null,
       "audio": []

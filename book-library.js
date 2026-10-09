@@ -17,18 +17,19 @@
     'Governance & Society':'শাসনব্যবস্থা ও সমাজ',
     'Sirah & Biography':'সীরাত ও জীবনী',
     'Spirituality':'আত্মশুদ্ধি ও আধ্যাত্মিকতা',
-    'Arabic Language & Literature':'আরবি ভাষা ও সাহিত্য'
+    'Arabic Language & Literature':'আরবি ভাষা ও সাহিত্য',
+    'Islamic Economics & Zakat':'ইসলামী অর্থনীতি ও যাকাত'
   };
   const categoryName=value=>isBn?(categoryBn[value]||value):value;
 
   const copy=isBn?{
     all:'সব',details:'বিস্তারিত দেখুন',preview:'প্রিভিউ',pdf:'PDF',audio:'অডিওবুক',rokomari:'রকমারি',publisherLink:'প্রকাশক',order:'অর্ডার করুন',
-    back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',binding:'বাঁধাই',country:'দেশ',language:'ভাষা',category:'বিষয়',
+    back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',year:'প্রকাশকাল',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',binding:'বাঁধাই',country:'দেশ',language:'ভাষা',category:'বিষয়',
     listen:'অডিওবুক',readPdf:'PDF পড়ুন',openPreview:'প্রিভিউ দেখুন',missing:'গ্রন্থের বিস্তারিত তথ্য পাওয়া যায়নি।',forthcoming:'প্রকাশিতব্য',ongoing:'চলমান',
     catalog:'গ্রন্থ তালিকা',catalogNote:'বিষয় অনুসারে প্রকাশিত গ্রন্থসমূহ দেখুন।',noMatch:'কোনো মিলযুক্ত গ্রন্থ পাওয়া যায়নি।',external:'বাহ্যিক লিংক'
   }:{
     all:'All',details:'View Details',preview:'Preview',pdf:'PDF',audio:'Audiobook',rokomari:'Rokomari',publisherLink:'Publisher',order:'Order Here',
-    back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',isbn:'ISBN',edition:'Edition',pages:'Pages',binding:'Binding',country:'Country',language:'Language',category:'Category',
+    back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',year:'Publication year',isbn:'ISBN',edition:'Edition',pages:'Pages',binding:'Binding',country:'Country',language:'Language',category:'Category',
     listen:'Audiobook',readPdf:'Read PDF',openPreview:'Preview',missing:'Detailed information for this book is not available.',forthcoming:'Forthcoming',ongoing:'Ongoing',
     catalog:'Book catalog',catalogNote:'Browse published works by topic.',noMatch:'No matching books found.',external:'External links'
   };
@@ -50,7 +51,7 @@
       id:'zubdatul-bayan',
       en:{title:'Zubdat al-Bayan',note:'An ongoing Bengali tafsir project intended to develop into a complete commentary on the Qur’an.'},
       bn:{title:'যুবদাতুল বায়ান',note:'পূর্ণাঙ্গ বাংলা কুরআন তাফসির হিসেবে বিকাশমান একটি চলমান তাফসির প্রকল্প।'},
-      volumes:[['1','204536'],['2','234566'],['…',null,'ongoing']]
+      volumes:[['1','204536'],['2','234566'],['3',null,'forthcoming','zubdatul-bayan-vol-3'],['…',null,'ongoing']]
     }
   ];
 
@@ -89,6 +90,7 @@
     const loc=localized(book);
     const article=document.createElement('article');
     article.className='book-card reveal';
+    if(book.status==='forthcoming') article.classList.add('is-forthcoming');
     article.dataset.category=book.category||'';
     article.dataset.title=String(`${loc.title||''} ${book.bn?.title||''} ${book.en?.title||''}`).toLowerCase();
 
@@ -107,6 +109,7 @@
     const overlay=document.createElement('span');overlay.className='book-hover-overlay';
     const button=document.createElement('span');button.className='book-hover-action';button.textContent=copy.details;
     overlay.appendChild(button);a.appendChild(overlay);
+    if(book.status==='forthcoming'){const badge=document.createElement('span');badge.className='book-status-badge';badge.textContent=copy.forthcoming;a.appendChild(badge);}
     article.appendChild(a);
     return article;
   }
@@ -139,13 +142,7 @@
   function renderForthcoming(){
     const host=document.getElementById('bookForthcoming');if(!host)return;
     const items=allBooks.filter(b=>b.status==='forthcoming').sort(compareByBanglaTitle);
-    host.replaceChildren();
-    items.forEach(book=>{
-      const a=document.createElement('a');a.className='archive-row forthcoming-row';a.href=detailHref(book.id);
-      const h=document.createElement('h3');h.lang='bn';h.textContent=book.bn?.title||localized(book).title||'';
-      const p=document.createElement('p');p.textContent=copy.forthcoming;
-      a.append(h,p);host.appendChild(a);
-    });
+    host.replaceChildren(...items.map(makeBookCard));
   }
 
   function renderDetail(){
@@ -175,7 +172,7 @@
       const publisherLink=Array.isArray(book.links)?book.links.find(x=>x?.url&&/^publisher(?:\s+catalog)?$/i.test(String(x.label||''))):null;
       if(publisherLink){const a=document.createElement('a');a.className='btn quiet';a.href=publisherLink.url;a.target='_blank';a.rel='noopener';a.textContent=`${copy.publisherLink} ↗`;actions.appendChild(a);}
       if(book.rokomariUrl){const a=document.createElement('a');a.className='btn quiet';a.href=book.rokomariUrl;a.target='_blank';a.rel='noopener';a.textContent=`${copy.rokomari} ↗`;actions.appendChild(a);}
-      const order=document.createElement('a');order.className='btn primary';order.href=`contact.html?subject=book-order&bookId=${encodeURIComponent(book.id)}#inquiry-form`;order.textContent=copy.order;actions.appendChild(order);
+      if(book.status!=='forthcoming'){const order=document.createElement('a');order.className='btn primary';order.href=`contact.html?subject=book-order&bookId=${encodeURIComponent(book.id)}#inquiry-form`;order.textContent=copy.order;actions.appendChild(order);}
       actions.hidden=!actions.children.length;
     }
 
@@ -184,6 +181,7 @@
       const m=book.meta||{};
       const rows=[
         [copy.publisher,isBn?(m.publisherBn||m.publisher):m.publisher],
+        [copy.year,m.publicationYear],
         [copy.isbn,m.isbn],
         [copy.edition,isBn?(m.editionBn||m.edition):m.edition],
         [copy.pages,m.pages],
