@@ -157,3 +157,57 @@ if(search)search.addEventListener('input',applyBooks);
     a.append(time,c,action);host.appendChild(a);
   });
 })();
+
+/* Bengali display digits: 0-9 -> ০-৯ */
+(() => {
+  if(document.documentElement.lang!=='bn')return;
+
+  const map={'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'};
+  const toBnDigits=value=>String(value??'').replace(/[0-9]/g,d=>map[d]);
+
+  const skipParent=el=>{
+    if(!el||el.nodeType!==Node.ELEMENT_NODE)return false;
+    return Boolean(el.closest('script,style,code,pre,kbd,samp,[data-keep-latin-digits]'));
+  };
+
+  const convertTextNode=node=>{
+    if(!node||node.nodeType!==Node.TEXT_NODE||skipParent(node.parentElement))return;
+    if(/[0-9]/.test(node.nodeValue||''))node.nodeValue=toBnDigits(node.nodeValue);
+  };
+
+  const convertElement=root=>{
+    if(!root)return;
+    if(root.nodeType===Node.TEXT_NODE){convertTextNode(root);return;}
+    if(root.nodeType!==Node.ELEMENT_NODE||skipParent(root))return;
+
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    let node;
+    while((node=walker.nextNode()))convertTextNode(node);
+
+    ['placeholder','aria-label','title'].forEach(attr=>{
+      if(root.hasAttribute?.(attr)){
+        const value=root.getAttribute(attr);
+        if(/[0-9]/.test(value||''))root.setAttribute(attr,toBnDigits(value));
+      }
+      root.querySelectorAll?.(`[${attr}]`).forEach(el=>{
+        if(skipParent(el))return;
+        const value=el.getAttribute(attr);
+        if(/[0-9]/.test(value||''))el.setAttribute(attr,toBnDigits(value));
+      });
+    });
+  };
+
+  convertElement(document.body);
+
+  const observer=new MutationObserver(mutations=>{
+    for(const mutation of mutations){
+      if(mutation.type==='characterData'){
+        convertTextNode(mutation.target);
+        continue;
+      }
+      mutation.addedNodes.forEach(convertElement);
+    }
+  });
+
+  observer.observe(document.body,{subtree:true,childList:true,characterData:true});
+})();
