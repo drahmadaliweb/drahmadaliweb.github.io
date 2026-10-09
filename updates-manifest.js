@@ -14,18 +14,5 @@ window.ahmadAliUpdates = [
       "title": "সাইটটি সক্রিয়ভাবে উন্নয়নাধীন",
       "summary": "এই ওয়েবসাইটটি বর্তমানে সক্রিয়ভাবে উন্নয়ন ও হালনাগাদের কাজের মধ্যে রয়েছে। এ সময়ে কোনো ত্রুটি, অসম্পূর্ণতা বা ব্যবহারজনিত সমস্যার সম্মুখীন হলে আমরা আন্তরিকভাবে দুঃখিত। আপনার কোনো পরামর্শ, মতামত বা সমস্যার কথা জানাতে অনুগ্রহ করে যোগাযোগ পৃষ্ঠার ফর্ম ব্যবহার করুন।"
     }
-  },
-  {
-    "date": "2026-10-05",
-    "href": "about.html#research",
-    "en": {
-      "title": "Ongoing project: Zubdatul Bayan — a full Bengali Qur’an tafsir",
-      "summary": "The ongoing Zubdatul Bayan project is intended to develop into a complete Bengali commentary on the Qur’an."
-    },
-    "bn": {
-      "title": "চলমান প্রকল্প: যুবদাতুল বায়ান — পূর্ণাঙ্গ বাংলা তাফসির",
-      "summary": "চলমান যুবদাতুল বায়ান প্রকল্পটি পূর্ণাঙ্গ বাংলা কুরআন তাফসির হিসেবে বিকাশের উদ্দেশ্যে রচিত হচ্ছে।"
-    },
-    "id": "2026-10-05-zubdatul-bayan"
   }
 ];
