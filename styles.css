@@ -879,3 +879,26 @@ html[lang="bn"] .review-book-option{font-family:var(--bangla-sans)}
 .review-language-picker .review-book-option:first-child{font-weight:500;color:var(--ink);border-bottom:0;border-radius:7px;margin-bottom:0}
 html[lang="bn"] .review-language-picker .review-book-picker-toggle,
 html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--bangla-sans)}
+
+/* 2026-10-10 - Reader Reviews consent alignment */
+.review-consent{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+.review-consent input[type="checkbox"]{
+  width:16px;
+  height:16px;
+  min-width:16px;
+  min-height:16px;
+  flex:0 0 16px;
+  padding:0;
+  margin:.18em 0 0;
+  box-sizing:border-box;
+  accent-color:var(--forest);
+}
+#readerReviewConsentText::after{
+  content:" *";
+  color:#9c5d3c;
+  font-weight:700;
+}

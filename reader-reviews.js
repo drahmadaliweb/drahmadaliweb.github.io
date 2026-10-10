@@ -232,7 +232,7 @@
     if(enInput)enInput.required=hasSelection&&(lang==='en'||lang==='both');
     const needConsent=lang==='bn'||lang==='en';
     if(consentWrap)consentWrap.hidden=!needConsent;
-    if(consentInput){consentInput.required=needConsent;if(!needConsent)consentInput.checked=false;}
+    if(consentInput){consentInput.required=needConsent;consentInput.setAttribute('aria-required',String(needConsent));if(!needConsent)consentInput.checked=false;}
     if(consentText)consentText.textContent=lang==='bn'?copy.consentBn:lang==='en'?copy.consentEn:'';
   }
   languageSelect?.addEventListener('change',updateLanguageFields);
