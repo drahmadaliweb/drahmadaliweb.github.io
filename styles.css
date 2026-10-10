@@ -763,7 +763,7 @@ html[lang="bn"] .book-glyph{
 .reader-reviews-page-hero{padding-bottom:74px}
 .reader-reviews-hero-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:34px}
 .reader-reviews-hero-copy{min-width:0}
-.reader-reviews-page-hero h1{font-size:clamp(3.2rem,6.2vw,5.8rem)}
+.reader-reviews-page-hero h1{font-size:clamp(2.2rem,4vw,4rem);max-width:900px}
 .reader-reviews-add-button{flex:0 0 auto;border:0;cursor:pointer;margin-bottom:8px}
 .reader-review-form-panel{padding:0 0 38px;background:linear-gradient(180deg,var(--paper),var(--ivory));border-bottom:1px solid var(--line)}
 .reader-review-page-form{margin:0;padding:24px 26px;background:rgba(255,255,255,.72);box-shadow:0 16px 42px rgba(23,63,54,.07)}
@@ -822,3 +822,53 @@ html[lang="bn"] .reader-review-wall-empty{font-family:var(--bangla-sans)}
   .reader-review-wall-meta{align-items:flex-start}
   .reader-review-wall{columns:1}
 }
+
+/* 2026-10-10 - Reader Reviews copy refinements */
+.reader-reviews-hero-action{flex:0 0 min(360px,32vw);display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:4px}
+.reader-reviews-hero-action p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.62}
+.reader-reviews-add-button{margin-bottom:0}
+.reader-reviews-books-link{color:var(--forest);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.reader-reviews-books-link:hover{color:var(--gold)}
+html[lang="bn"] .reader-reviews-hero-action p,
+html[lang="bn"] .reader-reviews-books-link{font-family:var(--bangla-sans)}
+@media(max-width:720px){.reader-reviews-hero-action{width:100%;max-width:520px;margin-top:22px}}
+
+/* 2026-10-10 — Reader Reviews form/dropdown/alignment fixes */
+#readerReviewConsentWrap[hidden],
+#readerReviewBnWrap[hidden],
+#readerReviewEnWrap[hidden],
+#readerReviewBookMenu[hidden]{display:none!important}
+
+.review-book-picker{position:relative}
+.review-book-picker-toggle{
+  width:100%;min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+  padding:9px 11px;font:500 .8rem/1.5 var(--sans);text-align:left;cursor:pointer
+}
+.review-book-picker-toggle:focus{border-color:var(--forest);box-shadow:0 0 0 3px rgba(23,63,54,.08);outline:none}
+.review-book-menu{
+  position:absolute;z-index:80;left:0;right:0;top:calc(100% + 6px);
+  max-height:320px;overflow-y:auto;padding:6px;
+  border:1px solid var(--line);border-radius:10px;background:#fff;
+  box-shadow:0 16px 36px rgba(23,63,54,.16)
+}
+.review-book-option{
+  width:100%;display:block;border:0;border-radius:7px;background:transparent;color:var(--ink);
+  padding:9px 10px;font:500 .76rem/1.45 var(--sans);text-align:left;cursor:pointer
+}
+.review-book-option:hover,.review-book-option:focus,.review-book-option[aria-selected="true"]{
+  background:var(--ivory);color:var(--forest);outline:none
+}
+.review-book-option:first-child{font-weight:800;color:var(--forest);border-bottom:1px solid var(--line);border-radius:7px 7px 0 0;margin-bottom:4px}
+
+.reader-review-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;columns:auto}
+.reader-review-wall-column{display:flex;flex-direction:column;gap:18px;min-width:0}
+.reader-review-wall-card{display:block;margin:0;width:100%}
+.reader-review-wall-heading{align-items:flex-start}
+.reader-review-wall-meta{display:none!important}
+
+html[lang="bn"] .review-book-picker-toggle,
+html[lang="bn"] .review-book-option{font-family:var(--bangla-sans)}
+
+@media(max-width:980px){.reader-review-wall{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.reader-review-wall{grid-template-columns:1fr}}

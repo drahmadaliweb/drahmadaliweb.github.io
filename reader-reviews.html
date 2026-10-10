@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=20261010-reader-reviews-v1" rel="stylesheet"/>
+<link href="styles.css?v=20261010-reader-reviews-v3" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header" id="top">
@@ -35,9 +35,12 @@
     <div class="reader-reviews-hero-copy">
       <p class="eyebrow">Reader feedback</p>
       <h1>Reader Reviews</h1>
-      <p class="page-lead">Thoughts and reflections from readers on Dr. Ahmad Ali’s books, gathered from this website and other platforms.</p>
+      <p class="page-lead">Reviews, reflections, and impressions from readers on Dr. Ahmad Ali’s books, gathered from this website and other platforms. To read all reviews of a particular book, visit the <a class="reader-reviews-books-link" href="books.html">Books</a> page and open that book.</p>
     </div>
-    <button class="btn primary reader-reviews-add-button" id="readerReviewFormToggle" type="button" aria-expanded="false" aria-controls="readerReviewFormPanel">Add a Review</button>
+    <div class="reader-reviews-hero-action">
+      <p>To share your review or reflection on any of Dr. Ahmad Ali’s books, click below.</p>
+      <button class="btn primary reader-reviews-add-button" id="readerReviewFormToggle" type="button" aria-expanded="false" aria-controls="readerReviewFormPanel">Add a Review</button>
+    </div>
   </div>
 </section>
 
@@ -46,12 +49,20 @@
     <form class="book-review-form reader-review-page-form" id="readerReviewPageForm" novalidate>
       <div class="reader-review-form-head">
         <div><p class="eyebrow">Share your thoughts</p><h2>Add a Review</h2></div>
-        <p>Reviews are moderated before publication. Approved reviews of at least 40 words may also appear on this page.</p>
       </div>
       <div class="review-form-grid">
         <label class="review-field"><span>Name <b>*</b></span><input id="readerReviewName" name="name" type="text" maxlength="100" autocomplete="name" required></label>
         <label class="review-field"><span>Email</span><input id="readerReviewEmail" name="email" type="email" maxlength="200" autocomplete="email"><small>Your email is never displayed publicly.</small></label>
-        <label class="review-field"><span>Book <b>*</b></span><select id="readerReviewBook" name="book" required><option value="">Select a book</option></select></label>
+        <div class="review-field">
+          <span>Book <b>*</b></span>
+          <div class="review-book-picker" id="readerReviewBookPicker">
+            <button class="review-book-picker-toggle" id="readerReviewBookToggle" type="button" aria-expanded="false" aria-controls="readerReviewBookMenu">
+              <span id="readerReviewBookLabel">Select a book</span><span aria-hidden="true">▾</span>
+            </button>
+            <div class="review-book-menu" id="readerReviewBookMenu" role="listbox" hidden></div>
+            <input id="readerReviewBook" name="book" type="hidden">
+          </div>
+        </div>
         <label class="review-field"><span>Review language <b>*</b></span><select id="readerReviewLanguage" name="language" required><option value="">Select language</option><option value="bn">Bengali</option><option value="en">English</option><option value="both">Both Bengali and English</option></select></label>
         <div class="review-field review-field-wide review-ai-consent" id="readerReviewConsentWrap" hidden><label class="review-consent"><input id="readerReviewAiConsent" type="checkbox"><span id="readerReviewConsentText"></span></label></div>
         <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>Review in Bengali <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="Write your Bengali review…"></textarea></label>
@@ -66,8 +77,7 @@
 <section class="section-pad reader-review-wall-section">
   <div class="container">
     <div class="reader-review-wall-heading reveal">
-      <div><p class="eyebrow">Selected reader reflections</p><h2>Reviews of 40 words or more</h2></div>
-      <div class="reader-review-wall-meta"><span id="readerReviewWallCount"></span><span>Order refreshes daily.</span></div>
+      <div><p class="eyebrow">Selected reader reflections</p><h2>Selected Reviews & Reflections</h2></div>
     </div>
     <div class="reader-review-wall" id="readerReviewWall" aria-live="polite"></div>
     <p class="reader-review-wall-empty" id="readerReviewWallEmpty">Loading reader reviews…</p>
@@ -84,7 +94,7 @@
 <script src="books-manifest.js?v=20261009-forthcoming"></script>
 <script src="reviews-config.js?v=20261007-reviews"></script>
 <script src="updates-manifest.js?v=20261005-updates"></script>
-<script src="reader-reviews.js?v=20261010-reader-reviews-v1"></script>
+<script src="reader-reviews.js?v=20261010-reader-reviews-v3"></script>
 <script src="script.js?v=20261006-library"></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>
