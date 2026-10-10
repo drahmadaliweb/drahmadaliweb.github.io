@@ -3,7 +3,7 @@ export default {
   "date": "2026-10-09",
   "topic_slug": "education-university-teaching",
   "source": {
-    "labelBn": "",
+    "labelBn": "ঐতিহ্যের ৫০ (সাময়িকী), প্রাক্তন ছাত্র পরিষদ, পুটিবিলা হামেদিয়া ফাজিল মাদরাসা, চট্টগ্রাম",
     "labelEn": "",
     "url": ""
   },
