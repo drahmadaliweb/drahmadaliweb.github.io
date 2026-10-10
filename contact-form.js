@@ -2,7 +2,11 @@
   const form=document.getElementById('contactForm');
   if(!form)return;
   const isBn=document.documentElement.lang==='bn';
-  const endpoint='https://formsubmit.co/ajax/drahmadiscu@gmail.com';
+  const config=window.AHMAD_ALI_REVIEW_CONFIG||{};
+  const supabaseUrl=String(config.supabaseUrl||'').replace(/\/$/,'');
+  const key=String(config.publishableKey||config.anonKey||'').trim();
+  const turnstile=window.AhmadAliReviewTurnstile;
+  const configured=Boolean(supabaseUrl&&key&&turnstile?.configured);
   const params=new URLSearchParams(location.search);
   const subject=document.getElementById('subject');
   const message=document.getElementById('message');
@@ -72,6 +76,7 @@
   if(preselectedBook){subject.value='book-order';bookTitle.value=preselectedBook;}
   updateMessageGuide();
   subject.addEventListener('change',updateMessageGuide);
+  turnstile?.mount('contactTurnstile','contact_message').catch(()=>{});
 
   // Preserve the order context when switching languages.
   document.querySelectorAll('.language-switch a').forEach(a=>{
@@ -88,29 +93,37 @@
       form.reportValidity();status.textContent=copy.invalid;status.classList.add('error');return;
     }
     if(document.getElementById('websiteField').value)return;
+    if(!configured){status.textContent=copy.error;status.classList.add('error');return;}
     submit.disabled=true;submit.textContent=copy.sending;status.textContent='';
     const subjectLabel=subject.options[subject.selectedIndex]?.textContent||subject.value;
-    const payload={
-      _subject:`Dr. Ahmad Ali Website — ${subjectLabel}`,
-      _template:'table',
-      _honey:'',
-      full_name:document.getElementById('fullName').value.trim(),
-      email:document.getElementById('email').value.trim(),
-      _replyto:document.getElementById('email').value.trim(),
-      phone:document.getElementById('phone').value.trim(),
-      subject:subjectLabel,
-      message:message.value.trim(),
-      page:location.href
-    };
-    if(subject.value==='book-order')payload.book=bookTitle.value.trim();
     try{
-      const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
-      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const turnstileToken=await turnstile.ensureToken('contactTurnstile','contact_message');
+      const payload={
+        turnstile_token:turnstileToken,
+        website:document.getElementById('websiteField').value,
+        full_name:document.getElementById('fullName').value.trim(),
+        email:document.getElementById('email').value.trim(),
+        phone:document.getElementById('phone').value.trim(),
+        subject:subjectLabel,
+        subject_code:subject.value,
+        book:subject.value==='book-order'?bookTitle.value.trim():'',
+        message:message.value.trim(),
+        page:location.href
+      };
+      const response=await fetch(`${supabaseUrl}/functions/v1/contact-submit`,{
+        method:'POST',
+        headers:{'apikey':key,'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      const data=await response.json().catch(()=>({}));
+      if(!response.ok)throw new Error(data?.error||`HTTP ${response.status}`);
       form.reset();bookTitle.value='';updateMessageGuide();
       status.textContent=copy.success;status.classList.add('success');
     }catch(error){
+      console.warn('Contact form submission failed.',error);
       status.textContent=copy.error;status.classList.add('error');
     }finally{
+      turnstile?.reset('contactTurnstile');
       submit.disabled=false;submit.textContent=copy.submit;
     }
   });
