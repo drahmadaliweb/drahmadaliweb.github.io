@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ড. আহমদ আলীর গ্রন্থসমূহ নিয়ে পাঠকদের পর্যালোচনা, অনুভূতি ও মতামত।" name="description"/>
+<meta content="#173f36" name="theme-color"/>
+<title>পাঠকের ভাবনা | ড. আহমদ আলী</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<link href="../styles.css?v=20261010-reader-reviews-v1" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="header-utility"><div class="utility-wrap container">
+    <div aria-label="সাম্প্রতিক আপডেট" class="updates-ticker" data-lang="bn"><span class="update-label">আপডেট</span><div class="update-viewport"></div></div>
+    <a aria-label="সাইটে খুঁজুন" class="site-search-control" href="search.html">⌕ খুঁজুন</a>
+    <div aria-label="ভাষা" class="language-switch"><a href="../reader-reviews.html">EN</a><span aria-hidden="true">/</span><a aria-current="page" class="active" href="reader-reviews.html">বাংলা</a></div>
+  </div></div>
+  <div class="nav-wrap container">
+    <a aria-label="ড. আহমদ আলীর হোম পেজ" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark">আআ</span><span class="brand-text"><strong>ড. আহমদ আলী</strong></span></a>
+    <div class="nav-actions"><nav aria-label="প্রধান নেভিগেশন" class="nav-links"><a href="index.html">হোম</a><a href="about.html">প্রোফাইল</a><a href="biography.html">জীবনী</a><a href="books.html">গ্রন্থসমূহ</a><a href="publications.html">গবেষণা প্রকাশনা</a><a href="selected-articles.html">প্রবন্ধ সংকলন</a><a href="window-of-time.html">সময়ের সঙ্গে সংলাপ</a><a class="active" href="reader-reviews.html">পাঠকের ভাবনা</a><a href="contact.html">যোগাযোগ</a></nav><button aria-expanded="false" aria-label="নেভিগেশন খুলুন" class="menu-toggle">☰</button></div>
+  </div>
+</header>
+
+<main>
+<section class="page-hero reader-reviews-page-hero">
+  <div class="container narrow reader-reviews-hero-inner reveal">
+    <div class="reader-reviews-hero-copy">
+      <p class="eyebrow">পাঠকের মতামত</p>
+      <h1>পাঠকের ভাবনা</h1>
+      <p class="page-lead">ড. আহমদ আলীর গ্রন্থসমূহ নিয়ে পাঠকদের পর্যালোচনা, অনুভূতি ও মতামত—এই ওয়েবসাইট ও বিভিন্ন মাধ্যম থেকে সংগৃহীত।</p>
+    </div>
+    <button class="btn primary reader-reviews-add-button" id="readerReviewFormToggle" type="button" aria-expanded="false" aria-controls="readerReviewFormPanel">মতামত দিন</button>
+  </div>
+</section>
+
+<section class="reader-review-form-panel" id="readerReviewFormPanel" hidden>
+  <div class="container narrow">
+    <form class="book-review-form reader-review-page-form" id="readerReviewPageForm" novalidate>
+      <div class="reader-review-form-head">
+        <div><p class="eyebrow">আপনার পাঠ-অভিজ্ঞতা</p><h2>মতামত দিন</h2></div>
+        <p>প্রকাশের আগে সব রিভিউ পর্যালোচনা করা হয়। অনুমোদিত ৪০ শব্দ বা তার বেশি দৈর্ঘ্যের রিভিউ এই পাতাতেও দেখানো হতে পারে।</p>
+      </div>
+      <div class="review-form-grid">
+        <label class="review-field"><span>নাম <b>*</b></span><input id="readerReviewName" name="name" type="text" maxlength="100" autocomplete="name" required></label>
+        <label class="review-field"><span>ইমেইল</span><input id="readerReviewEmail" name="email" type="email" maxlength="200" autocomplete="email"><small>আপনার ইমেইল প্রকাশ্যে দেখানো হবে না।</small></label>
+        <label class="review-field"><span>গ্রন্থ <b>*</b></span><select id="readerReviewBook" name="book" required><option value="">একটি গ্রন্থ নির্বাচন করুন</option></select></label>
+        <label class="review-field"><span>রিভিউয়ের ভাষা <b>*</b></span><select id="readerReviewLanguage" name="language" required><option value="">ভাষা নির্বাচন করুন</option><option value="bn">বাংলা</option><option value="en">ইংরেজি</option><option value="both">বাংলা ও ইংরেজি উভয় ভাষায়</option></select></label>
+        <div class="review-field review-field-wide review-ai-consent" id="readerReviewConsentWrap" hidden><label class="review-consent"><input id="readerReviewAiConsent" type="checkbox"><span id="readerReviewConsentText"></span></label></div>
+        <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>বাংলায় রিভিউ <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="বাংলায় আপনার রিভিউ লিখুন…"></textarea></label>
+        <label class="review-field review-field-wide" id="readerReviewEnWrap" hidden><span>ইংরেজিতে রিভিউ <b>*</b></span><textarea id="readerReviewEn" rows="7" maxlength="10000" placeholder="ইংরেজিতে আপনার রিভিউ লিখুন…"></textarea></label>
+        <label class="review-honeypot" aria-hidden="true">Website<input id="readerReviewWebsite" type="text" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="review-submit-row"><button class="btn primary" id="readerReviewSubmit" type="submit">রিভিউ জমা দিন</button><p class="review-form-status" id="readerReviewStatus" role="status" aria-live="polite"></p></div>
+    </form>
+  </div>
+</section>
+
+<section class="section-pad reader-review-wall-section">
+  <div class="container">
+    <div class="reader-review-wall-heading reveal">
+      <div><p class="eyebrow">নির্বাচিত পাঠক-ভাবনা</p><h2>৪০ শব্দ বা তার বেশি রিভিউ</h2></div>
+      <div class="reader-review-wall-meta"><span id="readerReviewWallCount"></span><span>ক্রম প্রতিদিন পরিবর্তিত হয়।</span></div>
+    </div>
+    <div class="reader-review-wall" id="readerReviewWall" aria-live="polite"></div>
+    <p class="reader-review-wall-empty" id="readerReviewWallEmpty">পাঠকের রিভিউ লোড হচ্ছে…</p>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-wrap footer-standard">
+<div class="footer-copyright"><strong>© ২০২৬ ড. আহমদ আলী</strong><span>সর্বস্বত্ব সংরক্ষিত।</span></div>
+<div class="footer-links"><a class="footer-facebook" href="https://www.facebook.com/share/p/19jTNrzmsg/" rel="noopener" target="_blank" aria-label="ফেসবুকে ড. আহমদ আলী"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.438H7.078v-3.489h3.047V9.414c0-3.025 1.792-4.696 4.533-4.696 1.313 0 2.686.236 2.686.236v2.971h-1.513c-1.49 0-1.956.931-1.956 1.887v2.261h3.328l-.532 3.489h-2.796V24C19.612 23.094 24 18.099 24 12.073Z"/></svg><span>ফেসবুক</span></a><a href="contact.html">যোগাযোগ</a><a href="#top">উপরে ফিরুন ↑</a></div>
+</div></footer>
+<script src="../books-manifest.js?v=20261009-forthcoming"></script>
+<script src="../reviews-config.js?v=20261007-reviews"></script>
+<script src="../updates-manifest.js?v=20261005-updates"></script>
+<script src="../reader-reviews.js?v=20261010-reader-reviews-v1"></script>
+<script src="../script.js?v=20261009-bn-digits-v1"></script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -758,3 +758,67 @@ html[lang="bn"] .arabic *,
 html[lang="bn"] .book-glyph{
   font-family:serif!important;
 }
+
+/* 2026-10-10 — Reader Reviews / পাঠকের ভাবনা */
+.reader-reviews-page-hero{padding-bottom:74px}
+.reader-reviews-hero-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:34px}
+.reader-reviews-hero-copy{min-width:0}
+.reader-reviews-page-hero h1{font-size:clamp(3.2rem,6.2vw,5.8rem)}
+.reader-reviews-add-button{flex:0 0 auto;border:0;cursor:pointer;margin-bottom:8px}
+.reader-review-form-panel{padding:0 0 38px;background:linear-gradient(180deg,var(--paper),var(--ivory));border-bottom:1px solid var(--line)}
+.reader-review-page-form{margin:0;padding:24px 26px;background:rgba(255,255,255,.72);box-shadow:0 16px 42px rgba(23,63,54,.07)}
+.reader-review-form-head{display:flex;justify-content:space-between;gap:28px;align-items:flex-end;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.reader-review-form-head h2{font-size:1.7rem;margin:0}
+.reader-review-form-head .eyebrow{margin-bottom:7px}
+.reader-review-form-head>p{max-width:470px;margin:0;color:var(--muted);font-size:.76rem;line-height:1.6;text-align:right}
+.review-field select{width:100%;min-height:40px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:9px 34px 9px 11px;font:500 .8rem/1.5 var(--sans);outline:none}
+.review-field select:focus{border-color:var(--forest);box-shadow:0 0 0 3px rgba(23,63,54,.08)}
+.review-ai-consent{margin-top:1px;padding:11px 13px;border:1px solid rgba(176,138,79,.28);border-radius:9px;background:rgba(176,138,79,.055)}
+.review-consent{display:flex;align-items:flex-start;gap:9px;color:#4d5d57;font-size:.72rem;line-height:1.55;cursor:pointer}
+.review-consent input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--forest);flex:0 0 auto}
+.reader-review-wall-section{padding-top:74px}
+.reader-review-wall-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:30px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.reader-review-wall-heading h2{font-size:clamp(1.8rem,3.2vw,2.8rem)}
+.reader-review-wall-heading .eyebrow{margin-bottom:8px}
+.reader-review-wall-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;color:var(--muted);font-size:.68rem}
+.reader-review-wall-meta span:first-child{color:var(--forest);font-weight:800}
+.reader-review-wall{columns:3;column-gap:18px}
+.reader-review-wall-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 18px;padding:22px 22px 20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.62);box-shadow:0 7px 24px rgba(23,63,54,.045);vertical-align:top}
+.reader-review-card-book{margin:0 0 13px;font-family:var(--serif);font-size:1.08rem;line-height:1.28;letter-spacing:-.012em}
+.reader-review-card-book a{color:var(--forest);text-decoration:none}
+.reader-review-card-book a:hover{text-decoration:underline;text-underline-offset:4px}
+.reader-review-card-name{display:block;color:var(--ink);font-size:.75rem;line-height:1.35}
+.reader-review-card-date{display:block;margin-top:2px;color:var(--gold);font-size:.63rem}
+.reader-review-card-text{margin:15px 0 0;color:#46554f;font-family:var(--serif);font-size:.86rem;line-height:1.72;white-space:pre-wrap}
+.reader-review-card-more{appearance:none;border:0;background:none;padding:0;margin-top:8px;color:var(--forest);font:800 .69rem/1.4 var(--sans);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.reader-review-card-more:hover{color:var(--gold)}
+.reader-review-card-source{margin-top:18px;padding-top:11px;border-top:1px solid rgba(221,215,203,.82);color:var(--muted);font-size:.64rem;line-height:1.45}
+.reader-review-card-source a{color:var(--gold);font-weight:800;text-decoration:none}
+.reader-review-card-source a:hover{text-decoration:underline;text-underline-offset:3px}
+.reader-review-wall-empty{margin:0;color:var(--muted);font-size:.8rem}
+.reader-review-wall:not(:empty)+.reader-review-wall-empty{display:none}
+html[lang="bn"] .reader-reviews-page-hero h1,
+html[lang="bn"] .reader-review-form-head h2,
+html[lang="bn"] .reader-review-wall-heading h2,
+html[lang="bn"] .reader-review-card-book,
+html[lang="bn"] .reader-review-card-text{font-family:var(--bangla-sans)}
+html[lang="bn"] .reader-review-form-head>p,
+html[lang="bn"] .review-field select,
+html[lang="bn"] .review-consent,
+html[lang="bn"] .reader-review-wall-meta,
+html[lang="bn"] .reader-review-card-name,
+html[lang="bn"] .reader-review-card-date,
+html[lang="bn"] .reader-review-card-more,
+html[lang="bn"] .reader-review-card-source,
+html[lang="bn"] .reader-review-wall-empty{font-family:var(--bangla-sans)}
+@media(max-width:980px){.reader-review-wall{columns:2}.reader-reviews-hero-inner{align-items:flex-start}}
+@media(max-width:720px){
+  .reader-reviews-hero-inner{display:block}
+  .reader-reviews-add-button{margin-top:22px;margin-bottom:0}
+  .reader-review-form-head{display:block}
+  .reader-review-form-head>p{margin-top:12px;text-align:left}
+  .reader-review-page-form{padding:19px 16px}
+  .reader-review-wall-heading{align-items:flex-start;flex-direction:column}
+  .reader-review-wall-meta{align-items:flex-start}
+  .reader-review-wall{columns:1}
+}
