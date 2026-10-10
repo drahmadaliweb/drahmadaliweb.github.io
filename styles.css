@@ -862,8 +862,8 @@ html[lang="bn"] .reader-reviews-books-link{font-family:var(--bangla-sans)}
 }
 .review-book-option:first-child{font-weight:800;color:var(--forest);border-bottom:1px solid var(--line);border-radius:7px 7px 0 0;margin-bottom:4px}
 
-.reader-review-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;columns:auto}
-.reader-review-wall-column{display:flex;flex-direction:column;gap:18px;min-width:0}
+.reader-review-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;columns:auto;align-items:start}
+.reader-review-wall-column{display:flex;flex-direction:column;gap:18px;min-width:0;align-self:start}
 .reader-review-wall-card{display:block;margin:0;width:100%}
 .reader-review-wall-heading{align-items:flex-start}
 .reader-review-wall-meta{display:none!important}
