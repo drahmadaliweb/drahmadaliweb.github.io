@@ -12,7 +12,7 @@
   const bookById=new Map(books.map(b=>[String(b.id),b]));
 
   const copy=isBn?{
-    add:'মতামত দিন',close:'ফর্ম বন্ধ করুন',generalFeedback:'সাধারণ মতামত',
+    add:'মতামত দিন',close:'ফর্ম বন্ধ করুন',generalFeedback:'সাধারণ মতামত',selectBook:'একটি গ্রন্থ নির্বাচন করুন',selectLanguage:'ভাষা নির্বাচন করুন',langBn:'বাংলা',langEn:'ইংরেজি',langBoth:'বাংলা ও ইংরেজি উভয় ভাষায়',
     consentBn:'আমি সম্মতি দিচ্ছি যে, এই বাংলা রিভিউটি ওয়েবসাইটের ইংরেজি সংস্করণে প্রদর্শনের জন্য AI ব্যবহার করে ইংরেজিতে অনুবাদ করা হতে পারে।',
     consentEn:'আমি সম্মতি দিচ্ছি যে, এই ইংরেজি রিভিউটি ওয়েবসাইটের বাংলা সংস্করণে প্রদর্শনের জন্য AI ব্যবহার করে বাংলায় অনুবাদ করা হতে পারে।',
     required:'নাম, গ্রন্থ, রিভিউয়ের ভাষা এবং প্রয়োজনীয় রিভিউ লিখুন।',
@@ -34,7 +34,7 @@
       iqaamah:'মূলত Iqaamah Blog-এ প্রকাশিত',website:'এই ওয়েবসাইটে জমা দেওয়া হয়েছে'
     }
   }:{
-    add:'Add a Review',close:'Close Form',generalFeedback:'General Feedback',
+    add:'Add a Review',close:'Close Form',generalFeedback:'General Feedback',selectBook:'Select a book',selectLanguage:'Select language',langBn:'Bengali',langEn:'English',langBoth:'Both Bengali and English',
     consentBn:'I agree that this Bengali review may be translated into English using AI for display on the English version of this website.',
     consentEn:'I agree that this English review may be translated into Bengali using AI for display on the Bengali version of this website.',
     required:'Please enter your name, select a book and language, and complete the required review field(s).',
@@ -68,6 +68,10 @@
   const bookMenu=document.getElementById('readerReviewBookMenu');
   const bookLabel=document.getElementById('readerReviewBookLabel');
   const languageSelect=document.getElementById('readerReviewLanguage');
+  const languagePicker=document.getElementById('readerReviewLanguagePicker');
+  const languageToggle=document.getElementById('readerReviewLanguageToggle');
+  const languageMenu=document.getElementById('readerReviewLanguageMenu');
+  const languageLabel=document.getElementById('readerReviewLanguageLabel');
   const consentWrap=document.getElementById('readerReviewConsentWrap');
   const consentInput=document.getElementById('readerReviewAiConsent');
   const consentText=document.getElementById('readerReviewConsentText');
@@ -152,6 +156,60 @@
     if(event.key==='ArrowDown'){event.preventDefault();options[Math.min(options.length-1,i+1)]?.focus();}
     if(event.key==='ArrowUp'){event.preventDefault();options[Math.max(0,i-1)]?.focus();}
     if(event.key==='Escape'){event.preventDefault();bookMenu.hidden=true;bookToggle?.setAttribute('aria-expanded','false');bookToggle?.focus();}
+  });
+
+  function setLanguageChoice(value,label){
+    if(languageSelect)languageSelect.value=value||'';
+    if(languageLabel)languageLabel.textContent=label||copy.selectLanguage;
+    if(languageMenu){
+      for(const option of languageMenu.querySelectorAll('.review-book-option')){
+        option.setAttribute('aria-selected',String(option.dataset.value===value));
+      }
+    }
+    if(languageMenu)languageMenu.hidden=true;
+    if(languageToggle)languageToggle.setAttribute('aria-expanded','false');
+    languageSelect?.dispatchEvent(new Event('change',{bubbles:true}));
+  }
+
+  function addLanguageOption(value,label){
+    if(!languageMenu)return;
+    const option=document.createElement('button');
+    option.type='button';
+    option.className='review-book-option';
+    option.dataset.value=value;
+    option.setAttribute('role','option');
+    option.setAttribute('aria-selected','false');
+    option.textContent=label;
+    option.addEventListener('click',()=>setLanguageChoice(value,label));
+    languageMenu.appendChild(option);
+  }
+
+  if(languageMenu&&languageSelect){
+    languageMenu.replaceChildren();
+    addLanguageOption('bn',copy.langBn);
+    addLanguageOption('en',copy.langEn);
+    addLanguageOption('both',copy.langBoth);
+  }
+
+  languageToggle?.addEventListener('click',()=>{
+    if(!languageMenu)return;
+    const open=languageMenu.hidden;
+    languageMenu.hidden=!open;
+    languageToggle.setAttribute('aria-expanded',String(open));
+    if(open)languageMenu.querySelector('.review-book-option[aria-selected="true"],.review-book-option')?.focus();
+  });
+  document.addEventListener('click',event=>{
+    if(languagePicker&&!languagePicker.contains(event.target)){
+      if(languageMenu)languageMenu.hidden=true;
+      if(languageToggle)languageToggle.setAttribute('aria-expanded','false');
+    }
+  });
+  languageMenu?.addEventListener('keydown',event=>{
+    const options=[...languageMenu.querySelectorAll('.review-book-option')];
+    const i=options.indexOf(document.activeElement);
+    if(event.key==='ArrowDown'){event.preventDefault();options[Math.min(options.length-1,i+1)]?.focus();}
+    if(event.key==='ArrowUp'){event.preventDefault();options[Math.max(0,i-1)]?.focus();}
+    if(event.key==='Escape'){event.preventDefault();languageMenu.hidden=true;languageToggle?.setAttribute('aria-expanded','false');languageToggle?.focus();}
   });
 
   function setOpen(open){
@@ -298,7 +356,25 @@
       wall.appendChild(col);
       return col;
     });
-    wallItems.forEach((item,index)=>hosts[index%columns].appendChild(card(item)));
+
+    wallItems.forEach((item,index)=>{
+      const node=card(item);
+      if(index<columns){
+        hosts[index].appendChild(node);
+        return;
+      }
+
+      let target=hosts[0];
+      let shortest=target.getBoundingClientRect().height;
+      for(let i=1;i<hosts.length;i++){
+        const height=hosts[i].getBoundingClientRect().height;
+        if(height<shortest){
+          shortest=height;
+          target=hosts[i];
+        }
+      }
+      target.appendChild(node);
+    });
   }
   let wallResizeTimer;
   window.addEventListener('resize',()=>{
@@ -347,7 +423,7 @@
       });
       const data=await response.json().catch(()=>({}));
       if(!response.ok){if(data?.code==='translation_not_configured')throw Object.assign(new Error('translation_not_configured'),{code:'translation_not_configured'});throw new Error(data?.error||`HTTP ${response.status}`);}
-      form.reset();setBookChoice('',copy.selectBook);updateLanguageFields();setStatus(copy.submitted,'success');
+      form.reset();setBookChoice('',copy.selectBook);setLanguageChoice('',copy.selectLanguage);updateLanguageFields();setStatus(copy.submitted,'success');
     }catch(err){
       console.warn('Reader review submission failed.',err);
       if(err?.code==='translation_not_configured'||String(err?.message||'')==='translation_not_configured')setStatus(copy.translationUnavailable,'error');

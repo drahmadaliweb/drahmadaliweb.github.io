@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="../styles.css?v=20261010-reader-reviews-v3" rel="stylesheet"/>
+<link href="../styles.css?v=20261010-reader-reviews-v4" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header" id="top">
@@ -30,7 +30,7 @@
     <div class="reader-reviews-hero-copy">
       <p class="eyebrow">পাঠকের মতামত</p>
       <h1>পাঠকের ভাবনা</h1>
-      <p class="page-lead">ড. আহমদ আলীর গ্রন্থসমূহ নিয়ে পাঠকদের পর্যালোচনা, অনুভূতি ও মতামত—এই ওয়েবসাইট ও বিভিন্ন মাধ্যম থেকে সংগৃহীত। কোনো নির্দিষ্ট গ্রন্থের সব পাঠক-রিভিউ দেখতে <a class="reader-reviews-books-link" href="books.html">গ্রন্থসমূহ</a> পাতায় গিয়ে সংশ্লিষ্ট গ্রন্থে ক্লিক করুন।</p>
+      <p class="page-lead">ড. আহমদ আলীর গ্রন্থসমূহ নিয়ে পাঠকদের নির্বাচিত পর্যালোচনা, ভাবনা ও অনুভূতি। কোনো নির্দিষ্ট গ্রন্থের সব পাঠক-রিভিউ দেখতে <a class="reader-reviews-books-link" href="books.html">গ্রন্থসমূহ</a> পাতায় গিয়ে সংশ্লিষ্ট গ্রন্থে ক্লিক করুন।</p>
     </div>
     <div class="reader-reviews-hero-action">
       <p>ড. আহমদ আলীর কোনো গ্রন্থ সম্পর্কে আপনার পাঠ-অভিজ্ঞতা, পর্যালোচনা বা ভাবনা জানাতে নিচের বাটনে ক্লিক করুন।</p>
@@ -58,7 +58,16 @@
             <input id="readerReviewBook" name="book" type="hidden">
           </div>
         </div>
-        <label class="review-field"><span>রিভিউয়ের ভাষা <b>*</b></span><select id="readerReviewLanguage" name="language" required><option value="">ভাষা নির্বাচন করুন</option><option value="bn">বাংলা</option><option value="en">ইংরেজি</option><option value="both">বাংলা ও ইংরেজি উভয় ভাষায়</option></select></label>
+        <div class="review-field">
+          <span>রিভিউয়ের ভাষা <b>*</b></span>
+          <div class="review-book-picker review-language-picker" id="readerReviewLanguagePicker">
+            <button class="review-book-picker-toggle" id="readerReviewLanguageToggle" type="button" aria-expanded="false" aria-controls="readerReviewLanguageMenu">
+              <span id="readerReviewLanguageLabel">ভাষা নির্বাচন করুন</span><span aria-hidden="true">v</span>
+            </button>
+            <div class="review-book-menu review-language-menu" id="readerReviewLanguageMenu" role="listbox" hidden></div>
+            <input id="readerReviewLanguage" name="language" type="hidden">
+          </div>
+        </div>
         <div class="review-field review-field-wide review-ai-consent" id="readerReviewConsentWrap" hidden><label class="review-consent"><input id="readerReviewAiConsent" type="checkbox"><span id="readerReviewConsentText"></span></label></div>
         <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>বাংলায় রিভিউ <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="বাংলায় আপনার রিভিউ লিখুন…"></textarea></label>
         <label class="review-field review-field-wide" id="readerReviewEnWrap" hidden><span>ইংরেজিতে রিভিউ <b>*</b></span><textarea id="readerReviewEn" rows="7" maxlength="10000" placeholder="ইংরেজিতে আপনার রিভিউ লিখুন…"></textarea></label>
@@ -87,7 +96,7 @@
 <script src="../books-manifest.js?v=20261009-forthcoming"></script>
 <script src="../reviews-config.js?v=20261007-reviews"></script>
 <script src="../updates-manifest.js?v=20261005-updates"></script>
-<script src="../reader-reviews.js?v=20261010-reader-reviews-v3"></script>
+<script src="../reader-reviews.js?v=20261010-reader-reviews-v4"></script>
 <script src="../script.js?v=20261009-bn-digits-v1"></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>
