@@ -1925,6 +1925,7 @@ window.ahmadAliBookDetails = [
     "meta": {
       "publisher": "Bangladesh Islamic Centre",
       "publisherBn": "বাংলাদেশ ইসলামিক সেন্টার",
+      "publicationYear": "",
       "isbn": "",
       "edition": "",
       "editionBn": "",
@@ -1939,7 +1940,7 @@ window.ahmadAliBookDetails = [
     "media": {
       "cover": "media/books/book-109970/cover.jpg",
       "preview": null,
-      "pdf": null,
+      "pdf": "https://drive.google.com/file/d/1Jv6kkW8a1qNIFIr2q-PEb-54DG7klMF-/view?usp=drivesdk",
       "audio": []
     }
   },
