@@ -147,7 +147,7 @@ if(search)search.addEventListener('input',applyBooks);
   if(!posts.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.empty;host.appendChild(p);return;}
   posts.slice(0,3).forEach((post,index)=>{
     const loc=post?.[lang]||post?.en||post?.bn||{};
-    const a=document.createElement('a');a.className='home-writing-item';a.href=`post.html?id=${encodeURIComponent(postId(post,index))}`;
+    const a=document.createElement('a');a.className='home-writing-item';a.href=`writings/${encodeURIComponent(postId(post,index))}.html`;
     const time=document.createElement('time');time.dateTime=post.date||'';time.textContent=fmt(post.date);
     const c=document.createElement('div');c.className='home-writing-copy';
     const h=document.createElement('h3');h.textContent=loc.title||'';

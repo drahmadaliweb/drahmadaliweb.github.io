@@ -191,7 +191,7 @@
     });
   }
 
-  function detailHref(post,index){ return `post.html?id=${encodeURIComponent(postId(post,index))}`; }
+  function detailHref(post,index){ return `writings/${encodeURIComponent(postId(post,index))}.html`; }
 
   function sourceType(post){
     const t=String(post?.source?.type||'website').toLowerCase();
@@ -275,7 +275,8 @@
   const detail=document.getElementById('postDetail');
   if(detail){
     const params=new URLSearchParams(location.search);
-    const requested=params.get('id');
+    const staticId=document.querySelector('meta[name="content-id"]')?.content||'';
+    const requested=staticId||params.get('id');
     const index=posts.findIndex((p,i)=>postId(p,i)===requested);
     const post=index>=0?posts[index]:null;
     if(!post){
@@ -301,7 +302,7 @@
     const desc=document.querySelector('meta[name="description"]');
     if(desc) desc.setAttribute('content',excerpt(loc.body,155));
 
-    document.querySelectorAll('.language-switch a').forEach(a=>{
+    if(!staticId)document.querySelectorAll('.language-switch a').forEach(a=>{
       const href=a.getAttribute('href');
       if(href) a.setAttribute('href',`${href}?id=${encodeURIComponent(requested)}`);
     });

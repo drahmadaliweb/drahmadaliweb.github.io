@@ -17,19 +17,19 @@
   // Rich book details.
   (window.ahmadAliBookDetails||[]).forEach(b=>{
     const l=b[lang]||b.en||b.bn||{};
-    add({type:copy.book,title:l.title||b.bn?.title,summary:l.subtitle||l.summary||'',href:`book.html?id=${encodeURIComponent(b.id)}`,keywords:[b.category,b.en?.title,b.bn?.title,b.en?.summary,b.bn?.summary]});
+    add({type:copy.book,title:l.title||b.bn?.title,summary:l.subtitle||l.summary||'',href:`books/${encodeURIComponent(b.id)}.html`,keywords:[b.category,b.en?.title,b.bn?.title,b.en?.summary,b.bn?.summary]});
   });
   // Writings.
   const slugify=text=>String(text||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u0980-\u09ff]+/g,'-').replace(/^-+|-+$/g,'').slice(0,90);
   (window.windowOfTimePosts||[]).forEach((p,i)=>{
     const l=p[lang]||p.en||p.bn||{};const id=p.id||`${p.date||'undated'}-${slugify(p.en?.title||p.bn?.title||`post-${i+1}`)||`post-${i+1}`}`;
-    add({type:copy.writing,title:l.title||'',summary:strip(l.excerpt||String(l.body||'').slice(0,220)),href:`post.html?id=${encodeURIComponent(id)}`,keywords:[p.source?.type,p.source?.label,...topicKeywords(p.topic_slug),p.en?.title,p.bn?.title,p.en?.body,p.bn?.body]});
+    add({type:copy.writing,title:l.title||'',summary:strip(l.excerpt||String(l.body||'').slice(0,220)),href:`writings/${encodeURIComponent(id)}.html`,keywords:[p.source?.type,p.source?.label,...topicKeywords(p.topic_slug),p.en?.title,p.bn?.title,p.en?.body,p.bn?.body]});
   });
 
   // Selected Articles.
   (window.ahmadAliSelectedArticles||[]).forEach(a=>{
     const l=a[lang]||a.en||a.bn||{};
-    add({type:isBn?'প্রবন্ধ':'Article',title:l.title||'',summary:strip(l.excerpt||String(l.body||'').slice(0,220)),href:`article.html?id=${encodeURIComponent(a.id)}`,keywords:[...topicKeywords(a.topic_slug),a.source?.labelEn,a.source?.labelBn,a.en?.title,a.bn?.title,a.en?.body,a.bn?.body]});
+    add({type:isBn?'প্রবন্ধ':'Article',title:l.title||'',summary:strip(l.excerpt||String(l.body||'').slice(0,220)),href:`articles/${encodeURIComponent(a.id)}.html`,keywords:[...topicKeywords(a.topic_slug),a.source?.labelEn,a.source?.labelBn,a.en?.title,a.bn?.title,a.en?.body,a.bn?.body]});
   });
   // Publications.
   (window.ahmadAliPublications||[]).forEach(p=>{

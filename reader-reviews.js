@@ -289,7 +289,7 @@
     if(itemBookId==='general-feedback')h.textContent=copy.generalFeedback;
     else{
       const bookLink=document.createElement('a');
-      bookLink.href=`book.html?id=${encodeURIComponent(itemBookId)}`;
+      bookLink.href=`books/${encodeURIComponent(itemBookId)}.html`;
       bookLink.textContent=book?localBookTitle(book):String(item.book_title||'');
       h.appendChild(bookLink);
     }

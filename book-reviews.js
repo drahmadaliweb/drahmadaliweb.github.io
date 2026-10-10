@@ -2,7 +2,7 @@
   const host=document.getElementById('readerReviews');
   if(!host)return;
   const isBn=document.documentElement.lang==='bn';
-  const bookId=new URLSearchParams(location.search).get('id');
+  const bookId=document.querySelector('meta[name="content-id"]')?.content||new URLSearchParams(location.search).get('id');
   if(!bookId){host.hidden=true;return;}
 
   const config=window.AHMAD_ALI_REVIEW_CONFIG||{};

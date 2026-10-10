@@ -4,7 +4,7 @@
   const lang=isBn?'bn':'en';
   const prefix=isBn?'../':'';
   const asset=url=>!url?url:(/^(?:https?:)?\/\//i.test(url)||url.startsWith('data:')||url.startsWith('mailto:')||url.startsWith('#'))?url:`${prefix}${url}`;
-  const detailHref=id=>`book.html?id=${encodeURIComponent(id)}`;
+  const detailHref=id=>`books/${encodeURIComponent(id)}.html`;
   const byRokomari=new Map(allBooks.filter(b=>b.rokomariId).map(b=>[String(b.rokomariId),b]));
 
   const categoryBn={
@@ -147,7 +147,8 @@
 
   function renderDetail(){
     const host=document.getElementById('bookDetail');if(!host)return;
-    const id=new URLSearchParams(location.search).get('id');
+    const staticId=document.querySelector('meta[name="content-id"]')?.content||'';
+    const id=staticId||new URLSearchParams(location.search).get('id');
     const book=allBooks.find(b=>b.id===id);
     if(!book){host.innerHTML=`<p class="page-lead">${copy.missing}</p><a class="inline-arrow" href="books.html">← ${copy.back}</a>`;return;}
     const loc=localized(book);const title=loc.title||book.bn?.title||'';const subtitle=loc.subtitle||'';
@@ -213,7 +214,7 @@
         audioHost.hidden=!hasAudio;
       }
     }
-    document.querySelectorAll('.language-switch a').forEach(a=>{const href=a.getAttribute('href');if(href)a.setAttribute('href',`${href}?id=${encodeURIComponent(book.id)}`);});
+    if(!staticId)document.querySelectorAll('.language-switch a').forEach(a=>{const href=a.getAttribute('href');if(href)a.setAttribute('href',`${href}?id=${encodeURIComponent(book.id)}`);});
   }
 
   renderSeries();renderCatalog();renderForthcoming();renderDetail();

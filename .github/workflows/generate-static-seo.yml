@@ -1,0 +1,53 @@
+name: Generate static SEO detail pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "books/*.mjs"
+      - "posts/*.mjs"
+      - "articles/*.mjs"
+      - "books-manifest.js"
+      - "posts-manifest.js"
+      - "selected-articles-manifest.js"
+      - "book.html"
+      - "bn/book.html"
+      - "article.html"
+      - "bn/article.html"
+      - "post.html"
+      - "bn/post.html"
+      - "tools/generate_static_seo.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-static-seo
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Generate static detail pages
+        run: python3 tools/generate_static_seo.py
+
+      - name: Commit generated pages
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml books articles writings bn/books bn/articles bn/writings
+          if git diff --cached --quiet; then
+            echo "Generated pages already up to date."
+            exit 0
+          fi
+          git commit -m "Generate static SEO detail pages"
+          git push origin main
