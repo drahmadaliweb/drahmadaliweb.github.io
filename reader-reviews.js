@@ -84,6 +84,7 @@
   const status=document.getElementById('readerReviewStatus');
   const count=document.getElementById('readerReviewWallCount');
   const empty=document.getElementById('readerReviewWallEmpty');
+  const turnstile=window.AhmadAliReviewTurnstile;
 
   function localBookTitle(book){
     const loc=book?.[isBn?'bn':'en']||book?.en||book?.bn||{};
@@ -217,7 +218,7 @@
     formPanel.hidden=!open;
     toggle.setAttribute('aria-expanded',String(open));
     toggle.textContent=open?copy.close:copy.add;
-    if(open)setTimeout(()=>nameInput?.focus(),0);
+    if(open){setTimeout(()=>nameInput?.focus(),0);turnstile?.mount('readerReviewTurnstile','reader_review').catch(()=>{});}
   }
   toggle?.addEventListener('click',()=>setOpen(formPanel?.hidden!==false));
 
@@ -410,16 +411,17 @@
     if(!name||!bookId||!language||(needsBn&&!reviewBn)||(needsEn&&!reviewEn)){setStatus(copy.required,'error');return;}
     if(email&&!/^\S+@\S+\.\S+$/.test(email)){setStatus(copy.email,'error');return;}
     if((language==='bn'||language==='en')&&!consentInput?.checked){setStatus(copy.consentRequired,'error');return;}
-    if(!configured){setStatus(copy.unavailable,'error');return;}
+    if(!configured||!turnstile?.configured){setStatus(copy.unavailable,'error');return;}
     const isGeneralFeedback=bookId==='general-feedback';
     const book=bookById.get(bookId);
     if(!isGeneralFeedback&&!book){setStatus(copy.required,'error');return;}
     const submittedTitle=isGeneralFeedback?'General Feedback / সাধারণ মতামত':canonicalBookTitle(book);
     submit.disabled=true;setStatus(copy.submitting);
     try{
+      const turnstileToken=await turnstile.ensureToken('readerReviewTurnstile','reader_review');
       const response=await fetch(`${supabaseUrl}/functions/v1/reader-review-submit`,{
         method:'POST',headers:apiHeaders(),
-        body:JSON.stringify({name,email:email||null,book_id:bookId,book_title:submittedTitle,language,review_bn:reviewBn||null,review_en:reviewEn||null,ai_consent:Boolean(consentInput?.checked),website:String(honeypot?.value||'')})
+        body:JSON.stringify({submission_type:'reader-review-page',turnstile_token:turnstileToken,name,email:email||null,book_id:bookId,book_title:submittedTitle,language,review_bn:reviewBn||null,review_en:reviewEn||null,ai_consent:Boolean(consentInput?.checked),website:String(honeypot?.value||'')})
       });
       const data=await response.json().catch(()=>({}));
       if(!response.ok){if(data?.code==='translation_not_configured')throw Object.assign(new Error('translation_not_configured'),{code:'translation_not_configured'});throw new Error(data?.error||`HTTP ${response.status}`);}
@@ -428,7 +430,7 @@
       console.warn('Reader review submission failed.',err);
       if(err?.code==='translation_not_configured'||String(err?.message||'')==='translation_not_configured')setStatus(copy.translationUnavailable,'error');
       else setStatus(copy.error,'error');
-    }finally{submit.disabled=false;}
+    }finally{turnstile?.reset('readerReviewTurnstile');submit.disabled=false;}
   });
 
   loadReviews();

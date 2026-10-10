@@ -44,6 +44,7 @@
   const list=document.getElementById('bookReviewList');
   const empty=document.getElementById('bookReviewEmpty');
   const count=document.getElementById('reviewCount');
+  const turnstile=window.AhmadAliReviewTurnstile;
 
   function setStatus(message,type=''){
     if(!status)return;
@@ -55,7 +56,7 @@
     form.hidden=!open;
     toggle.setAttribute('aria-expanded',String(open));
     toggle.textContent=open?copy.close:copy.open;
-    if(open)setTimeout(()=>name?.focus(),0);
+    if(open){setTimeout(()=>name?.focus(),0);turnstile?.mount('bookReviewTurnstile','book_review').catch(()=>{});}
   }
   toggle?.addEventListener('click',()=>setOpen(form?.hidden!==false));
 
@@ -185,19 +186,22 @@
     const r=String(review?.value||'').trim();
     if(!n||!r){setStatus(copy.required,'error');return;}
     if(e&&!/^\S+@\S+\.\S+$/.test(e)){setStatus(copy.email,'error');return;}
-    if(!configured){setStatus(copy.unavailable,'error');return;}
+    if(!configured||!turnstile?.configured){setStatus(copy.unavailable,'error');return;}
     submit.disabled=true;setStatus(copy.submitting);
     try{
-      const response=await fetch(`${url}/rest/v1/rpc/submit_book_review`,{
+      const turnstileToken=await turnstile.ensureToken('bookReviewTurnstile','book_review');
+      const response=await fetch(`${url}/functions/v1/reader-review-submit`,{
         method:'POST',headers:apiHeaders(),body:JSON.stringify({
-          p_book_id:bookId,p_book_title:localized.title||book?.bn?.title||bookId,
-          p_name:n,p_email:e||null,p_review:r
+          submission_type:'book-page',turnstile_token:turnstileToken,
+          book_id:bookId,book_title:localized.title||book?.bn?.title||bookId,
+          name:n,email:e||null,review:r,page_language:isBn?'bn':'en',website:String(honeypot?.value||'')
         })
       });
-      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const data=await response.json().catch(()=>({}));
+      if(!response.ok)throw new Error(data?.error||`HTTP ${response.status}`);
       form.reset();setStatus(copy.submitted,'success');
     }catch(err){console.warn('Reader review submission failed.',err);setStatus(copy.error,'error');}
-    finally{submit.disabled=false;}
+    finally{turnstile?.reset('bookReviewTurnstile');submit.disabled=false;}
   });
 
   loadReviews();

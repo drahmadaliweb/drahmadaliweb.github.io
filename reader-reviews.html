@@ -99,6 +99,7 @@
         <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>Review in Bengali <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="Write your Bengali review…"></textarea></label>
         <label class="review-field review-field-wide" id="readerReviewEnWrap" hidden><span>Review in English <b>*</b></span><textarea id="readerReviewEn" rows="7" maxlength="10000" placeholder="Write your English review…"></textarea></label>
         <label class="review-honeypot" aria-hidden="true">Website<input id="readerReviewWebsite" type="text" tabindex="-1" autocomplete="off"></label>
+        <div class="review-field-wide review-turnstile" id="readerReviewTurnstile"></div>
       </div>
       <div class="review-submit-row"><button class="btn primary" id="readerReviewSubmit" type="submit">Submit Review</button><p class="review-form-status" id="readerReviewStatus" role="status" aria-live="polite"></p></div>
     </form>
@@ -123,9 +124,10 @@
 </div>
 </footer>
 <script src="books-manifest.js?v=20261009-forthcoming"></script>
-<script src="reviews-config.js?v=20261007-reviews"></script>
+<script src="reviews-config.js?v=20261010-turnstile-v1"></script>
+<script src="review-turnstile.js?v=20261010-turnstile-v1"></script>
 <script src="updates-manifest.js?v=20261005-updates"></script>
-<script src="reader-reviews.js?v=20261010-reader-reviews-v4"></script>
+<script src="reader-reviews.js?v=20261010-turnstile-v1"></script>
 <script src="script.js?v=20261006-library"></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>
