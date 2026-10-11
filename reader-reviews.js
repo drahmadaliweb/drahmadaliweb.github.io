@@ -291,7 +291,26 @@
     else{
       const bookLink=document.createElement('a');
       bookLink.href=`books/${encodeURIComponent(itemBookId)}.html`;
-      bookLink.textContent=book?localBookTitle(book):String(item.book_title||'');
+      if(book){
+        const loc=book?.[isBn?'bn':'en']||book?.en||book?.bn||{};
+        const title=String(loc.title||book?.bn?.title||book?.id||'').trim();
+        const subtitle=String(loc.subtitle||'').trim();
+        const titleSpan=document.createElement('span');
+        titleSpan.className='reader-review-card-book-title';
+        titleSpan.textContent=title;
+        bookLink.appendChild(titleSpan);
+        if(subtitle){
+          const subtitleSpan=document.createElement('span');
+          subtitleSpan.className='reader-review-card-book-subtitle';
+          subtitleSpan.textContent=subtitle;
+          bookLink.appendChild(subtitleSpan);
+        }
+      }else{
+        const titleSpan=document.createElement('span');
+        titleSpan.className='reader-review-card-book-title';
+        titleSpan.textContent=String(item.book_title||'');
+        bookLink.appendChild(titleSpan);
+      }
       h.appendChild(bookLink);
     }
     const reviewer=document.createElement('strong');reviewer.className='reader-review-card-name';reviewer.textContent=String(item.name||'').trim();

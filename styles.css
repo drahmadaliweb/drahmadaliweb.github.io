@@ -785,8 +785,11 @@ html[lang="bn"] .book-glyph{
 .reader-review-wall{columns:3;column-gap:18px}
 .reader-review-wall-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 18px;padding:22px 22px 20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.62);box-shadow:0 7px 24px rgba(23,63,54,.045);vertical-align:top}
 .reader-review-card-book{margin:0 0 13px;font-family:var(--serif);font-size:1.08rem;line-height:1.28;letter-spacing:-.012em}
-.reader-review-card-book a{color:var(--forest);text-decoration:none}
-.reader-review-card-book a:hover{text-decoration:underline;text-underline-offset:4px}
+.reader-review-card-book a{display:block;color:var(--forest);text-decoration:none}
+.reader-review-card-book-title{display:block}
+.reader-review-card-book-subtitle{display:block;margin-top:5px;color:var(--muted);font-size:.78rem;font-weight:500;line-height:1.42;letter-spacing:0}
+.reader-review-card-book a:hover .reader-review-card-book-title{text-decoration:underline;text-underline-offset:4px}
+.reader-review-card-book a:hover .reader-review-card-book-subtitle{color:var(--forest)}
 .reader-review-card-name{display:block;color:var(--ink);font-size:.75rem;line-height:1.35}
 .reader-review-card-date{display:block;margin-top:2px;color:var(--gold);font-size:.63rem}
 .reader-review-card-text{margin:15px 0 0;color:#46554f;font-family:var(--serif);font-size:.86rem;line-height:1.72;white-space:pre-wrap}
