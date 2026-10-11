@@ -166,8 +166,6 @@
       if(summaryHeading)summaryHeading.textContent=isBn?'সারসংক্ষেপ':'Summary';
       const infoHeading=document.querySelector('.book-spec-panel > h2');
       if(infoHeading)infoHeading.textContent=isBn?'গবেষণা তথ্য':'Research information';
-      const reviews=document.getElementById('readerReviews');
-      if(reviews)reviews.hidden=true;
     }
     document.title=`${title} | ${isBn?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;
     const desc=document.querySelector('meta[name="description"]');if(desc)desc.content=loc.summary||subtitle||title;
