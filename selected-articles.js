@@ -13,7 +13,25 @@
     missing:'This article could not be found.', topic:'Topic', source:'Source', allTopics:'All topics', noMatch:'No articles matched your search or selected topic.'
   };
   const localized=a=>a?.[lang]||a?.bn||a?.en||{};
-  const sourceLabel=a=>isBn?(a?.source?.labelBn||a?.source?.labelEn):(a?.source?.labelEn||a?.source?.labelBn);
+  const sourceHost=url=>{try{return new URL(url,location.href).hostname.replace(/^www\./i,'');}catch{return '';}};
+  const sourceLabelFor=src=>isBn?(src?.labelBn||src?.labelEn||sourceHost(src?.url)):(src?.labelEn||src?.labelBn||sourceHost(src?.url));
+  const sourceLabel=a=>sourceLabelFor(a?.source);
+  const sourceEntries=a=>[a?.source,...(Array.isArray(a?.additionalSources)?a.additionalSources:[])].filter(src=>src&&(sourceLabelFor(src)||src.url));
+  function sourceChainElement(a){
+    const entries=sourceEntries(a);
+    if(!entries.length)return null;
+    const wrap=document.createElement('span');wrap.className='selected-article-source-chain';
+    entries.forEach((src,index)=>{
+      if(index){const sep=document.createElement('span');sep.className='selected-article-source-sep';sep.textContent='·';sep.setAttribute('aria-hidden','true');wrap.appendChild(sep);}
+      const label=sourceLabelFor(src)||sourceHost(src.url)||copy.source;
+      const node=document.createElement(src.url?'a':'span');
+      node.className=index?'selected-article-source-link':'selected-article-source-primary';
+      if(src.url){node.href=src.url;node.target='_blank';node.rel='noopener noreferrer';}
+      node.textContent=index?`${label} ↗`:label;
+      wrap.appendChild(node);
+    });
+    return wrap;
+  }
   const topicLabel=a=>{const t=topicTaxonomy[a?.topic_slug]||{};return isBn?(t.bn||t.en||''):(t.en||t.bn||'');};
   const hasBody=a=>Boolean(String(localized(a).body||'').trim());
   const dateLabel=a=>{
@@ -59,7 +77,7 @@
       const main=document.createElement('div');
       const meta=document.createElement('div');meta.className='selected-article-meta';
       const topic=document.createElement('span');topic.className='content-topic-chip';topic.textContent=topicLabel(a);meta.appendChild(topic);
-      const src=sourceLabel(a);if(src){const ss=document.createElement('span');ss.className='selected-article-source-inline';ss.textContent=src;meta.appendChild(ss);}
+      const sourceChain=sourceChainElement(a);if(sourceChain)meta.appendChild(sourceChain);
       const h=document.createElement('h2');h.textContent=l.title||'';
       const ex=document.createElement('p');ex.textContent=l.excerpt||excerpt(l.body)||(copy.pending);
       main.append(meta,h,ex);
@@ -74,7 +92,7 @@
     const staticId=document.querySelector('meta[name="content-id"]')?.content||'';const id=staticId||new URLSearchParams(location.search).get('id');const a=items.find(x=>x.id===id);
     if(!a){detail.replaceChildren();const p=document.createElement('p');p.className='page-lead';p.textContent=copy.missing;const back=document.createElement('a');back.className='inline-arrow';back.href='selected-articles.html';back.textContent=`← ${copy.back}`;detail.append(p,back);return;}
     const l=localized(a);const title=document.getElementById('selectedArticleTitle');const date=document.getElementById('selectedArticleDate');const topic=document.getElementById('selectedArticleTopic');const source=document.getElementById('selectedArticleSource');const body=document.getElementById('selectedArticleBody');
-    if(title)title.textContent=l.title||'';if(date){date.dateTime=a.date||'';date.textContent=dateLabel(a);}if(topic){topic.textContent=topicLabel(a);topic.hidden=!topic.textContent;}if(source){source.textContent=sourceLabel(a)||'';source.hidden=!source.textContent;}
+    if(title)title.textContent=l.title||'';if(date){date.dateTime=a.date||'';date.textContent=dateLabel(a);}if(topic){topic.textContent=topicLabel(a);topic.hidden=!topic.textContent;}if(source){const chain=sourceChainElement(a);source.replaceChildren(...(chain?[chain]:[]));source.hidden=!chain;}
     if(body){if(hasBody(a))renderBody(body,l.body);else{body.replaceChildren();const p=document.createElement('p');p.className='article-fulltext-pending';p.textContent=copy.pending;body.appendChild(p);}}
     document.title=`${l.title||'Article'} | ${isBn?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;const desc=document.querySelector('meta[name="description"]');if(desc)desc.content=l.excerpt||excerpt(l.body,155)||l.title||'';
     if(!staticId)document.querySelectorAll('.language-switch a').forEach(link=>{const h=link.getAttribute('href');if(h)link.setAttribute('href',`${h}?id=${encodeURIComponent(a.id)}`);});

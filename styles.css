@@ -1044,3 +1044,32 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
     text-size-adjust:100%;
   }
 }
+
+/* 2026-10-11 — Multiple source links */
+/* Through the Window of Time: primary source remains labeled; secondary
+   publication links are compact logo/icon buttons beside it. */
+.post-source-cluster{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap}
+.secondary-source-links{display:inline-flex;align-items:center;gap:5px;vertical-align:middle}
+.secondary-source-logo{
+  width:25px;height:25px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid rgba(221,215,203,.95);border-radius:7px;background:#fff;
+  text-decoration:none;box-shadow:0 2px 7px rgba(35,47,42,.05);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease
+}
+.secondary-source-logo:hover{transform:translateY(-1px);border-color:rgba(24,84,68,.35);box-shadow:0 4px 10px rgba(35,47,42,.09)}
+.secondary-source-logo .source-icon{width:17px;height:17px}
+.writing-meta .secondary-source-logo{width:22px;height:22px;border-radius:6px}
+.writing-meta .secondary-source-logo .source-icon{width:15px;height:15px}
+.secondary-source-actions{gap:7px}
+.secondary-source-actions .secondary-source-logo{width:36px;height:36px;border-radius:10px}
+.secondary-source-actions .secondary-source-logo .source-icon{width:21px;height:21px}
+
+/* Selected Articles: deliberately text-only, preserving the current
+   editorial/academic presentation. */
+.selected-article-source-chain{display:inline-flex;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.78rem;font-weight:600}
+.selected-article-source-primary{color:inherit;text-decoration:none}
+a.selected-article-source-primary:hover{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+.selected-article-source-sep{margin:0 .42em;color:#9a9387}
+.selected-article-source-link{color:var(--forest);font-weight:700;text-decoration:none}
+.selected-article-source-link:hover{text-decoration:underline;text-underline-offset:3px}
+html[lang="bn"] .selected-article-source-chain{font-family:var(--bangla-sans)}

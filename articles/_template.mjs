@@ -14,6 +14,10 @@ export default {
     labelEn: "Publication / source",
     url: ""
   },
+  // Optional: other publications carrying the same article.
+  additionalSources: [
+    // { labelBn: "অন্য প্রকাশনা", labelEn: "Another publication", url: "https://example.com/article" }
+  ],
   bn: {
     title: "প্রবন্ধের শিরোনাম",
     dateLabel: "",

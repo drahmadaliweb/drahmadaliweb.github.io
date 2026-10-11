@@ -173,6 +173,39 @@
     return a;
   }
 
+
+  function additionalSources(post){
+    return Array.isArray(post?.additionalSources)
+      ? post.additionalSources.filter(src=>src&&src.url)
+      : [];
+  }
+
+  function secondarySourceLogo(src){
+    if(!src?.url) return null;
+    const a=document.createElement('a');
+    a.className='secondary-source-logo';
+    a.href=src.url;
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    const name=sourceName(src);
+    a.title=name;
+    a.setAttribute('aria-label',`${lang==='bn'?'অতিরিক্ত প্রকাশনা':'Also published at'}: ${name}`);
+    a.appendChild(sourceIcon(src));
+    return a;
+  }
+
+  function secondarySourceGroup(post,action=false){
+    const sources=additionalSources(post);
+    if(!sources.length) return null;
+    const group=document.createElement('span');
+    group.className=`secondary-source-links${action?' secondary-source-actions':''}`;
+    sources.forEach(src=>{
+      const link=secondarySourceLogo(src);
+      if(link)group.appendChild(link);
+    });
+    return group.childElementCount?group:null;
+  }
+
   function renderBody(container,body){
     container.replaceChildren();
     String(body || '').split(/\r?\n/).forEach(raw=>{
@@ -247,6 +280,7 @@
         const date=document.createElement('time'); date.dateTime=post.date||''; date.textContent=formatDate(post.date); meta.appendChild(date);
         const topicText=topicLabel(post); if(topicText){ const topic=document.createElement('span'); topic.className='content-topic-chip'; topic.textContent=topicText; meta.appendChild(topic); }
         const src=sourceLink(post,true); if(src) meta.appendChild(src);
+        const secondaryMeta=secondarySourceGroup(post); if(secondaryMeta) meta.appendChild(secondaryMeta);
 
         const title=document.createElement('h2');
         const titleLink=document.createElement('a'); titleLink.href=detailHref(post,index); titleLink.textContent=loc.title||''; title.appendChild(titleLink);
@@ -257,6 +291,8 @@
           const original=originalLogoLink(post);
           if(original) actions.appendChild(original);
         }
+        const secondaryActions=secondarySourceGroup(post,true);
+        if(secondaryActions) actions.appendChild(secondaryActions);
         card.append(meta,title,ex,actions); archive.appendChild(card);
       });
     }
@@ -295,7 +331,13 @@
     if(title) title.textContent=loc.title||'';
     if(date){date.dateTime=post.date||''; date.textContent=formatDate(post.date);}
     if(topicSlot){topicSlot.textContent=topicLabel(post); topicSlot.hidden=!topicSlot.textContent;}
-    if(sourceSlot){const src=sourceLink(post,false); if(src) sourceSlot.replaceChildren(src); else sourceSlot.replaceChildren();}
+    if(sourceSlot){
+      sourceSlot.classList.add('post-source-cluster');
+      const nodes=[];
+      const src=sourceLink(post,false); if(src)nodes.push(src);
+      const extras=secondarySourceGroup(post); if(extras)nodes.push(extras);
+      sourceSlot.replaceChildren(...nodes);
+    }
     if(body) renderBody(body,loc.body);
     document.title=`${loc.title || 'Writing'} | ${lang==='bn'?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;
 

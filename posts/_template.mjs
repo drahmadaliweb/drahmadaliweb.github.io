@@ -17,6 +17,10 @@ export default {
     label: 'Facebook',
     url: 'https://example.com/original-writing'
   },
+  // Optional: other places where the same writing was published.
+  additionalSources: [
+    // { type: 'newspaper', label: 'Publication name', url: 'https://example.com/republished-writing' }
+  ],
   bn: {
     title: 'বাংলা শিরোনাম',
     body: `এখানে সম্পূর্ণ বাংলা লেখাটি পেস্ট করুন।`
