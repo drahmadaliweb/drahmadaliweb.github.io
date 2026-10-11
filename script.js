@@ -120,8 +120,9 @@ if(search)search.addEventListener('input',applyBooks);
   };
   viewport.replaceChildren();viewport.removeAttribute('aria-live');
   const track=document.createElement('div');track.className='update-track';
-  const firstSet=makeSet(false);const secondSet=makeSet(true);secondSet.setAttribute('aria-hidden','true');
-  track.append(firstSet,secondSet);viewport.appendChild(track);
+  track.style.animationPlayState='paused';
+  const firstSet=makeSet(false);
+  track.appendChild(firstSet);viewport.appendChild(track);
 
   const signature=bannerItems.map(x=>`${x.id||''}:${x.date||''}`).join('|');
   let hash=0;for(let i=0;i<signature.length;i++)hash=((hash<<5)-hash+signature.charCodeAt(i))|0;
@@ -129,11 +130,39 @@ if(search)search.addEventListener('input',applyBooks);
   let epoch=0;try{epoch=Number(localStorage.getItem(epochKey));}catch(_e){}
   if(!Number.isFinite(epoch)||epoch<=0){epoch=Date.now();try{localStorage.setItem(epochKey,String(epoch));}catch(_e){}}
 
+  const ensureCopies=cycleWidth=>{
+    if(!cycleWidth)return;
+    const viewportWidth=viewport.getBoundingClientRect().width;
+    const needed=Math.max(2,Math.ceil(viewportWidth/cycleWidth)+2);
+    while(track.children.length<needed){
+      const duplicate=makeSet(true);
+      duplicate.setAttribute('aria-hidden','true');
+      track.appendChild(duplicate);
+    }
+  };
+
   const startMarquee=()=>{
     const cycleWidth=firstSet.getBoundingClientRect().width;if(!cycleWidth)return;
-    const pixelsPerSecond=48;const duration=cycleWidth/pixelsPerSecond;const elapsed=(Date.now()-epoch)/1000;const phase=((elapsed%duration)+duration)%duration;
-    track.style.setProperty('--marquee-shift',`-${cycleWidth}px`);track.style.setProperty('--marquee-duration',`${duration}s`);track.style.animationDelay=`-${phase}s`;ticker.classList.add('marquee-ready');
+    ensureCopies(cycleWidth);
+    const pixelsPerSecond=48;
+    const duration=cycleWidth/pixelsPerSecond;
+    const elapsed=(Date.now()-epoch)/1000;
+    const phase=((elapsed%duration)+duration)%duration;
+    track.style.setProperty('--marquee-shift',`-${cycleWidth}px`);
+    track.style.setProperty('--marquee-duration',`${duration}s`);
+    track.style.animationDelay=`-${phase}s`;
+    track.style.animationPlayState='running';
+    ticker.classList.add('marquee-ready');
   };
+
+  if('ResizeObserver' in window){
+    const resizeObserver=new ResizeObserver(()=>requestAnimationFrame(()=>{
+      const cycleWidth=firstSet.getBoundingClientRect().width;
+      ensureCopies(cycleWidth);
+    }));
+    resizeObserver.observe(viewport);
+  }
+
   if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>requestAnimationFrame(startMarquee));}else{requestAnimationFrame(startMarquee);}
 })();
 
