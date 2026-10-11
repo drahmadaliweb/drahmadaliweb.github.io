@@ -935,3 +935,49 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
     width:100%;
   }
 }
+
+/* 2026-10-11 — Mobile homepage portrait beside hero heading */
+@media(max-width:780px){
+  .hero .hero-grid{
+    position:relative;
+  }
+
+  .hero .portrait-wrap{
+    position:absolute;
+    top:18px;
+    right:0;
+    width:clamp(126px,38vw,155px);
+    max-width:none;
+    margin:0;
+    justify-self:auto;
+    z-index:2;
+  }
+
+  .hero .portrait-frame{
+    border-width:5px;
+    border-radius:46% 46% 16px 16px;
+  }
+
+  .hero .hero-copy>.eyebrow,
+  .hero .hero-copy>h1,
+  .hero .hero-copy>.hero-role{
+    max-width:calc(100% - clamp(145px,42vw,170px));
+  }
+
+  .hero .hero-lead{
+    max-width:none;
+  }
+}
+
+@media(max-width:390px){
+  .hero .portrait-wrap{
+    top:24px;
+    width:118px;
+  }
+
+  .hero .hero-copy>.eyebrow,
+  .hero .hero-copy>h1,
+  .hero .hero-copy>.hero-role{
+    max-width:calc(100% - 132px);
+  }
+}
