@@ -936,57 +936,55 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
   }
 }
 
-/* 2026-10-11 — Mobile homepage hero: true shared grid */
+/* 2026-10-11 — Mobile homepage hero: centered identity + portrait */
+.hero-identity{display:contents}
+
 @media(max-width:780px){
-  /*
-    On mobile, make the hero-copy wrapper transparent to CSS Grid so
-    its children and the portrait share ONE parent grid. This lets the
-    photo occupy the upper-right column without absolute positioning,
-    and forces the research paragraph to begin below both the text
-    block and the portrait.
-  */
   .hero .hero-grid{
     position:relative;
     display:grid;
     grid-template-columns:minmax(0,1fr) clamp(118px,31vw,136px);
     column-gap:16px;
     row-gap:0;
-    align-items:start;
+    align-items:center;
   }
 
   .hero .hero-copy{
     display:contents;
   }
 
+  /* Hide the institutional line on mobile only. */
   .hero .hero-copy>.eyebrow{
-    grid-column:1 / -1;
+    display:none;
+  }
+
+  /* Name + role behave as one block and are vertically centered
+     against the portrait. */
+  .hero .hero-identity{
+    display:flex;
+    grid-column:1;
     grid-row:1;
-    max-width:none;
+    align-self:center;
+    flex-direction:column;
+    justify-content:center;
+    min-width:0;
     padding-right:0;
-    margin-bottom:20px;
   }
 
-  .hero .hero-copy>h1{
-    grid-column:1;
-    grid-row:2;
+  .hero .hero-identity>h1{
+    margin:0 0 8px;
     max-width:none;
-    padding-right:0;
-    align-self:start;
   }
 
-  .hero .hero-copy>.hero-role{
-    grid-column:1;
-    grid-row:3;
+  .hero .hero-identity>.hero-role{
+    margin:0;
     max-width:none;
-    padding-right:0;
-    align-self:start;
-    margin-bottom:0;
   }
 
   .hero .portrait-wrap{
     position:static;
     grid-column:2;
-    grid-row:2 / 4;
+    grid-row:1;
     align-self:center;
     justify-self:end;
     width:100%;
@@ -1002,15 +1000,15 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
 
   .hero .hero-copy>.hero-lead{
     grid-column:1 / -1;
-    grid-row:4;
+    grid-row:2;
     width:100%;
     max-width:none;
-    margin-top:34px;
+    margin-top:28px;
   }
 
   .hero .hero-copy>.hero-actions{
     grid-column:1 / -1;
-    grid-row:5;
+    grid-row:3;
     width:100%;
     max-width:none;
   }
@@ -1026,7 +1024,11 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
     max-width:108px;
   }
 
+  .hero .hero-identity>h1{
+    margin-bottom:6px;
+  }
+
   .hero .hero-copy>.hero-lead{
-    margin-top:28px;
+    margin-top:24px;
   }
 }
