@@ -2,6 +2,15 @@ const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
 if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});}
 
+/* Back to top: keep fragment links on the current page even when a <base> tag is present. */
+document.addEventListener('click',event=>{
+  const link=event.target.closest?.('a[href="#top"]');
+  if(!link)return;
+  event.preventDefault();
+  const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0,left:0,behavior:reduceMotion?'auto':'smooth'});
+});
+
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
