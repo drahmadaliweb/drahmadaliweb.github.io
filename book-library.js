@@ -26,12 +26,12 @@
     all:'সব',details:'বিস্তারিত দেখুন',preview:'প্রিভিউ',pdf:'PDF',audio:'অডিওবুক',rokomari:'রকমারি',publisherLink:'প্রকাশক',order:'অর্ডার করুন',
     back:'সব গ্রন্থে ফিরুন',about:'গ্রন্থ পরিচিতি',information:'প্রকাশনা তথ্য',publisher:'প্রকাশক',year:'প্রকাশকাল',isbn:'ISBN',edition:'সংস্করণ',pages:'পৃষ্ঠা',binding:'বাঁধাই',country:'দেশ',language:'ভাষা',category:'বিষয়',
     listen:'অডিওবুক',readPdf:'PDF পড়ুন',openPreview:'প্রিভিউ দেখুন',missing:'গ্রন্থের বিস্তারিত তথ্য পাওয়া যায়নি।',forthcoming:'প্রকাশিতব্য',ongoing:'চলমান',
-    catalog:'গ্রন্থ তালিকা',catalogNote:'বিষয় অনুসারে প্রকাশিত গ্রন্থসমূহ দেখুন।',noMatch:'কোনো মিলযুক্ত গ্রন্থ পাওয়া যায়নি।',external:'বাহ্যিক লিংক'
+    catalog:'গ্রন্থ তালিকা',catalogNote:'বিষয় অনুসারে প্রকাশিত গ্রন্থসমূহ দেখুন।',noMatch:'কোনো মিলযুক্ত গ্রন্থ পাওয়া যায়নি।',external:'বাহ্যিক লিংক',type:'ধরন',institution:'প্রতিষ্ঠান',degreeYear:'ডিগ্রি অর্জনের বছর'
   }:{
     all:'All',details:'View Details',preview:'Preview',pdf:'PDF',audio:'Audiobook',rokomari:'Rokomari',publisherLink:'Publisher',order:'Order Here',
     back:'Back to all books',about:'About this book',information:'Publication information',publisher:'Publisher',year:'Publication year',isbn:'ISBN',edition:'Edition',pages:'Pages',binding:'Binding',country:'Country',language:'Language',category:'Category',
     listen:'Audiobook',readPdf:'Read PDF',openPreview:'Preview',missing:'Detailed information for this book is not available.',forthcoming:'Forthcoming',ongoing:'Ongoing',
-    catalog:'Book catalog',catalogNote:'Browse published works by topic.',noMatch:'No matching books found.',external:'External links'
+    catalog:'Book catalog',catalogNote:'Browse published works by topic.',noMatch:'No matching books found.',external:'External links',type:'Type',institution:'Institution',degreeYear:'Degree year'
   };
 
   const series=[
@@ -84,7 +84,7 @@
   }
 
   function localized(book){return book?.[lang]||book?.en||book?.bn||{};}
-  function coverTitle(book){return book?.bn?.title||localized(book).title||'';}
+  function coverTitle(book){return localized(book)?.coverTitle||book?.bn?.title||localized(book).title||'';}
 
   function makeBookCard(book){
     const loc=localized(book);
@@ -139,6 +139,12 @@
     const empty=document.getElementById('bookEmpty');if(empty)empty.textContent=copy.noMatch;
   }
 
+  function renderThesis(){
+    const host=document.getElementById('bookThesis');if(!host)return;
+    const items=allBooks.filter(b=>b.status==='thesis').sort(compareByBanglaTitle);
+    host.replaceChildren(...items.map(makeBookCard));
+  }
+
   function renderForthcoming(){
     const host=document.getElementById('bookForthcoming');if(!host)return;
     const items=allBooks.filter(b=>b.status==='forthcoming').sort(compareByBanglaTitle);
@@ -152,6 +158,17 @@
     const book=allBooks.find(b=>b.id===id);
     if(!book){host.innerHTML=`<p class="page-lead">${copy.missing}</p><a class="inline-arrow" href="books.html">← ${copy.back}</a>`;return;}
     const loc=localized(book);const title=loc.title||book.bn?.title||'';const subtitle=loc.subtitle||'';
+    const isThesis=book.status==='thesis';
+    if(isThesis){
+      const kind=document.querySelector('.book-detail-main > .eyebrow');
+      if(kind)kind.textContent=isBn?'পিএইচ.ডি. গবেষণাপাণ্ডুলিপি':'Ph.D. Dissertation';
+      const summaryHeading=document.querySelector('.book-summary > h2');
+      if(summaryHeading)summaryHeading.textContent=isBn?'সারসংক্ষেপ':'Summary';
+      const infoHeading=document.querySelector('.book-spec-panel > h2');
+      if(infoHeading)infoHeading.textContent=isBn?'গবেষণা তথ্য':'Research information';
+      const reviews=document.getElementById('readerReviews');
+      if(reviews)reviews.hidden=true;
+    }
     document.title=`${title} | ${isBn?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;
     const desc=document.querySelector('meta[name="description"]');if(desc)desc.content=loc.summary||subtitle||title;
     const titleEl=document.getElementById('bookDetailTitle');if(titleEl)titleEl.textContent=title;
@@ -170,7 +187,7 @@
       const publisherLink=Array.isArray(book.links)?book.links.find(x=>x?.url&&/^publisher(?:\s+catalog)?$/i.test(String(x.label||''))):null;
       if(publisherLink){const a=document.createElement('a');a.className='btn quiet';a.href=publisherLink.url;a.target='_blank';a.rel='noopener';a.textContent=`${copy.publisherLink} ↗`;actions.appendChild(a);}
       if(book.rokomariUrl){const a=document.createElement('a');a.className='btn quiet';a.href=book.rokomariUrl;a.target='_blank';a.rel='noopener';a.textContent=`${copy.rokomari} ↗`;actions.appendChild(a);}
-      if(book.status!=='forthcoming'){const order=document.createElement('a');order.className='btn primary';order.href=`contact.html?subject=book-order&bookId=${encodeURIComponent(book.id)}#inquiry-form`;order.textContent=copy.order;actions.appendChild(order);}
+      if((book.status||'published')==='published'){const order=document.createElement('a');order.className='btn primary';order.href=`contact.html?subject=book-order&bookId=${encodeURIComponent(book.id)}#inquiry-form`;order.textContent=copy.order;actions.appendChild(order);}
       actions.hidden=!actions.children.length;
     }
 
@@ -178,6 +195,9 @@
     if(specs){
       const m=book.meta||{};
       const rows=[
+        [copy.type,isBn?(m.workTypeBn||m.workType):m.workType],
+        [copy.institution,isBn?(m.institutionBn||m.institution):m.institution],
+        [copy.degreeYear,m.degreeYear],
         [copy.publisher,isBn?(m.publisherBn||m.publisher):m.publisher],
         [copy.year,m.publicationYear],
         [copy.isbn,m.isbn],
@@ -217,5 +237,5 @@
     if(!staticId)document.querySelectorAll('.language-switch a').forEach(a=>{const href=a.getAttribute('href');if(href)a.setAttribute('href',`${href}?id=${encodeURIComponent(book.id)}`);});
   }
 
-  renderSeries();renderCatalog();renderForthcoming();renderDetail();
+  renderSeries();renderCatalog();renderThesis();renderForthcoming();renderDetail();
 })();
