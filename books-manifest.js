@@ -797,9 +797,10 @@ window.ahmadAliBookDetails = [
     "meta": {
       "publisher": "Prochchhod Prokashon",
       "publisherBn": "প্রচ্ছদ প্রকাশন",
+      "publicationYear": "",
       "isbn": "",
       "edition": "2nd Edition, 2026",
-      "editionBn": "২য় সংস্করণ, ২০২৬",
+      "editionBn": "২য় সংস্করণ, ৫ম মুদ্রণ, ২০২৬",
       "pages": "152",
       "binding": "Paperback",
       "bindingBn": "পেপারব্যাক",
