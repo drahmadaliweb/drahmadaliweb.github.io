@@ -86,6 +86,30 @@
   function localized(book){return book?.[lang]||book?.en||book?.bn||{};}
   function coverTitle(book){return localized(book)?.coverTitle||book?.bn?.title||localized(book).title||'';}
 
+  const hasArabic=value=>/[\u0600-\u06ff]/u.test(String(value||''));
+  const hasBangla=value=>/[\u0980-\u09ff]/u.test(String(value||''));
+  function applyTextLanguage(el,value){
+    if(!el)return;
+    const text=String(value||'');
+    if(hasArabic(text)){
+      el.lang='ar';
+      el.dir='rtl';
+      el.setAttribute('data-keep-latin-digits','');
+      return;
+    }
+    if(hasBangla(text)){
+      el.lang='bn';
+      el.dir='ltr';
+      el.removeAttribute('data-keep-latin-digits');
+      return;
+    }
+    if(/[A-Za-z]/.test(text)){
+      el.lang='en';
+      el.dir='ltr';
+      el.setAttribute('data-keep-latin-digits','');
+    }
+  }
+
   function makeBookCard(book){
     const loc=localized(book);
     const article=document.createElement('article');
@@ -102,7 +126,7 @@
     }else{
       const seriesLabel=document.createElement('span');seriesLabel.className='book-series';seriesLabel.textContent=categoryName(book.category||'');
       const glyph=document.createElement('span');glyph.className='book-glyph';glyph.setAttribute('aria-hidden','true');glyph.textContent='۞';
-      const h=document.createElement('h3');h.lang='bn';h.textContent=coverTitle(book);
+      const h=document.createElement('h3');h.textContent=coverTitle(book);applyTextLanguage(h,h.textContent);
       const author=document.createElement('span');author.className='book-author';author.lang='bn';author.textContent='ড. আহমদ আলী';
       a.append(seriesLabel,glyph,h,author);
     }
@@ -169,10 +193,11 @@
     }
     document.title=`${title} | ${isBn?'ড. আহমদ আলী':'Dr. Ahmad Ali'}`;
     const desc=document.querySelector('meta[name="description"]');if(desc)desc.content=loc.summary||subtitle||title;
-    const titleEl=document.getElementById('bookDetailTitle');if(titleEl)titleEl.textContent=title;
-    const sub=document.getElementById('bookDetailSubtitle');if(sub){sub.textContent=subtitle;sub.hidden=!subtitle;}
+    const titleEl=document.getElementById('bookDetailTitle');if(titleEl){titleEl.textContent=title;applyTextLanguage(titleEl,title);}
+    const sub=document.getElementById('bookDetailSubtitle');if(sub){sub.textContent=subtitle;sub.hidden=!subtitle;applyTextLanguage(sub,subtitle);}
     const cover=document.querySelector('.detail-book-cover');
-    const coverTitleEl=document.getElementById('detailCoverTitle');if(coverTitleEl)coverTitleEl.textContent=book.bn?.title||title;
+    const detailCoverText=book.bn?.coverTitle||book.bn?.title||title;
+    const coverTitleEl=document.getElementById('detailCoverTitle');if(coverTitleEl){coverTitleEl.textContent=detailCoverText;applyTextLanguage(coverTitleEl,detailCoverText);}
     const coverSeries=document.getElementById('detailCoverSeries');if(coverSeries)coverSeries.textContent=categoryName(book.category||'');
     if(cover&&book.media?.cover){cover.classList.add('has-real-cover');cover.style.backgroundImage=`url(${JSON.stringify(asset(book.media.cover)).slice(1,-1)})`;}
     const summary=document.getElementById('bookDetailSummary');if(summary)summary.textContent=loc.summary||'';
