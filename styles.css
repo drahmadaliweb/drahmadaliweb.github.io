@@ -1032,3 +1032,15 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
     margin-top:24px;
   }
 }
+
+/* 2026-10-11 — Mobile-only Bengali update-ticker size normalization */
+@media(max-width:560px){
+  html[lang="bn"] .updates-ticker,
+  html[lang="bn"] .update-link{
+    font-family:var(--bangla-sans)!important;
+    font-size:.78rem!important;
+    line-height:1.2!important;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+}
