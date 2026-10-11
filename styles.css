@@ -905,3 +905,17 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
   color:#9c5d3c;
   font-weight:700;
 }
+
+/* Profile biography inline link */
+.profile-inline-link {
+  color: #0f4f46;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 0.08em;
+}
+.profile-inline-link:hover,
+.profile-inline-link:focus {
+  color: #0f4f46;
+  opacity: 0.9;
+}
