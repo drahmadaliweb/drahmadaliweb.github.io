@@ -919,3 +919,19 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
   color: #0f4f46;
   opacity: 0.9;
 }
+
+/* Biography mobile layout: stack the facts card above the prose. */
+@media(max-width:760px){
+  .biography-layout{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .bio-facts{
+    position:static;
+    width:100%;
+  }
+  .biography-prose{
+    max-width:none;
+    width:100%;
+  }
+}
