@@ -936,17 +936,29 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
   }
 }
 
-/* 2026-10-11 — Mobile homepage portrait beside hero heading */
+/* 2026-10-11 — Mobile homepage portrait beside hero heading, refined */
 @media(max-width:780px){
   .hero .hero-grid{
     position:relative;
   }
 
+  .hero .hero-copy{
+    width:100%;
+    max-width:none;
+  }
+
+  /* Keep the institutional eyebrow full-width above the portrait.
+     The portrait starts lower, beside the name and role. */
+  .hero .hero-copy>.eyebrow{
+    max-width:none;
+    padding-right:0;
+  }
+
   .hero .portrait-wrap{
     position:absolute;
-    top:18px;
+    top:72px;
     right:0;
-    width:clamp(126px,38vw,155px);
+    width:clamp(120px,32vw,138px);
     max-width:none;
     margin:0;
     justify-self:auto;
@@ -958,26 +970,30 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
     border-radius:46% 46% 16px 16px;
   }
 
-  .hero .hero-copy>.eyebrow,
+  /* Reserve only the space actually needed by the portrait.
+     This keeps "Dr. Ahmad" and the role from breaking into
+     unnecessarily narrow one-word lines. */
   .hero .hero-copy>h1,
   .hero .hero-copy>.hero-role{
-    max-width:calc(100% - clamp(145px,42vw,170px));
+    max-width:calc(100% - clamp(132px,35vw,154px));
   }
 
-  .hero .hero-lead{
+  /* Once below the heading/photo area, use the whole mobile width. */
+  .hero .hero-lead,
+  .hero .hero-actions{
+    width:100%;
     max-width:none;
   }
 }
 
 @media(max-width:390px){
   .hero .portrait-wrap{
-    top:24px;
-    width:118px;
+    top:76px;
+    width:112px;
   }
 
-  .hero .hero-copy>.eyebrow,
   .hero .hero-copy>h1,
   .hero .hero-copy>.hero-role{
-    max-width:calc(100% - 132px);
+    max-width:calc(100% - 124px);
   }
 }
