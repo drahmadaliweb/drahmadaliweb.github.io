@@ -284,7 +284,7 @@ window.ahmadAliBookDetails = [
       "summary": "A research-based examination of Islamic banking in theory and practice. The book asks how Islamic banks should operate in light of their stated objectives, evaluates areas of Shariah compliance and violation in current practice, identifies institutional and operational shortcomings, and discusses possible paths for reform."
     },
     "bn": {
-      "title": "ইসলামী ব্যাংকিংয়ে শরীয়া পরিপালন ও লঙ্ঘন : সমস্যা ও উত্তরণ ভাবনা",
+      "title": "ইসলামী ব্যাংকিংয়ে শরীয়া পরিপালন ও লঙ্ঘন",
       "subtitle": "সমস্যা ও উত্তরণ ভাবনা",
       "summary": "ইসলামী ব্যাংক প্রতিষ্ঠার লক্ষ্য-উদ্দেশ্যের আলোকে এর কার্যক্রম কেমন হওয়া উচিত, বাস্তবে বর্তমানে কেমন চলছে, কোথায় শরীয়া পরিপালন ও লঙ্ঘনের সমস্যা রয়েছে এবং নানান সংকট ও ত্রুটি থেকে উত্তরণের কী পথ হতে পারে—এসব বিষয় নিয়ে গবেষণাধর্মী আলোচনা।"
     },
