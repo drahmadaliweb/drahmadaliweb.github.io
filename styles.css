@@ -940,6 +940,8 @@ html[lang="bn"] .review-language-picker .review-book-option{font-family:var(--ba
 @media(max-width:780px){
   .hero .hero-grid{
     position:relative;
+    grid-template-columns:1fr;
+    gap:0;
   }
 
   /* Reserve a right-hand portrait column for the name/role only.
