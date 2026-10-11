@@ -180,10 +180,10 @@
       : [];
   }
 
-  function secondarySourceLogo(src){
+  function secondarySourceLink(src,compact=false){
     if(!src?.url) return null;
     const a=document.createElement('a');
-    a.className='secondary-source-logo';
+    a.className=`${compact?'post-source-chip':'post-source-link'} secondary-source-link`;
     a.href=src.url;
     a.target='_blank';
     a.rel='noopener noreferrer';
@@ -191,16 +191,19 @@
     a.title=name;
     a.setAttribute('aria-label',`${lang==='bn'?'অতিরিক্ত প্রকাশনা':'Also published at'}: ${name}`);
     a.appendChild(sourceIcon(src));
+    const label=document.createElement('span');
+    label.textContent=name;
+    a.appendChild(label);
     return a;
   }
 
-  function secondarySourceGroup(post,action=false){
+  function secondarySourceGroup(post,compact=false){
     const sources=additionalSources(post);
     if(!sources.length) return null;
     const group=document.createElement('span');
-    group.className=`secondary-source-links${action?' secondary-source-actions':''}`;
+    group.className='secondary-source-links';
     sources.forEach(src=>{
-      const link=secondarySourceLogo(src);
+      const link=secondarySourceLink(src,compact);
       if(link)group.appendChild(link);
     });
     return group.childElementCount?group:null;
@@ -280,7 +283,7 @@
         const date=document.createElement('time'); date.dateTime=post.date||''; date.textContent=formatDate(post.date); meta.appendChild(date);
         const topicText=topicLabel(post); if(topicText){ const topic=document.createElement('span'); topic.className='content-topic-chip'; topic.textContent=topicText; meta.appendChild(topic); }
         const src=sourceLink(post,true); if(src) meta.appendChild(src);
-        const secondaryMeta=secondarySourceGroup(post); if(secondaryMeta) meta.appendChild(secondaryMeta);
+        const secondaryMeta=secondarySourceGroup(post,true); if(secondaryMeta) meta.appendChild(secondaryMeta);
 
         const title=document.createElement('h2');
         const titleLink=document.createElement('a'); titleLink.href=detailHref(post,index); titleLink.textContent=loc.title||''; title.appendChild(titleLink);
@@ -291,8 +294,6 @@
           const original=originalLogoLink(post);
           if(original) actions.appendChild(original);
         }
-        const secondaryActions=secondarySourceGroup(post,true);
-        if(secondaryActions) actions.appendChild(secondaryActions);
         card.append(meta,title,ex,actions); archive.appendChild(card);
       });
     }
@@ -335,7 +336,7 @@
       sourceSlot.classList.add('post-source-cluster');
       const nodes=[];
       const src=sourceLink(post,false); if(src)nodes.push(src);
-      const extras=secondarySourceGroup(post); if(extras)nodes.push(extras);
+      const extras=secondarySourceGroup(post,false); if(extras)nodes.push(extras);
       sourceSlot.replaceChildren(...nodes);
     }
     if(body) renderBody(body,loc.body);
