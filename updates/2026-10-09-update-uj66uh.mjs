@@ -1,7 +1,7 @@
 export default {
   "id": "2026-10-09-update-uj66uh",
   "date": "2026-10-09",
-  "href": "",
+  "href": "contact.html",
   "en": {
     "title": "This website is currently under active development and ongoing updates.",
     "summary": "We apologize for any errors, incomplete content, or usability issues you may encounter during this period. If you have any feedback, suggestions, or would like to report an issue, please use the form on the Contact page."
