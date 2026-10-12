@@ -14,13 +14,14 @@ export default {
     "summary": "The second numbered volume of Dr. Ahmad Ali’s continuing Bengali tafsir project. It covers the first four ruku of Surah al-Baqarah and follows an academic format that includes contextual introductions, lexical analysis, verse-by-verse explanation, related Qur’anic and hadith evidence, juristic issues, practical lessons and detailed references."
   },
   "bn": {
-    "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — দ্বিতীয় খণ্ড",
+    "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — ২য় খণ্ড",
     "subtitle": "সূরা বাকারাহর তাফসীর: ১–৪ রূকূ",
     "summary": "ড. আহমদ আলীর চলমান পূর্ণাঙ্গ বাংলা তাফসীর প্রকল্পের দ্বিতীয় সংখ্যায়িত খণ্ড। এতে সূরা বাকারাহর প্রথম চার রূকূর তাফসীর রয়েছে; সূরার পরিচিতি, শাব্দিক বিশ্লেষণ, আয়াতভিত্তিক ব্যাখ্যা, সংশ্লিষ্ট আয়াত-হাদীস, ফিকহী মাসআলা, শিক্ষণীয় দিক ও বিস্তারিত তথ্যসূত্র একাডেমিক বিন্যাসে উপস্থাপিত হয়েছে।"
   },
   "meta": {
     "publisher": "Prochchhod Prokashon",
     "publisherBn": "প্রচ্ছদ প্রকাশন",
+    "publicationYear": "",
     "isbn": "",
     "edition": "1st Published, 2022",
     "editionBn": "প্রথম প্রকাশ, ২০২২",
