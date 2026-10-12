@@ -14,13 +14,14 @@ export default {
     "summary": "The first numbered volume of Dr. Ahmad Ali’s continuing project to produce a complete Bengali tafsir of the Qur’an. The Surah al-Fatihah volume is arranged in an academic style with extensive references and explanatory discussion."
   },
   "bn": {
-    "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — প্রথম খণ্ড",
+    "title": "যুবদাতুল বায়ান ফী ঈদাহিল কুরআন — ১ম খণ্ড",
     "subtitle": "সূরা ফাতিহার তাফসীর",
     "summary": "ড. আহমদ আলীর পূর্ণাঙ্গ বাংলা তাফসীর রচনার চলমান প্রকল্পের প্রথম সংখ্যায়িত খণ্ড। সূরা ফাতিহার তাফসীরটি একাডেমিক বিন্যাস, প্রামাণ্য তথ্যসূত্র ও ব্যাখ্যামূলক আলোচনায় সাজানো হয়েছে।"
   },
   "meta": {
     "publisher": "Prochchhod Prokashon",
     "publisherBn": "প্রচ্ছদ প্রকাশন",
+    "publicationYear": "",
     "isbn": "9789849207429",
     "edition": "2nd Edition, 2020",
     "editionBn": "২য় সংস্করণ, ২০২০",
