@@ -154,6 +154,129 @@ async function insertReview(row: Record<string, unknown>) {
   return Array.isArray(rows) && rows[0] ? rows[0].id : null;
 }
 
+function escapeHtml(value: unknown) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[char] || char));
+}
+
+function languageLabel(value: string) {
+  if (value === "bn") return "Bengali";
+  if (value === "en") return "English";
+  if (value === "mixed") return "Bengali + English";
+  return value || "Unknown";
+}
+
+async function sendReviewNotification(review: {
+  id: unknown;
+  bookTitle: string;
+  reviewerName: string;
+  reviewerEmail: string;
+  sourceLanguage: string;
+  reviewBn: string;
+  reviewEn: string;
+}) {
+  const apiKey = env("BREVO_API_KEY");
+  if (!apiKey) {
+    console.warn("Review notification skipped: BREVO_API_KEY is not configured.");
+    return;
+  }
+
+  const toEmail = env("REVIEW_NOTIFICATION_TO") || "admin@profahmadali.com";
+  const fromEmail = env("REVIEW_NOTIFICATION_FROM") || "contact@profahmadali.com";
+  const fromName = env("REVIEW_NOTIFICATION_FROM_NAME") || "Dr. Ahmad Ali Website";
+  const reviewId = String(review.id ?? "").trim();
+
+  const submittedAt = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Dhaka",
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+
+  const sectionsText: string[] = [];
+  const reviewHtml: string[] = [];
+
+  if (review.sourceLanguage === "bn") {
+    sectionsText.push(`Original Bengali review:\n\n${review.reviewBn}`);
+    reviewHtml.push(`<h3 style="margin:22px 0 8px">Original Bengali review</h3><div dir="auto" style="white-space:pre-wrap;line-height:1.7">${escapeHtml(review.reviewBn)}</div>`);
+  } else if (review.sourceLanguage === "en") {
+    sectionsText.push(`Original English review:\n\n${review.reviewEn}`);
+    reviewHtml.push(`<h3 style="margin:22px 0 8px">Original English review</h3><div dir="auto" style="white-space:pre-wrap;line-height:1.7">${escapeHtml(review.reviewEn)}</div>`);
+  } else {
+    if (review.reviewBn) {
+      sectionsText.push(`Bengali review:\n\n${review.reviewBn}`);
+      reviewHtml.push(`<h3 style="margin:22px 0 8px">Bengali review</h3><div dir="auto" style="white-space:pre-wrap;line-height:1.7">${escapeHtml(review.reviewBn)}</div>`);
+    }
+    if (review.reviewEn) {
+      sectionsText.push(`English review:\n\n${review.reviewEn}`);
+      reviewHtml.push(`<h3 style="margin:22px 0 8px">English review</h3><div dir="auto" style="white-space:pre-wrap;line-height:1.7">${escapeHtml(review.reviewEn)}</div>`);
+    }
+  }
+
+  const metaText = [
+    `Book: ${review.bookTitle}`,
+    `Reviewer: ${review.reviewerName}`,
+    `Reviewer email: ${review.reviewerEmail || "Not provided"}`,
+    `Language: ${languageLabel(review.sourceLanguage)}`,
+    `Submitted: ${submittedAt} (Dhaka time)`,
+    "Status: Awaiting approval",
+    reviewId ? `Review ID: ${reviewId}` : "",
+  ].filter(Boolean).join("\n");
+
+  const textContent =
+    `A new reader review has been submitted on profahmadali.com.\n\n${metaText}\n\n` +
+    sectionsText.join("\n\n------------------------------\n\n");
+
+  const htmlContent = `
+    <div style="font-family:Arial,sans-serif;color:#1f2d29;max-width:720px;margin:0 auto">
+      <h2 style="margin:0 0 8px">New reader review submitted</h2>
+      <p style="margin:0 0 20px;color:#66736e">A new review on profahmadali.com is awaiting approval.</p>
+      <table style="border-collapse:collapse;width:100%;font-size:14px">
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Book</td><td style="padding:6px 0">${escapeHtml(review.bookTitle)}</td></tr>
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Reviewer</td><td style="padding:6px 0">${escapeHtml(review.reviewerName)}</td></tr>
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Email</td><td style="padding:6px 0">${escapeHtml(review.reviewerEmail || "Not provided")}</td></tr>
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Language</td><td style="padding:6px 0">${escapeHtml(languageLabel(review.sourceLanguage))}</td></tr>
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Submitted</td><td style="padding:6px 0">${escapeHtml(submittedAt)} (Dhaka time)</td></tr>
+        <tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Status</td><td style="padding:6px 0">Awaiting approval</td></tr>
+        ${reviewId ? `<tr><td style="padding:6px 10px 6px 0;font-weight:700;vertical-align:top">Review ID</td><td style="padding:6px 0">${escapeHtml(reviewId)}</td></tr>` : ""}
+      </table>
+      ${reviewHtml.join("")}
+    </div>`;
+
+  const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "api-key": apiKey,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      sender: { name: fromName, email: fromEmail },
+      to: [{ email: toEmail }],
+      subject: `New reader review — ${review.bookTitle}`,
+      htmlContent,
+      textContent,
+      tags: ["reader-review", "profahmadali"],
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Brevo notification failed (${response.status}): ${(await response.text()).slice(0, 500)}`);
+  }
+}
+
+async function notifyReviewSafely(review: Parameters<typeof sendReviewNotification>[0]) {
+  try {
+    await sendReviewNotification(review);
+  } catch (error) {
+    console.error("Review was saved, but the notification email could not be sent.", error);
+  }
+}
+
 Deno.serve(async (req) => {
   const origin = req.headers.get("origin");
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders(origin) });
@@ -208,6 +331,16 @@ Deno.serve(async (req) => {
         ai_translation_consent: false,
       });
 
+      await notifyReviewSafely({
+        id,
+        bookTitle,
+        reviewerName: name,
+        reviewerEmail: email,
+        sourceLanguage: pageLanguage,
+        reviewBn: pageLanguage === "bn" ? reviewText : "",
+        reviewEn: pageLanguage === "en" ? reviewText : "",
+      });
+
       return json({ ok: true, id }, 200, origin);
     }
 
@@ -250,6 +383,16 @@ Deno.serve(async (req) => {
       source_date: null,
       approved: false,
       ai_translation_consent: language === "both" ? false : aiConsent,
+    });
+
+    await notifyReviewSafely({
+      id,
+      bookTitle,
+      reviewerName: name,
+      reviewerEmail: email,
+      sourceLanguage,
+      reviewBn,
+      reviewEn,
     });
 
     return json({ ok: true, id }, 200, origin);
