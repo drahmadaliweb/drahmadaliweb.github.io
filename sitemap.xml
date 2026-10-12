@@ -590,18 +590,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/zubdatul-bayan-vol-3.html"/>
   </url>
   <url>
-    <loc>https://profahmadali.com/books/book-234566.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/book-234566.html"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/book-234566.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/book-234566.html"/>
-  </url>
-  <url>
-    <loc>https://profahmadali.com/bn/books/book-234566.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/book-234566.html"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/book-234566.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/book-234566.html"/>
-  </url>
-  <url>
     <loc>https://profahmadali.com/books/zubdatul-bayan-vol-1.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/zubdatul-bayan-vol-1.html"/>
     <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/zubdatul-bayan-vol-1.html"/>
@@ -612,6 +600,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/zubdatul-bayan-vol-1.html"/>
     <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/zubdatul-bayan-vol-1.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/zubdatul-bayan-vol-1.html"/>
+  </url>
+  <url>
+    <loc>https://profahmadali.com/books/book-234566.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/book-234566.html"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/book-234566.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/book-234566.html"/>
+  </url>
+  <url>
+    <loc>https://profahmadali.com/bn/books/book-234566.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profahmadali.com/books/book-234566.html"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://profahmadali.com/bn/books/book-234566.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profahmadali.com/bn/books/book-234566.html"/>
   </url>
   <url>
     <loc>https://profahmadali.com/books/seerah-modern-civilization-crisis.html</loc>
