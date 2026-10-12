@@ -841,7 +841,11 @@ html[lang="bn"] .reader-reviews-books-link{font-family:var(--bangla-sans)}
 #readerReviewBnWrap[hidden],
 #readerReviewEnWrap[hidden],
 #readerReviewBookMenu[hidden],
-#readerReviewLanguageMenu[hidden]{display:none!important}
+#readerReviewLanguageMenu[hidden],
+#bookReviewConsentWrap[hidden],
+#bookReviewBnWrap[hidden],
+#bookReviewEnWrap[hidden],
+#bookReviewLanguageMenu[hidden]{display:none!important}
 
 .review-book-picker{position:relative}
 .review-book-picker-toggle{
@@ -1080,4 +1084,12 @@ html[lang="bn"] .selected-article-source-chain{font-family:var(--bangla-sans)}
 @media(max-width:520px){
   .review-limit-row{align-items:flex-start}
   .review-limit-counter{margin-left:0}
+}
+
+/* 2026-10-12 — fixed book selector */
+.review-book-picker-fixed:disabled{
+  opacity:1;
+  cursor:default;
+  color:var(--ink);
+  background:#f8f7f2;
 }

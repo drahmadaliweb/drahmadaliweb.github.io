@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=20261011-review-limit-10000-v1" rel="stylesheet"/>
+<link href="styles.css?v=20261012-book-review-form-exact-v2" rel="stylesheet"/>
 <!-- SEO PHASE 2 DETAIL START -->
 <meta name="content-id" content="usulul-iman-vol-6"/>
 <link rel="canonical" href="https://profahmadali.com/books/usulul-iman-vol-6.html"/>
@@ -63,7 +63,15 @@
     <div class="review-form-grid">
       <label class="review-field"><span>Name <b>*</b></span><input id="reviewName" name="name" type="text" maxlength="100" autocomplete="name" required></label>
       <label class="review-field"><span>Email</span><input id="reviewEmail" name="email" type="email" maxlength="200" autocomplete="email"><small>Your email is never displayed publicly.</small></label>
-      <div class="review-field review-field-wide">
+      <div class="review-field">
+        <span>Book <b>*</b></span>
+        <div class="review-book-picker">
+          <button class="review-book-picker-toggle review-book-picker-fixed" id="bookReviewBookFixed" type="button" disabled aria-disabled="true">
+            <span id="bookReviewBookLabel"></span><span aria-hidden="true">▾</span>
+          </button>
+        </div>
+      </div>
+      <div class="review-field">
         <span>Review language <b>*</b></span>
         <div class="review-book-picker review-language-picker" id="bookReviewLanguagePicker">
           <button class="review-book-picker-toggle" id="bookReviewLanguageToggle" type="button" aria-expanded="false" aria-controls="bookReviewLanguageMenu">
@@ -95,7 +103,7 @@
 <div class="footer-links"><a class="footer-facebook" href="https://www.facebook.com/ahmad.ali.54887" rel="noopener" target="_blank" aria-label="Dr. Ahmad Ali on Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.438H7.078v-3.489h3.047V9.414c0-3.025 1.792-4.696 4.533-4.696 1.313 0 2.686.236 2.686.236v2.971h-1.513c-1.49 0-1.956.931-1.956 1.887v2.261h3.328l-.532 3.489h-2.796V24C19.612 23.094 24 18.099 24 12.073Z"/></svg><span>Facebook</span></a><a href="contact.html">Contact</a><a href="#top">Back to top ↑</a></div>
 </div>
 </footer>
-<script src="books-manifest.js?v=20261011-phd-thesis-v1"></script><script src="book-library.js?v=20261011-phd-bidi-v3"></script><script src="reviews-config.js?v=20261010-turnstile-v1"></script><script src="review-turnstile.js?v=20261010-turnstile-v1"></script><script src="book-reviews.js?v=20261012-book-review-form-match-v1"></script><script src="updates-manifest.js?v=20261005-updates"></script><script src="script.js?v=20261011-continuous-ticker-v2"></script>
+<script src="books-manifest.js?v=20261011-phd-thesis-v1"></script><script src="book-library.js?v=20261011-phd-bidi-v3"></script><script src="reviews-config.js?v=20261010-turnstile-v1"></script><script src="review-turnstile.js?v=20261010-turnstile-v1"></script><script src="book-reviews.js?v=20261012-book-review-form-exact-v2"></script><script src="updates-manifest.js?v=20261005-updates"></script><script src="script.js?v=20261011-continuous-ticker-v2"></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>
 <!-- End Cloudflare Web Analytics -->

@@ -53,6 +53,7 @@
   const form=document.getElementById('bookReviewForm');
   const name=document.getElementById('reviewName');
   const email=document.getElementById('reviewEmail');
+  const bookLabel=document.getElementById('bookReviewBookLabel');
   const languageSelect=document.getElementById('bookReviewLanguage');
   const languagePicker=document.getElementById('bookReviewLanguagePicker');
   const languageToggle=document.getElementById('bookReviewLanguageToggle');
@@ -80,6 +81,14 @@
     const subtitle=String(book?.bn?.subtitle||'').trim();
     return subtitle?`${title} : ${subtitle}`:title;
   }
+
+  function localBookTitle(){
+    const loc=book?.[isBn?'bn':'en']||book?.en||book?.bn||{};
+    const title=String(loc.title||book?.bn?.title||book?.id||'').trim();
+    const subtitle=String(loc.subtitle||'').trim();
+    return subtitle?`${title}: ${subtitle}`:title;
+  }
+  if(bookLabel)bookLabel.textContent=localBookTitle();
 
   function setStatus(message,type=''){
     if(!status)return;
