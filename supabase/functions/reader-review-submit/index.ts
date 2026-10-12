@@ -71,38 +71,61 @@ async function verifyTurnstile(token: string, expectedAction: string) {
 }
 
 async function translate(text: string, from: "Bengali" | "English", to: "Bengali" | "English") {
-  const apiKey = env("OPENAI_API_KEY");
+  const apiKey = env("GEMINI_API_KEY");
   if (!apiKey) {
     const error: any = new Error("translation_not_configured");
     error.code = "translation_not_configured";
     throw error;
   }
 
-  const model = env("OPENAI_TRANSLATION_MODEL") || "gpt-6-luna";
-  const response = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model,
-      store: false,
-      instructions:
-        `Translate reader book reviews faithfully from ${from} to ${to}. ` +
-        "Preserve paragraph breaks, names, titles, quotations, Arabic/Islamic terms, tone, and meaning. " +
-        "Do not summarize, add commentary, soften criticism, or invent information. " +
-        "Return only the translated review.",
-      input: text,
-    }),
-  });
+  const model = env("GEMINI_TRANSLATION_MODEL") || "gemini-2.5-flash";
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
+    {
+      method: "POST",
+      headers: {
+        "x-goog-api-key": apiKey,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        system_instruction: {
+          parts: [{
+            text:
+              `Translate this reader review faithfully from ${from} to ${to}. The review concerns Islamic scholarship, Islamic law, Qur'anic studies, Hadith, theology, da'wah, Arabic terminology, or related religious subjects. ` +
+              "Treat Islamic terminology with special care. Verify each Islamic term against its immediate context before choosing an equivalent. " +
+              "Preserve established Arabic/Islamic technical terms when an English or Bengali rendering could distort the meaning; use a clear conventional translation where one is well established. " +
+              "Preserve Arabic script, Qur'anic quotations, hadith quotations, du'a, names, book titles, madhhab names, honorifics, transliterations, and technical fiqh/usul terms accurately. " +
+              "Do not invent, correct, normalize, or add Qur'an verse numbers, hadith references, legal rulings, theological claims, citations, or scholarly attributions that are not present in the source. " +
+              "Do not reinterpret or 'improve' the author's religious position. Preserve nuance, degree of certainty, praise, criticism, and respectful tone. " +
+              "If a religious term is genuinely ambiguous, prefer retaining the transliterated term rather than guessing. " +
+              "Preserve paragraph breaks and quotations. Do not summarize, omit, add commentary, soften criticism, or invent information. " +
+              "Return only the translated review, with no translator notes or preface."
+          }]
+        },
+        contents: [{
+          role: "user",
+          parts: [{ text }]
+        }],
+        generationConfig: {
+          temperature: 0.2
+        }
+      }),
+    }
+  );
 
   if (!response.ok) {
-    throw new Error(`Translation request failed (${response.status}).`);
+    throw new Error(`Gemini translation request failed (${response.status}): ${await response.text()}`);
   }
 
   const data = await response.json();
-  const translated = outputText(data);
+  const translated = (Array.isArray(data?.candidates?.[0]?.content?.parts)
+    ? data.candidates[0].content.parts
+        .filter((part: any) => typeof part?.text === "string")
+        .map((part: any) => part.text)
+        .join("")
+        .trim()
+    : "");
+
   if (!translated) throw new Error("Translation returned no text.");
   return translated;
 }
