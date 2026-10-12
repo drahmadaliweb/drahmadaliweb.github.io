@@ -79,12 +79,36 @@
   const enWrap=document.getElementById('readerReviewEnWrap');
   const bnInput=document.getElementById('readerReviewBn');
   const enInput=document.getElementById('readerReviewEn');
+  const bnCounter=document.getElementById('readerReviewBnCounter');
+  const enCounter=document.getElementById('readerReviewEnCounter');
   const honeypot=document.getElementById('readerReviewWebsite');
   const submit=document.getElementById('readerReviewSubmit');
   const status=document.getElementById('readerReviewStatus');
   const count=document.getElementById('readerReviewWallCount');
   const empty=document.getElementById('readerReviewWallEmpty');
   const turnstile=window.AhmadAliReviewTurnstile;
+
+  function liveWordCount(value){
+    const text=String(value||'').trim();
+    return text?text.split(/\s+/u).filter(Boolean).length:0;
+  }
+  function setLiveCounter(input,counter){
+    if(!counter)return;
+    const chars=String(input?.value||'').length;
+    const words=liveWordCount(input?.value);
+    if(isBn){
+      const nf=new Intl.NumberFormat('bn-BD');
+      counter.textContent=`${nf.format(words)} শব্দ · ${nf.format(chars)} / ${nf.format(10000)} অক্ষর`;
+    }else{
+      counter.textContent=`${words.toLocaleString('en-US')} word${words===1?'':'s'} · ${chars.toLocaleString('en-US')} / 10,000 characters`;
+    }
+  }
+  const updateBnCounter=()=>setLiveCounter(bnInput,bnCounter);
+  const updateEnCounter=()=>setLiveCounter(enInput,enCounter);
+  bnInput?.addEventListener('input',updateBnCounter);
+  enInput?.addEventListener('input',updateEnCounter);
+  updateBnCounter();
+  updateEnCounter();
 
   function localBookTitle(book){
     const loc=book?.[isBn?'bn':'en']||book?.en||book?.bn||{};
@@ -444,7 +468,7 @@
       });
       const data=await response.json().catch(()=>({}));
       if(!response.ok){if(data?.code==='translation_not_configured')throw Object.assign(new Error('translation_not_configured'),{code:'translation_not_configured'});throw new Error(data?.error||`HTTP ${response.status}`);}
-      form.reset();setBookChoice('',copy.selectBook);setLanguageChoice('',copy.selectLanguage);updateLanguageFields();setStatus(copy.submitted,'success');
+      form.reset();updateBnCounter();updateEnCounter();setBookChoice('',copy.selectBook);setLanguageChoice('',copy.selectLanguage);updateLanguageFields();setStatus(copy.submitted,'success');
     }catch(err){
       console.warn('Reader review submission failed.',err);
       if(err?.code==='translation_not_configured'||String(err?.message||'')==='translation_not_configured')setStatus(copy.translationUnavailable,'error');

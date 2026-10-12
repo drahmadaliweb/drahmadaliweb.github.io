@@ -7,7 +7,7 @@ create table if not exists public.book_reviews (
   book_title text,
   name text not null check (char_length(name) between 1 and 100),
   email text,
-  review text not null check (char_length(review) between 2 and 3000),
+  review text not null check (char_length(review) between 2 and 10000),
   created_at timestamptz not null default now(),
   approved boolean not null default false
 );
@@ -44,7 +44,7 @@ begin
   if clean_email is not null and (char_length(clean_email) > 200 or clean_email !~* '^[^[:space:]@]+@[^[:space:]@]+\.[^[:space:]@]+$') then
     raise exception 'Invalid email';
   end if;
-  if char_length(clean_review) < 2 or char_length(clean_review) > 3000 then
+  if char_length(clean_review) < 2 or char_length(clean_review) > 10000 then
     raise exception 'Invalid review';
   end if;
   if char_length(coalesce(p_book_id,'')) < 1 or char_length(p_book_id) > 160 then

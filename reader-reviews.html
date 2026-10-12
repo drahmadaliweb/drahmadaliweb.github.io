@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=20261011-reader-review-book-title-v1" rel="stylesheet"/>
+<link href="styles.css?v=20261011-review-limit-10000-v1" rel="stylesheet"/>
 <!-- SEO PHASE 1 START -->
 <link rel="canonical" href="https://profahmadali.com/reader-reviews.html"/>
 <link rel="alternate" hreflang="en" href="https://profahmadali.com/reader-reviews.html"/>
@@ -96,8 +96,8 @@
           </div>
         </div>
         <div class="review-field review-field-wide review-ai-consent" id="readerReviewConsentWrap" hidden><label class="review-consent"><input id="readerReviewAiConsent" type="checkbox"><span id="readerReviewConsentText"></span></label></div>
-        <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>Review in Bengali <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="Write your Bengali review…"></textarea></label>
-        <label class="review-field review-field-wide" id="readerReviewEnWrap" hidden><span>Review in English <b>*</b></span><textarea id="readerReviewEn" rows="7" maxlength="10000" placeholder="Write your English review…"></textarea></label>
+        <label class="review-field review-field-wide" id="readerReviewBnWrap" hidden><span>Review in Bengali <b>*</b></span><textarea id="readerReviewBn" rows="7" maxlength="10000" placeholder="Write your Bengali review…"></textarea><small class="review-limit-row"><span>Maximum 10,000 characters.</span><span class="review-limit-counter" id="readerReviewBnCounter">0 words · 0 / 10,000 characters</span></small></label>
+        <label class="review-field review-field-wide" id="readerReviewEnWrap" hidden><span>Review in English <b>*</b></span><textarea id="readerReviewEn" rows="7" maxlength="10000" placeholder="Write your English review…"></textarea><small class="review-limit-row"><span>Maximum 10,000 characters.</span><span class="review-limit-counter" id="readerReviewEnCounter">0 words · 0 / 10,000 characters</span></small></label>
         <label class="review-honeypot" aria-hidden="true">Website<input id="readerReviewWebsite" type="text" tabindex="-1" autocomplete="off"></label>
         <div class="review-field-wide review-turnstile" id="readerReviewTurnstile"></div>
       </div>
@@ -127,7 +127,7 @@
 <script src="reviews-config.js?v=20261010-turnstile-v1"></script>
 <script src="review-turnstile.js?v=20261010-turnstile-v1"></script>
 <script src="updates-manifest.js?v=20261005-updates"></script>
-<script src="reader-reviews.js?v=20261011-book-title-v1"></script>
+<script src="reader-reviews.js?v=20261011-review-limit-10000-v1"></script>
 <script src="script.js?v=20261011-continuous-ticker-v2"></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e05ba294355e4506b2b257181524ae45"}'></script>

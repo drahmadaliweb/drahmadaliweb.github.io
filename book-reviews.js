@@ -38,6 +38,7 @@
   const name=document.getElementById('reviewName');
   const email=document.getElementById('reviewEmail');
   const review=document.getElementById('reviewText');
+  const reviewCounter=document.getElementById('reviewCharCounter');
   const honeypot=document.getElementById('reviewWebsite');
   const submit=document.getElementById('reviewSubmit');
   const status=document.getElementById('reviewFormStatus');
@@ -51,6 +52,23 @@
     status.textContent=message||'';
     status.className=`review-form-status${type?` ${type}`:''}`;
   }
+  function reviewWordCount(value){
+    const text=String(value||'').trim();
+    return text?text.split(/\s+/u).filter(Boolean).length:0;
+  }
+  function updateReviewCounter(){
+    if(!reviewCounter)return;
+    const chars=String(review?.value||'').length;
+    const words=reviewWordCount(review?.value);
+    if(isBn){
+      const nf=new Intl.NumberFormat('bn-BD');
+      reviewCounter.textContent=`${nf.format(words)} শব্দ · ${nf.format(chars)} / ${nf.format(10000)} অক্ষর`;
+    }else{
+      reviewCounter.textContent=`${words.toLocaleString('en-US')} word${words===1?'':'s'} · ${chars.toLocaleString('en-US')} / 10,000 characters`;
+    }
+  }
+  review?.addEventListener('input',updateReviewCounter);
+  updateReviewCounter();
   function setOpen(open){
     if(!form||!toggle)return;
     form.hidden=!open;
@@ -199,7 +217,7 @@
       });
       const data=await response.json().catch(()=>({}));
       if(!response.ok)throw new Error(data?.error||`HTTP ${response.status}`);
-      form.reset();setStatus(copy.submitted,'success');
+      form.reset();updateReviewCounter();setStatus(copy.submitted,'success');
     }catch(err){console.warn('Reader review submission failed.',err);setStatus(copy.error,'error');}
     finally{turnstile?.reset('bookReviewTurnstile');submit.disabled=false;}
   });

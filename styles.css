@@ -1062,3 +1062,22 @@ a.selected-article-source-primary:hover{color:var(--forest);text-decoration:unde
 .selected-article-source-link{color:var(--forest);font-weight:700;text-decoration:none}
 .selected-article-source-link:hover{text-decoration:underline;text-underline-offset:3px}
 html[lang="bn"] .selected-article-source-chain{font-family:var(--bangla-sans)}
+
+/* 2026-10-11 — Review 10,000-character counters */
+.review-limit-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:1px;
+}
+.review-limit-counter{
+  margin-left:auto;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+@media(max-width:520px){
+  .review-limit-row{align-items:flex-start}
+  .review-limit-counter{margin-left:0}
+}

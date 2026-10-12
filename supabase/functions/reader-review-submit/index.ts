@@ -163,7 +163,7 @@ Deno.serve(async (req) => {
     if (!bookTitle) return json({ ok: false, error: "Book title is required." }, 400, origin);
 
     if (submissionType === "book-page") {
-      const reviewText = cleanText(body?.review, 3000);
+      const reviewText = cleanText(body?.review, 10000);
       const pageLanguage = cleanText(body?.page_language, 10);
       if (!reviewText) return json({ ok: false, error: "Review is required." }, 400, origin);
       if (!["bn", "en"].includes(pageLanguage)) return json({ ok: false, error: "Invalid page language." }, 400, origin);
