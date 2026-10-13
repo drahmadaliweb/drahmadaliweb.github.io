@@ -3,15 +3,15 @@ export default {
   "date": "2026-06-01",
   "topic_slug": "islamic-law-justice",
   "source": {
-    "type": "newspaper",
-    "label": "Kaler Kantho",
-    "url": "https://www.kalerkantho.com/print-edition/islamic-life/2026/06/01/1691305"
+    "type": "facebook",
+    "label": "Facebook",
+    "url": "https://www.facebook.com/share/p/1GoByv8uQM/"
   },
   "additionalSources": [
     {
-      "type": "website",
-      "label": "Facebook",
-      "url": "https://www.facebook.com/share/p/1GoByv8uQM/"
+      "type": "newspaper",
+      "label": "Kaler Kantho",
+      "url": "https://www.kalerkantho.com/print-edition/islamic-life/2026/06/01/1691305"
     }
   ],
   "bn": {
