@@ -250,6 +250,11 @@ window.windowOfTimePosts = [
         "type": "newspaper",
         "label": "Kaler Kantho",
         "url": "https://www.kalerkantho.com/print-edition/islamic-life/2026/09/11/1737482?fbclid=IwY2xjawU4zVpleHRuA2FlbQIxMQBwZG9mBWJyaWQRMWZxaDNDWTIxbm43MUo4Q2tzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEev2LugKtVhW71dQj3tQcX51bkaPsaGnSElzH5l_HxtBf3PGGQoFTs7sxAJIQ_aem_kiLHfGNIixaD0fnmrz6dLQ"
+      },
+      {
+        "type": "newspaper",
+        "label": "News24",
+        "url": "https://www.news24bd.tv/details/298827"
       }
     ],
     "bn": {
