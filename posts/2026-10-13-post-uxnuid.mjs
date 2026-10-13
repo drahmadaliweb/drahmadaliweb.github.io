@@ -1,7 +1,7 @@
 export default {
   "id": "2026-10-13-post-uxnuid",
   "date": "2026-10-13",
-  "topic_slug": "islamic-thought-philosophy",
+  "topic_slug": "dawah-waz-ulama",
   "source": {
     "type": "facebook",
     "label": "Facebook",
