@@ -229,9 +229,14 @@
 
   function detailHref(post,index){ return `writings/${encodeURIComponent(postId(post,index))}.html`; }
 
-  function sourceType(post){
-    const t=String(post?.source?.type||'website').toLowerCase();
+  function normalizedSourceType(src){
+    const t=String(src?.type||'website').toLowerCase();
     return ['facebook','newspaper','magazine','blog','website','other'].includes(t)?t:'other';
+  }
+
+  function sourceTypes(post){
+    const sources=[post?.source,...additionalSources(post)].filter(Boolean);
+    return [...new Set(sources.map(normalizedSourceType))];
   }
   const typeLabels=lang==='bn'?{
     all:'সব',facebook:'ফেসবুক',newspaper:'সংবাদপত্র',magazine:'সাময়িকী',blog:'ব্লগ',website:'ওয়েবসাইটের লেখা',other:'অন্যান্য'
@@ -245,7 +250,7 @@
     const filterHost=document.getElementById('writingFilters');
     const topicSelect=document.getElementById('writingTopicFilter');
     const searchInput=document.getElementById('writingSearch');
-    const present=[...new Set(posts.map(sourceType))];
+    const present=[...new Set(posts.flatMap(sourceTypes))];
     const presentTopicSlugs=[...new Set(posts.map(p=>p.topic_slug).filter(slug=>topicTaxonomy[slug]))];
     let activeType='all';
     let activeTopic='all';
@@ -270,7 +275,7 @@
 
     function renderArchive(){
       archive.replaceChildren();
-      const shown=posts.filter(p=>(activeType==='all'||sourceType(p)===activeType)&&(activeTopic==='all'||p.topic_slug===activeTopic)&&matchesSearch(p));
+      const shown=posts.filter(p=>(activeType==='all'||sourceTypes(p).includes(activeType))&&(activeTopic==='all'||p.topic_slug===activeTopic)&&matchesSearch(p));
       if(!shown.length){const p=document.createElement('p');p.className='page-lead';p.textContent=copy.noMatch;archive.appendChild(p);return;}
       shown.forEach((post)=>{
         const index=posts.indexOf(post);
