@@ -4,14 +4,14 @@ export default {
   "topic_slug": "fiqh-sharia-contemporary",
   "source": {
     "type": "newspaper",
-    "label": "JagoNews24",
-    "url": "https://www.jagonews24.com/religion/islam/1105500"
+    "label": "Facebook",
+    "url": "https://www.facebook.com/share/p/1DqvCPKPjM/"
   },
   "additionalSources": [
     {
-      "type": "website",
-      "label": "facebook",
-      "url": "https://www.facebook.com/share/p/1DqvCPKPjM/"
+      "type": "newspaper",
+      "label": "JagoNews24",
+      "url": "https://www.jagonews24.com/religion/islam/1105500"
     }
   ],
   "bn": {
