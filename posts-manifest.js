@@ -39,6 +39,24 @@ window.windowOfTimePosts = [
     }
   },
   {
+    "id": "2026-10-14-post-sgi6ly",
+    "date": "2026-10-14",
+    "topic_slug": "dawah-waz-ulama",
+    "source": {
+      "type": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/p/19xP6z2ngK/"
+    },
+    "bn": {
+      "title": "যখন ‘ফিতনা’ শব্দটিই স্বয়ং নতুন ফিতনা বিস্তারের অনুঘটক হয়ে ওঠে!!!",
+      "body": "‘হক্কানী’, ‘বাতিল’, ‘গুমরাহ’—ধর্মীয় দৃষ্টিকোণ থেকে শব্দগুলোর বিশেষ তাৎপর্য রয়েছে। তেমনি ‘মুফতী’, ‘মুফাসসির’, ‘আল্লামা’ প্রভৃতি উপাধিরও রয়েছে স্বতন্ত্র মর্যাদা ও তাৎপর্য। \nকিন্তু যথেচ্ছ প্রয়োগ ও অপব্যবহারের ফলে এসব শব্দ ও উপাধি ক্রমেই তাদের স্বকীয় গুরুত্ব ও মর্যাদা হারাচ্ছে। \nএকসময় যেসব শব্দ ও উপাধি বিশেষ তাৎপর্য ও মর্যাদা বহন করত, এখন সেগুলো শুনলে অনেকের মনেই আর সেই গুরুত্ব জাগে না; বরং মনে হয়, একে অপরকে এসব অভিধায় আখ্যায়িত করা কিংবা এসব বিশেষণে ভূষিত করা আলিমদের নিত্যনৈমিত্তিক ব্যাপার। এমনকি, এসব শব্দ ও উপাধি এখন অনেকের কাছে হাস্যরসেরও খোরাক হয়ে উঠেছে।\nধর্মীয় পরিভাষা ও আলিমদের সম্মানসূচক উপাধিগুলোকে এভাবে গুরুত্বহীন ও হাস্যরসের বিষয়ে পরিণত করার দায় সংশ্লিষ্ট আলিমগণ কোনোভাবেই এড়াতে পারেন না। \nএর ফলে ধর্মীয় পরিভাষা ও আলিমদের সম্মানসূচক উপাধিগুলোকে অনেকটা হাস্যরসের বিষয়ে পরিণত করার দায় সংশ্লিষ্ট আলিমদের এড়ানোর কোনো সুযোগ নেই।\nদুঃখজনকভাবে, এ তালিকায় এবার যুক্ত হচ্ছে ‘ফিতনা’ শব্দটিও। যদিও আগে থেকেই এ শব্দটির ব্যবহার অনেকটা হালকা হয়ে গিয়েছিল।  \nএভাবে চলতে থাকলে একসময় ফিতনা চিহ্নিত করতে গিয়ে শব্দটিই তার তাৎপর্য ও গুরুত্ব হারিয়ে ফেলবে; ফিতনা থেকে বেঁচে থাকা ও অন্যকে সতর্ক করার চেয়ে কে ফিতনাকারী, কোনটি ফিতনা—এসব আখ্যা দেওয়া ও তকমা সাঁটাতেই আমাদের আগ্রহ ও ব্যস্ততা বেশি হয়ে উঠবে। \nপরিণতিস্বরূপ, \nপরিণামে, ফিতনা থেকে উম্মাহকে রক্ষা করার কথা বলতে বলতেই আমরাই হয়তো ফিতনা বিস্তারের বড় অনুঘটকে পরিণত হব—\nআর এভাবেই বাস্তব হয়ে উঠবে রাসূলুল্লাহ (সা.)-এর সেই সতর্কবাণী, যার মর্ম হলো, তাদের থেকেই ফিতনার উদ্ভব ঘটবে এবং তাদের দিকেই তা ফিরে আসবে।"
+    },
+    "en": {
+      "title": "When the Very Word “Fitnah” Becomes a Catalyst for Spreading New Fitnah!",
+      "body": "‘Haqquni’ (adhering to the truth), ‘Bāṭil’ (falsehood), and ‘Gumrāh’ (misguided) are terms that carry particular significance in the religious context. Similarly, honorific titles such as ‘Mufti’, ‘Mufassir’, and ‘Allama’ possess their own distinct status and significance.\nHowever, through indiscriminate use and misuse, these words and titles are gradually losing their distinctive importance and prestige.\nTerms and titles that once carried considerable weight and dignity no longer evoke the same sense of significance in many people. Instead, people have begun to regard the practice of scholars labelling one another with such terms or bestowing these titles upon one another as an everyday occurrence. Indeed, these words and titles have even become a source of amusement for some.\nThe scholars concerned cannot escape responsibility for allowing religious terminology and honorific titles to be reduced to objects of ridicule and triviality.\nSadly, the word ‘fitnah’ is now being added to this list, although its usage had already become somewhat diluted.\nIf this trend continues, the very word may eventually lose its significance and gravity even when used to identify fitnah. Rather than focusing on avoiding fitnah and warning others against it, we may become more preoccupied with labelling people as instigators of fitnah and attaching the tag of ‘fitnah’ to this or that person or issue.\nConsequently, while claiming to protect the Ummah from fitnah, we ourselves may become major catalysts for its spread.\nAnd thus, the warning of the Messenger of Allah (صلى الله عليه وسلم) may become a reality in our own conduct—a warning whose meaning is that fitnah will originate from them and return to them."
+    }
+  },
+  {
     "id": "2026-10-13-post-e2bta0",
     "date": "2026-10-13",
     "topic_slug": "islamic-thought-philosophy",
