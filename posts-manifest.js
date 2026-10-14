@@ -21,6 +21,24 @@ window.windowOfTimePosts = [
     }
   },
   {
+    "id": "2026-10-14-post-7hm84g",
+    "date": "2026-10-14",
+    "topic_slug": "personal-experience-life-reflection",
+    "source": {
+      "type": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/p/1dEMcpmmFf/"
+    },
+    "bn": {
+      "title": "যে কান্না আল্লাহর জন্য, তার সাক্ষী ক্যামেরাকে কেন বানাতে হবে?—  কিছু অনুভূতি মানুষের সামনে নয়; শুধু আল্লাহর কাছেই থাকুক!",
+      "body": "কোনো দায়িত্ব বা পদ গ্রহণের সময় শপথ অনুষ্ঠানে দায়িত্বের গুরুভার, আমানতের গুরুত্ব এবং আল্লাহর কাছে জবাবদিহির কথা স্মরণ করে একজন মুমিনের চোখে পানি আসতেই পারে, কান্নাও আসতে পারে। \nএমন অনুভূতি অস্বাভাবিক নয়; বরং তা ঈমানি সংবেদনশীলতার প্রকাশও হতে পারে। \nকিন্তু প্রশ্ন হলো—\nএমন একান্ত অনুভূতিকেও কি প্রকাশ্যে আনতে হবে? শপথের সময়ের কান্নাকেও কি মিডিয়া কভারেজ দিতে হবে?!\nমনে রাখা দরকার, \nএকজন দায়িত্বশীল ব্যক্তির মূল্যায়ন শেষ পর্যন্ত তাঁর আবেগ দিয়ে নয়, তাঁর কাজ দিয়ে হবে। \nদায়িত্ব যথাযথভাবে পালন হলে মানুষ তাঁর কর্মই মনে রাখবে; আর দায়িত্ব পালনে ব্যর্থ হলে শপথের সময়ের সেই অশ্রু ও কান্নাই একসময় হাসি-তামাশা ও ট্রলের উপকরণে পরিণত হতে পারে। \nকারণ, \nআপনি যে অনুভূতিকে আল্লাহর কাছে জবাবদিহির ভয় হিসেবে দেখছেন, সাধারণ মানুষ তার অন্তর্নিহিত ব্যাখ্যা জানবে না; তারা আপনাকে বিচার করবে আপনার প্রকাশ্য আচরণ, সিদ্ধান্ত ও কাজের ফলাফল দিয়ে।\nতাই সব অনুভূতি প্রকাশের জন্য নয়, সব মুহূর্তও মিডিয়ায় তুলে ধরার জন্য নয়। বিশেষ করে আল্লাহভীতি, জবাবদিহির অনুভূতি, আত্মশুদ্ধি কিংবা অন্তরের এমন কিছু অবস্থা আছে, যা আল্লাহ ও বান্দার মধ্যেই সীমাবদ্ধ রাখা হয়তো অধিক নিরাপদ ও মর্যাদাপূর্ণ। \nসবকিছু প্রচারের আলোয় আনলে কখনো কখনো আন্তরিকতার চেয়ে প্রদর্শনই বেশি দৃশ্যমান হয়ে ওঠে।\nইদানীং ইসলামী দলগুলোর ছোট-বড় প্রায় সব কার্যক্রমই—এমনকি একান্ত অভ্যন্তরীণ বা ইনডোর কর্মসূচিগুলোও—ব্যাপকভাবে মিডিয়ায় প্রচারিত হচ্ছে। একই সঙ্গে নেতাকর্মীদের মধ্যেও দৃশ্যমানতা ও প্রচারমুখিতার প্রবণতা ক্রমশ বাড়ছে। \nঅথচ ইসলামী কাজের ক্ষেত্রে অপ্রয়োজনীয় ও অতিরিক্ত প্রচার একসময় কাজের চেয়ে প্রচারকেই বড় করে তুলতে পারে; এমনকি যে আবেগ ও অনুভূতি শ্রদ্ধা জাগানোর কথা, সেটিও পরবর্তীতে বিদ্রূপের কারণ হতে পারে।\nসবকিছু মানুষকে দেখানোর নয়। কিছু কাজের পরিচয় হোক তার ফলাফলে, আর কিছু অনুভূতির সাক্ষী থাকুন শুধু আল্লাহ। দায়িত্বশীলতার সঙ্গে প্রচারের প্রয়োজনীয়তারও একটি সীমারেখা থাকা জরুরি।\n—নিজস্ব পর্যবেক্ষণ"
+    },
+    "en": {
+      "title": "Why must a camera bear witness to tears shed for the sake of Allah? Some feelings are not meant to be displayed before people; let them remain private, known only to Allah.",
+      "body": "When taking an oath upon assuming a position or responsibility, a believer may be moved to tears while reflecting on the gravity of the responsibility, the significance of the trust placed in them, and their accountability before Allah.\n\nSuch emotions are not unusual; they may even reflect the sensitivity of one’s faith.\n\nBut the question is: **Must even such deeply personal feelings be made public? Must tears shed during an oath-taking ceremony also be given media coverage?**\n\nIt is worth remembering that, ultimately, a person entrusted with responsibility will be judged not by their emotions, but by their actions.\n\nIf they discharge their duties properly, people will remember their work. But if they fail to fulfil their responsibilities, those very tears shed during the oath-taking ceremony may one day become material for mockery and online trolling.\n\nThe reason is simple: what you perceive as fear of accountability before Allah may not be understood by the general public in the same way. People will judge you by your public conduct, decisions, and the outcomes of your actions.\n\nTherefore, not every emotion needs to be expressed, nor does every moment need to be broadcast by the media. In particular, there are certain states of the heart—fear of Allah, a sense of accountability, spiritual self-purification, and other deeply personal feelings—that may be safer and more dignified when kept between Allah and His servant.\n\nWhen everything is brought into the public spotlight, sometimes the display becomes more visible than the sincerity behind it.\n\nOf late, almost every activity of Islamic political parties, whether large or small—even their internal meetings and indoor programmes—is being widely publicised through the media. At the same time, a growing tendency towards visibility and self-promotion can be observed among their leaders and activists.\n\nYet, in Islamic work, unnecessary and excessive publicity can gradually make promotion more important than the work itself. Even emotions that ought to inspire respect may eventually become objects of ridicule.\n\n**Not everything is meant to be shown to people. Let some deeds speak through their results, and let Allah alone bear witness to certain emotions. There must also be a clear boundary between responsible publicity and unnecessary exposure.**\n\n— *Personal Observation*"
+    }
+  },
+  {
     "id": "2026-10-13-post-e2bta0",
     "date": "2026-10-13",
     "topic_slug": "islamic-thought-philosophy",
