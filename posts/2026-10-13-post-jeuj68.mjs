@@ -1,7 +1,7 @@
 export default {
   "id": "2026-10-13-post-jeuj68",
   "date": "2026-10-13",
-  "topic_slug": "books-writing-publishing",
+  "topic_slug": "research-scholarship-academic-life",
   "source": {
     "type": "facebook",
     "label": "Facebook",
