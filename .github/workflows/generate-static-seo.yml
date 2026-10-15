@@ -17,6 +17,17 @@ on:
       - "post.html"
       - "bn/post.html"
       - "tools/generate_static_seo.py"
+      - "tools/prerender_static_content.py"
+      - "bn/publications.html"
+      - "publications.html"
+      - "bn/books.html"
+      - "books.html"
+      - "bn/index.html"
+      - "index.html"
+      - "updates-manifest.js"
+      - "publications-manifest.js"
+      - "updates/*.mjs"
+      - "publications/*.mjs"
 
 permissions:
   contents: write
@@ -36,15 +47,17 @@ jobs:
       - name: Sync latest main
         run: git pull --rebase origin main
 
-      - name: Generate static detail pages
-        run: python3 tools/generate_static_seo.py
+      - name: Generate static detail pages and prerender archives
+        run: |
+          python3 tools/generate_static_seo.py
+          python3 tools/prerender_static_content.py
 
       - name: Commit generated pages
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml books articles writings bn/books bn/articles bn/writings
+          git add sitemap.xml books articles writings bn/books bn/articles bn/writings index.html bn/index.html books.html bn/books.html publications.html bn/publications.html
           if git diff --cached --quiet; then
             echo "Generated pages already up to date."
             exit 0
