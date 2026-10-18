@@ -20,7 +20,24 @@ function repoApi(path:string){return `https://api.github.com/repos/${env('GITHUB
 function contentsUrl(path:string){return repoApi(`contents/${path.split('/').map(encodeURIComponent).join('/')}`)+`?ref=${encodeURIComponent(branch())}`}
 async function gh(path:string,opt:any={}){const r=await fetch(repoApi(path),{...opt,headers:{...ghHeaders(),...(opt.headers||{})}});if(!r.ok)throw new Error(`GitHub API failed (${r.status}): ${await r.text()}`);return await r.json()}
 async function getFile(path:string){const r=await fetch(contentsUrl(path),{headers:ghHeaders()});if(r.status===404)return null;if(!r.ok)throw new Error(`GitHub read failed (${r.status}): ${await r.text()}`);return await r.json()}
-async function readText(path:string){const f=await getFile(path);if(!f)return null;return b64utf8(f.content||'')}
+async function readText(path:string){
+  const f=await getFile(path);
+  if(!f)return null;
+
+  // GitHub's Contents API may omit inline "content" for large files.
+  // Fall back to the Git Blob API using the file SHA so large manifests
+  // (notably posts-manifest.js) remain readable by the admin publisher.
+  if(typeof f.content==='string'&&f.content.trim()){
+    return b64utf8(f.content);
+  }
+  if(f.sha){
+    const blob=await gh(`git/blobs/${encodeURIComponent(f.sha)}`);
+    if(blob?.encoding==='base64'&&typeof blob.content==='string'&&blob.content.trim()){
+      return b64utf8(blob.content);
+    }
+  }
+  throw new Error(`GitHub content unavailable for ${path}.`);
+}
 let topicSlugCache:Set<string>|null=null;
 let topicSlugCacheAt=0;
 const TOPIC_CACHE_MS=5*60*1000;
