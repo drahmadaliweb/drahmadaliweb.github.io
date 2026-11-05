@@ -1,7 +1,7 @@
 export default {
   "id": "2026-11-05-post-priorities",
   "date": "2026-11-05",
-  "topic_slug": "islamic-thought-philosophy",
+  "topic_slug": "dawah-waz-ulama",
   "source": {
     "type": "facebook",
     "label": "Facebook",
