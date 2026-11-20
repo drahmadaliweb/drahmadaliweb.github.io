@@ -2,10 +2,10 @@ export default {
   "id": "bangladeshe-zakat-ushr-aday-bonton",
   "order": 999,
   "status": "published",
-  "rokomariId": null,
+  "rokomariId": "",
   "category": "Islamic Economics & Zakat",
   "series": null,
-  "rokomariUrl": null,
+  "rokomariUrl": "",
   "links": [],
   "en": {
     "title": "Zakat and Ushr Collection and Distribution in Bangladesh",
@@ -21,6 +21,7 @@ export default {
   "meta": {
     "publisher": "",
     "publisherBn": "",
+    "publicationYear": "",
     "isbn": "",
     "edition": "Seminar paper/booklet, presented 16 February 2025",
     "editionBn": "সেমিনার প্রবন্ধ/পুস্তিকা, উপস্থাপিত ১৬ ফেব্রুয়ারি ২০২৫",
@@ -35,7 +36,7 @@ export default {
   "media": {
     "cover": "media/books/bangladeshe-zakat-ushr-aday-bonton/cover.jpg",
     "preview": null,
-    "pdf": null,
+    "pdf": "media/books/bangladeshe-zakat-ushr-aday-bonton/pdf.pdf",
     "audio": []
   }
 };
