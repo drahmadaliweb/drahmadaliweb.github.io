@@ -2,10 +2,10 @@ export default {
   "id": "jongibader-utthan-bonam-islamer-shashwoto-shikkha",
   "order": 103,
   "status": "published",
-  "rokomariId": null,
+  "rokomariId": "",
   "category": "Islamic Thought",
   "series": null,
-  "rokomariUrl": null,
+  "rokomariUrl": "",
   "links": [],
   "en": {
     "title": "The Rise of Militancy versus Islam’s Enduring Teachings",
@@ -21,6 +21,7 @@ export default {
   "meta": {
     "publisher": "Department of Islamic Studies, University of Chittagong",
     "publisherBn": "ইসলামিক স্টাডিজ বিভাগ, চট্টগ্রাম বিশ্ববিদ্যালয়",
+    "publicationYear": "",
     "isbn": "",
     "edition": "",
     "editionBn": "",
@@ -33,7 +34,7 @@ export default {
     "languageBn": "বাংলা"
   },
   "media": {
-    "cover": "media/books/jongibader-utthan-bonam-islamer-shashwoto-shikkha/cover.jpg",
+    "cover": "media/books/jongibader-utthan-bonam-islamer-shashwoto-shikkha/cover.pdf",
     "preview": null,
     "pdf": null,
     "audio": []
